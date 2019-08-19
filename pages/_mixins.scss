@@ -1,0 +1,10 @@
+@mixin font($name) {
+  font-variant-ligatures: none;
+  @if $name == 'quicksand' {
+    font-family: 'Quicksand', Helvetica, Arial, sans-serif !important;
+  } @else if $name == 'space mono' {
+    font-family: 'Space Mono', 'Courier New', Courier, monospace !important;
+  } @else {
+    @error "Unknown font #{$name}."
+  }
+}

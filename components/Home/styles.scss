@@ -1,0 +1,56 @@
+@import '../../pages/variables';
+@import '../../pages/mixins';
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    margin: 0 15px;
+    font-size: 2em;
+  }
+}
+
+.post {
+  margin-bottom: 0.5em;
+}
+
+.hr {
+  border: 0;
+  border-top: 2px dashed $grey-f;
+  height: 0;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.date {
+  @include font('space mono');
+  opacity: 0.75;
+}
+
+.separator {
+  @include font('space mono');
+  color: $grey-d;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+
+  a {
+    margin: 0 5px;
+  }
+
+  span {
+    color: $grey-d;
+    margin-bottom: 1px;
+  }
+}

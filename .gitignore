@@ -1,0 +1,7 @@
+.env
+.next/
+out/
+node_modules/
+
+yarn-debug.log*
+yarn-error.log*
