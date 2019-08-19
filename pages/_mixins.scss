@@ -8,3 +8,17 @@
     @error "Unknown font #{$name}."
   }
 }
+
+@mixin media($size) {
+  @if $size == sm {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @if $size == md {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+}

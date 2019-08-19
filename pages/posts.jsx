@@ -1,13 +1,13 @@
 import React from 'react'
 import matter from 'gray-matter'
 
-import Post from '../components/Post'
+import BlogPost from '../components/BlogPost'
 
-function PostPage(props) {
-  return <Post {...props} />
+function BlogPostPage(props) {
+  return <BlogPost {...props} />
 }
 
-PostPage.getInitialProps = async ctx => {
+BlogPostPage.getInitialProps = async ctx => {
   const {slug} = ctx.query
   const module = await import(`../posts/${slug}.md`)
   const {content, data} = matter(module.default)
@@ -16,4 +16,4 @@ PostPage.getInitialProps = async ctx => {
   return {post}
 }
 
-export default PostPage
+export default BlogPostPage

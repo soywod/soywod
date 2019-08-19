@@ -8,7 +8,7 @@ module.exports = async () => {
   const defaultRoutes = {'/': {page: '/'}}
 
   return slugs.reduce(
-    (routes, slug) => ({...routes, [`/posts/${slug}`]: {page: '/posts', query: {slug}}}),
+    (routes, slug) => ({...routes, [`/blog/${slug}`]: {page: '/posts', query: {slug}}}),
     defaultRoutes,
   )
 }

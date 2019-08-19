@@ -78,18 +78,23 @@ h2, h3, h4, h5, h6 {
   margin: 30px 0;
 }
 
+hr {
+  border: 0;
+  border-top: 2px dashed $grey-f;
+  height: 0;
+  padding: 0;
+  margin: 30px 0;
+}
+
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: 48em;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 
-  @media (min-width: 576px) {
+  @include media(md) {
     max-width: 42em;
-  }
-  
-  @media (min-width: 1200px) {
-    max-width: 48em;
   }
 }

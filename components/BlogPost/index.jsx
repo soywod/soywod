@@ -12,7 +12,7 @@ import classes from './styles.scss'
 
 const baseUrl = 'https://blog.soywod.me'
 
-function Post(props) {
+function BlogPost(props) {
   const {title, desc, date, tags, content, slug} = props.post
   const disqusShortname = 'clement-douin'
   const disqusConfig = {identifier: slug, title}
@@ -59,4 +59,4 @@ function Post(props) {
   )
 }
 
-export default Post
+export default BlogPost

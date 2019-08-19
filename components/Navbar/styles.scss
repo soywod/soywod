@@ -1,0 +1,47 @@
+@import '../../pages/variables';
+@import '../../pages/mixins';
+
+@mixin no-hover {
+  border-bottom: none;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px dashed $grey-f;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.brand {
+  flex: 1;
+}
+
+.brandDesktop {
+  font-size: 1.5rem;
+  font-weight: bold;
+  @include no-hover;
+
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.brandMobile {
+  display: none;
+  width: 32px;
+  height: 32px;
+  @include no-hover;
+
+  @include media(sm) {
+    display: block;
+  }
+}
+
+.item {
+  margin-left: 20px;
+}
