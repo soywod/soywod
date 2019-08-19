@@ -1,0 +1,32 @@
+@mixin font($name) {
+  font-variant-ligatures: none;
+  @if $name == 'quicksand' {
+    font-family: 'Quicksand', Helvetica, Arial, sans-serif !important;
+  } @else if $name == 'space mono' {
+    font-family: 'Space Mono', 'Courier New', Courier, monospace !important;
+  } @else {
+    @error "Unknown font #{$name}."
+  }
+}
+
+@mixin no-hover {
+  border-bottom: none;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+@mixin media($size) {
+  @if $size == sm {
+    @media (max-width: 575px) {
+      @content;
+    }
+  }
+
+  @if $size == md {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+}

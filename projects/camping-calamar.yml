@@ -1,0 +1,10 @@
+title: Camping Calamar
+subtitle: Site web - Camping
+link: 'https://soywod.github.io/camping-calamar'
+desc: Site vitrine responsive développé à partir de maquettes graphiques. L'administration se fait via Google Sheets et Google Drive.
+source: 'https://github.com/soywod/camping-calamar'
+date: 1807
+tags:
+  - react
+  - typescript
+  - sass

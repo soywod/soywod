@@ -1,0 +1,10 @@
+title: Ateliers vitalité
+subtitle: Web app - QCM en ligne
+link: 'http://www.ateliersvitalite.fr'
+desc: Ajout d'un nouveau module comprenant des fiches, des animations canvas et un QCM.
+source: null
+date: 1811
+tags:
+  - php
+  - sass
+  - sqlite

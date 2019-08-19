@@ -1,0 +1,44 @@
+@import '../../pages/variables';
+@import '../../pages/mixins';
+
+.nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px dashed $greyF0;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+
+  &>:first-child {
+    flex: 1;
+  }
+}
+
+.avatarLink {
+  @include no-hover;
+  display: flex;
+  align-items: center;
+
+  span {
+    color: $grey3D;
+    margin-left: 15px;
+
+    @include media(sm) {
+      display: none;
+    }
+  }
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  @include media(sm) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.link {
+  margin-left: 20px;
+}
