@@ -10,10 +10,16 @@ const sass = [withSass, {cssModules: true}]
 module.exports = withPlugins([images, sass], {
   exportPathMap,
   webpack: config => {
-    config.module.rules.push({
-      test: /\.md$/,
-      use: 'raw-loader',
-    })
+    config.module.rules.push(
+      {
+        test: /\.ya?ml$/,
+        use: 'js-yaml-loader',
+      },
+      {
+        test: /\.md$/,
+        use: 'raw-loader',
+      },
+    )
 
     return config
   },

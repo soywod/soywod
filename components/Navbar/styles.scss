@@ -14,31 +14,36 @@
   align-items: center;
   border-bottom: 2px dashed $grey-f;
   padding-bottom: 15px;
-  margin-bottom: 15px;
-}
+  margin-bottom: 30px;
 
-.brand {
-  flex: 1;
-}
-
-.brandDesktop {
-  font-size: 1.5rem;
-  font-weight: bold;
-  @include no-hover;
-
-  @include media(sm) {
-    display: none;
+  &>:first-child {
+    flex: 1;
   }
 }
 
-.brandMobile {
-  display: none;
-  width: 32px;
-  height: 32px;
+.avatarLink {
   @include no-hover;
+  display: flex;
+  align-items: center;
+
+  span {
+    color: $grey-3;
+    margin-left: 15px;
+
+    @include media(sm) {
+      display: none;
+    }
+  }
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 
   @include media(sm) {
-    display: block;
+    width: 32px;
+    height: 32px;
   }
 }
 

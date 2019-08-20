@@ -1,31 +1,28 @@
 import React from 'react'
 import Link from 'next/link'
 
-import logo from './logo.png'
+import avatar from '../../images/clement-douin.jpeg?size=80'
 
 import classes from './styles.scss'
 
 function Navbar() {
   return (
     <nav className={classes.nav}>
-      <div className={classes.brand}>
+      <div>
         <Link href="/">
-          <a className={classes.brandDesktop}>Clément DOUIN</a>
-        </Link>
-
-        <Link href="/">
-          <a className={classes.brandMobile}>
-            <img width={32} src={logo} alt="Clément DOUIN" />
+          <a className={classes.avatarLink}>
+            <img className={classes.avatar} src={avatar} alt="Clément DOUIN" />
+            <span>Clément DOUIN</span>
           </a>
         </Link>
       </div>
 
-      <Link href="/">
-        <a className={classes.item}>À propos</a>
+      <Link href="/experiences">
+        <a className={classes.item}>Expériences</a>
       </Link>
 
-      <Link href="/cv">
-        <a className={classes.item}>CV</a>
+      <Link href="/projects">
+        <a className={classes.item}>Projets</a>
       </Link>
 
       <Link href="/blog">

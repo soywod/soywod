@@ -1,0 +1,13 @@
+company: Whaller
+link: https://whaller.com
+title: Développeur web
+desc: Corrections de bugs back-end sur CodeIgniter (PHP) et sur un front-end en jQuery. Développement d'un lecteur de flux RSS en jQuery. Développement d'un gestionnaire de fichiers en jQuery.
+begin: 1509
+end: 1602
+tags:
+  - PHP
+  - CodeIgniter
+  - JavaScript
+  - jQuery
+  - Node.js
+  - Docker

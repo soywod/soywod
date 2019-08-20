@@ -3,6 +3,7 @@ import App, {Container} from 'next/app'
 import ReactGA from 'react-ga'
 
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 import classes from './_styles.scss'
 
@@ -30,6 +31,7 @@ class MyApp extends App {
         <div className={classes.container}>
           <Navbar />
           <Component {...pageProps} />
+          <Footer />
         </div>
       </Container>
     )
