@@ -1,0 +1,10 @@
+title: Camping Calamar
+subtitle: Website - Camping
+link: 'https://soywod.github.io/camping-calamar'
+desc: Responsive corporate website built from scratch, with a designer. Administration set up a Google Sheets and Google Drive.
+source: https://github.com/soywod/camping-calamar
+date: 1807
+tags:
+  - react
+  - typescript
+  - sass

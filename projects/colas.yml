@@ -1,0 +1,10 @@
+title: Colas
+subtitle: API - Sync between databases
+link: null
+desc: Synchronization API between a Microsoft SQL Server and a SaaS solution (Serena). Everything is hosted in a private repo on GitLab.
+source: null
+date: 1808
+tags:
+  - node.js
+  - javascript
+  - typescript

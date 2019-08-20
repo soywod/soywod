@@ -5,9 +5,9 @@ desc: Corrections de bugs back-end sur CodeIgniter (PHP) et sur un front-end en 
 begin: 1509
 end: 1602
 tags:
-  - PHP
-  - CodeIgniter
-  - JavaScript
-  - jQuery
-  - Node.js
-  - Docker
+  - php
+  - codeigniter
+  - javascript
+  - jquery
+  - node.js
+  - docker

@@ -1,0 +1,11 @@
+title: IMY
+subtitle: Mobile - Meeting
+link: null
+desc: Mobile app about meeting. I added some functionalities front and back side. Beta-tested with TestFlight (iOS only). The source code is not available (private repo).
+source: null
+date: 1807
+tags:
+  - angular
+  - ionic
+  - javascript
+  - ruby-on-rails

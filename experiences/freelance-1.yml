@@ -3,6 +3,6 @@ desc: Développement d'un site vitrine pour Run&Sense. Développement d'un diapo
 begin: 1608
 end: 1612
 tags:
-  - PHP
-  - JavaScript
-  - jQuery
+  - php
+  - javascript
+  - jquery

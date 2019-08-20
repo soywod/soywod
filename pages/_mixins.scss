@@ -9,6 +9,14 @@
   }
 }
 
+@mixin no-hover {
+  border-bottom: none;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
 @mixin media($size) {
   @if $size == sm {
     @media (max-width: 575px) {

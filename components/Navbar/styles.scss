@@ -1,14 +1,6 @@
 @import '../../pages/variables';
 @import '../../pages/mixins';
 
-@mixin no-hover {
-  border-bottom: none;
-
-  &:hover {
-    border-bottom: none;
-  }
-}
-
 .nav {
   display: flex;
   align-items: center;

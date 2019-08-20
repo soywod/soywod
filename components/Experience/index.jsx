@@ -13,13 +13,15 @@ function Experience(props) {
 
   return (
     <>
-      <h2 className={classes.company}>
+      <hr />
+
+      <h2 className={classes.title}>
         <span>{props.title}</span>
         <em>{interval}</em>
       </h2>
 
       {props.link && (
-        <h3 className={classes.title}>
+        <h3 className={classes.company}>
           @
           <Link href={props.link}>
             <a>{props.company}</a>

@@ -1,0 +1,10 @@
+title: Sigma Search Partners
+subtitle: Website - IT Recruitment
+link: https://sigma-search.com
+desc: Responsive multi-platform corporate website built from scratch. Admin set up with Google Sheets and Google Drive.
+source: https://github.com/soywod/sigma-search
+date: 1812
+tags:
+  - react
+  - typescript
+  - stylus

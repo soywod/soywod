@@ -1,0 +1,10 @@
+title: Island Tours
+subtitle: Web module - Dynamic form
+link: null
+desc: Dynamic form built with Angular. The result was saved in a simple excel sheet. The form is not online anymore, but the source code is still available.
+source: https://github.com/soywod/island-tours
+date: 1611
+tags:
+  - angular
+  - typescript
+  - less

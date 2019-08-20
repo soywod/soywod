@@ -5,8 +5,8 @@ desc: Développement d'outils d'aide au diagnostic pour logiciels d'encaissement
 begin: 1112
 end: 1502
 tags:
-  - C/C++
-  - Java
-  - PHP
-  - JavaScript
-  - Node.js
+  - c/c++
+  - java
+  - php
+  - javascript
+  - node.js

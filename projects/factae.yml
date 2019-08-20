@@ -1,0 +1,11 @@
+title: factAE
+subtitle: Web app with API - Billing tool
+link: 'https://factae.fr'
+desc: Web app helping french auto-entrepreneurs to manage their business (clients, quotations, invoices).
+source: 'https://github.com/soywod/factae'
+date: 1904
+tags:
+  - react
+  - node.js
+  - typescript
+  - typeorm

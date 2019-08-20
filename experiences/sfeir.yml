@@ -5,8 +5,8 @@ desc: Développement d'un système de hook en JavaScript. Maintenance d'un outil
 begin: 1701
 end: 1712
 tags:
-  - JavaScript
-  - Flow
-  - React
-  - AngularJS
-  - iOS
+  - javascript
+  - flow
+  - react
+  - angularjs
+  - ios
