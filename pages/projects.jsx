@@ -1,12 +1,18 @@
 import React from 'react'
 
 import Project from '../components/Project'
+import SEO from '../components/SEO'
+
+const title = 'Clément DOUIN | Projets'
+const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
+const tags =
+  'clément,douin,soywod,développement,développeur,projets,web,javascript,typescript,react,startup'
 
 function ProjectsPage({projects}) {
   return (
     <>
+      <SEO title={title} desc={desc} tags={tags} />
       <h1>Projets</h1>
-
       {projects.map((project, key) => (
         <Project key={key} {...project} />
       ))}

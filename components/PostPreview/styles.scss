@@ -18,7 +18,7 @@
 
 .hr {
   border: 0;
-  border-top: 2px dashed $grey-f;
+  border-top: 2px dashed $greyF0;
   height: 0;
   padding: 0;
   margin: 30px 0;
@@ -31,5 +31,5 @@
 
 .separator {
   @include font('space mono');
-  color: $grey-d;
+  color: $greyD3;
 }

@@ -4,7 +4,7 @@
 .nav {
   display: flex;
   align-items: center;
-  border-bottom: 2px dashed $grey-f;
+  border-bottom: 2px dashed $greyF0;
   padding-bottom: 15px;
   margin-bottom: 30px;
 
@@ -19,7 +19,7 @@
   align-items: center;
 
   span {
-    color: $grey-3;
+    color: $grey3D;
     margin-left: 15px;
 
     @include media(sm) {
@@ -39,6 +39,6 @@
   }
 }
 
-.item {
+.link {
   margin-left: 20px;
 }

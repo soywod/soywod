@@ -2,10 +2,24 @@ import React from 'react'
 import matter from 'gray-matter'
 import {DateTime} from 'luxon'
 
-import Blog from '../components/Blog'
+import SEO from '../components/SEO'
+import PostPreview from '../components/PostPreview'
+
+const title = 'Clément DOUIN | Blog'
+const desc = 'Blog tech sur mes réflexions et mes expériences.'
+const tags = 'clément,douin,soywod,blog,web,javascript,react,code,tech,dev'
 
 function BlogPage(props) {
-  return <Blog {...props} />
+  return (
+    <>
+      <SEO title={title} desc={desc} tags={tags} />
+      <h1>Blog</h1>
+      <hr />
+      {props.posts.map(post => (
+        <PostPreview key={post.slug} {...post} />
+      ))}
+    </>
+  )
 }
 
 BlogPage.getInitialProps = async () => {

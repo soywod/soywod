@@ -1,11 +1,10 @@
 title: factAE
-subtitle: Web app with API - Billing tool
+subtitle: Web app - Facturation
 link: 'https://factae.fr'
-desc: Web app helping french auto-entrepreneurs to manage their business (clients, quotations, invoices).
+desc: Application web d'aide à la facturation à 1€/mois pour micro-entrepreneurs.
 source: 'https://github.com/soywod/factae'
 date: 1904
 tags:
   - react
-  - node.js
-  - typescript
-  - typeorm
+  - next.js
+  - firebase

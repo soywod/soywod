@@ -25,24 +25,25 @@ body {
   @include font(quicksand);
   margin: 15px 0;
   padding: 0;
-  color: $grey-3;
+  color: $grey3D;
+  overflow-y: scroll;
 }
 
 a {
-  color: $primary;
+  color: $blue18;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-bottom 250ms;
 
   &:hover {
-    border-bottom: 1px solid $primary;
+    border-bottom: 1px solid $blue18;
   }
 
   svg {
     margin-right: 4px;
 
     > path {
-      fill: $primary;
+      fill: $blue18;
     }
   }
 }
@@ -70,7 +71,7 @@ code {
 }
 
 :not(pre) > code {
-  background: $grey-f;
+  background: $greyF0;
   padding: 0.1em 0.3em;
 }
 
@@ -80,10 +81,21 @@ h2, h3, h4, h5, h6 {
 
 hr {
   border: 0;
-  border-top: 2px dashed $grey-f;
+  border-top: 2px dashed $greyF0;
   height: 0;
   padding: 0;
   margin: 30px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+
+td, th {
+  border: 1px solid $greyF0;
+  padding: 5px 10px;
 }
 
 .container {

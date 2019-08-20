@@ -1,13 +1,24 @@
 import React from 'react'
 import matter from 'gray-matter'
 
-import BlogPost from '../components/BlogPost'
+import Post from '../components/Post'
+import SEO from '../components/SEO'
 
-function BlogPostPage(props) {
-  return <BlogPost {...props} />
+function PostPage({post}) {
+  const {desc} = post
+  const title = 'Clément DOUIN | ' + post.title
+  const tags = post.tags.concat(['clément', 'douin', 'blog', 'soywod']).join(',')
+  const url = `/blog/${post.slug}`
+
+  return (
+    <>
+      <SEO title={title} desc={desc} tags={tags} url={url} />
+      <Post {...post} />
+    </>
+  )
 }
 
-BlogPostPage.getInitialProps = async ctx => {
+PostPage.getInitialProps = async ctx => {
   const {slug} = ctx.query
   const module = await import(`../posts/${slug}.md`)
   const {content, data} = matter(module.default)
@@ -16,4 +27,4 @@ BlogPostPage.getInitialProps = async ctx => {
   return {post}
 }
 
-export default BlogPostPage
+export default PostPage

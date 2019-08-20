@@ -1,8 +1,8 @@
 title: Island Tours
-subtitle: Web module - Dynamic form
+subtitle: Mobule web - Formulaire dynamique
 link: null
-desc: Dynamic form built with Angular. The result was saved in a simple excel sheet. The form is not online anymore, but the source code is still available.
-source: https://github.com/soywod/island-tours
+desc: Formulaire dynamique développé en Angular. Le résultat du formulaire est stocké dans un simple .csv. Le formulaire n'est plus en ligne, mais le code est toujours disponible.
+source: 'https://github.com/soywod/island-tours'
 date: 1611
 tags:
   - angular

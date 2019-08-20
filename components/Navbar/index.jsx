@@ -18,15 +18,15 @@ function Navbar() {
       </div>
 
       <Link href="/experiences">
-        <a className={classes.item}>Expériences</a>
+        <a className={classes.link}>Expériences</a>
       </Link>
 
       <Link href="/projects">
-        <a className={classes.item}>Projets</a>
+        <a className={classes.link}>Projets</a>
       </Link>
 
       <Link href="/blog">
-        <a className={classes.item}>Blog</a>
+        <a className={classes.link}>Blog</a>
       </Link>
     </nav>
   )

@@ -3,18 +3,41 @@
 
 .footer {
   display: flex;
+  font-size: 0.9rem;
+}
+
+.recruit {
+  display: flex;
+  flex-direction: column;
+  @include no-hover;
+}
+
+.available {
+  font-size: 0.8rem;
+  color: $greyD3;
+  @include font('space mono');
+}
+
+.status {
+  margin-left: 5px;
+  width: 8px;
+  fill: $green52;
+}
+
+.socials {
+  display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 0.9rem;
+  flex: 1;
+}
 
-  a {
-    margin: 0 5px;
-    text-align: center;
-  }
+.social {
+  margin: 0 5px;
+  text-align: center;
+}
 
-  span {
-    color: $grey-d;
-    @include font('space mono');
-    margin-bottom: 1px;
-  }
+.separator {
+  color: $greyD3;
+  @include font('space mono');
+  margin-bottom: 1px;
 }
