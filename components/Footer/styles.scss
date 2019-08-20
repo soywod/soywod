@@ -4,6 +4,10 @@
 .footer {
   display: flex;
   font-size: 0.9rem;
+
+  @include media(sm) {
+    flex-direction: column;
+  }
 }
 
 .recruit {

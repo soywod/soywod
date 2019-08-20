@@ -7,6 +7,10 @@
   justify-content: center;
   margin-right: 5px;
   @include no-hover;
+
+  @include media(sm) {
+    display: none;
+  }
 }
 
 .title {

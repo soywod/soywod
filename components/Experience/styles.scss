@@ -14,8 +14,8 @@
     @include font('space mono');
     font-size: 0.9rem;
     font-weight: 400;
-    opacity: 0.75;
     margin-top: 0;
+    color: $greyD3;
 
     @include media(sm) {
       display: none;
