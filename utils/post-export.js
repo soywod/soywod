@@ -20,17 +20,18 @@ function buildSitemapFile(paths) {
 
   const xml = sitemap.createSitemap(config)
 
-  fs.writeFileSync(__dirname + '/../out/sitemap.xml', xml.toString())
+  fs.writeFileSync(path.resolve(__dirname, '../out/sitemap.xml'), xml.toString())
 }
 
-function copyRobotsFile() {
-  const src = path.resolve(__dirname, '../static/robots.txt')
-  const dest = path.resolve(__dirname, '../out/robots.txt')
-
-  fs.copyFileSync(src, dest)
+function moveFiles(files) {
+  for (const file of files) {
+    const src = path.resolve(__dirname, `../out/static/${file}`)
+    const dest = path.resolve(__dirname, `../out/${file}`)
+    fs.renameSync(src, dest)
+  }
 }
 
 buildPaths().then(paths => {
   buildSitemapFile(paths)
-  copyRobotsFile()
+  moveFiles(['robots.txt', '_redirects'])
 })

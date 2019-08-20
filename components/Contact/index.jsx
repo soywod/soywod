@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import IconArrowDown from '../ArrowDown'
+import IconArrowDown from './IconArrowDown'
 
 import classes from './styles.scss'
 

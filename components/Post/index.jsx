@@ -4,8 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import {DateTime} from 'luxon'
 import {DiscussionEmbed} from 'disqus-react'
 
-import ArrowBack from '../ArrowBack'
-import CodeBlock from '../CodeBlock'
+import CodeBlock from './CodeBlock'
+import IconArrowBack from './IconArrowBack'
 
 import classes from './styles.scss'
 
@@ -18,7 +18,7 @@ function Post(props) {
       <h1 className={classes.title}>
         <Link prefetch href="/blog">
           <a className={classes.back}>
-            <ArrowBack />
+            <IconArrowBack />
           </a>
         </Link>
         <span>{title}</span>
