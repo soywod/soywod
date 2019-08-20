@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import {DateTime} from 'luxon'
+
+import Link from '../Link'
 
 import classes from './styles.scss'
 
@@ -14,10 +15,8 @@ function Project(props) {
       <div className={classes.container}>
         <div className={classes.imageContainer}>
           {props.link ? (
-            <Link href={props.link}>
-              <a className={classes.imageLink}>
-                <img className={classes.image} src={props.image} alt={props.title} />
-              </a>
+            <Link className={classes.imageLink} to={props.link}>
+              <img className={classes.image} src={props.image} alt={props.title} />
             </Link>
           ) : (
             <img className={classes.image} src={props.image} alt={props.title} />
@@ -26,15 +25,7 @@ function Project(props) {
 
         <div className={classes.content}>
           <h2 className={classes.title}>
-            <span>
-              {props.link ? (
-                <Link href={props.link}>
-                  <a>{props.title}</a>
-                </Link>
-              ) : (
-                props.title
-              )}
-            </span>
+            <span>{props.link ? <Link to={props.link}>{props.title}</Link> : props.title}</span>
             <em>{date}</em>
           </h2>
 
@@ -51,11 +42,7 @@ function Project(props) {
 
       <p>{props.desc}</p>
 
-      {props.source && (
-        <Link href={props.source}>
-          <a>> Sources</a>
-        </Link>
-      )}
+      {props.source && <Link to={props.source}>> Sources</Link>}
     </>
   )
 }

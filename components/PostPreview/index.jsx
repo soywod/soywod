@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import {DateTime} from 'luxon'
+
+import Link from '../Link'
 
 import classes from './styles.scss'
 
@@ -11,8 +12,8 @@ function PostPreview(props) {
         {DateTime.fromISO(props.date, {locale: 'fr'}).toFormat('dd LLL yyyy')}
       </em>
       <span className={classes.separator}>{' > '}</span>
-      <Link href={`/posts?slug=${props.slug}`} as={`/blog/${props.slug}`}>
-        <a>{props.title}</a>
+      <Link to={`/posts?slug=${props.slug}`} as={`/blog/${props.slug}`}>
+        {props.title}
       </Link>
     </div>
   )

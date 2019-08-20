@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
-import Link from 'next/link'
+
+import Link from '../Link'
 
 import classes from './styles.scss'
 
@@ -16,26 +17,22 @@ function Footer() {
       <hr />
       <footer className={classes.footer}>
         <div>
-          <Link href="/job">
-            <a className={classes.recruit}>
-              <span>Recrutez-moi !</span>
-              <span className={classes.available}>
-                Actuellement disponible
-                <svg className={classes.status} viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="50" />
-                </svg>
-              </span>
-            </a>
+          <Link to="/job" className={classes.recruit}>
+            <span>Recrutez-moi !</span>
+            <span className={classes.available}>
+              Actuellement disponible
+              <svg className={classes.status} viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50" />
+              </svg>
+            </span>
           </Link>
         </div>
         <div className={classes.socials}>
           {medias.map(({name, href}, index) => (
             <Fragment key={name}>
               {index > 0 && <span className={classes.separator}>{' / '}</span>}
-              <Link href={href}>
-                <a className={classes.social} target="_blank" rel="noopener noreferrer">
-                  {name}
-                </a>
+              <Link to={href} className={classes.social}>
+                {name}
               </Link>
             </Fragment>
           ))}

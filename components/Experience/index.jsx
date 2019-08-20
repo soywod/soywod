@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import {DateTime, Interval} from 'luxon'
+
+import Link from '../Link'
 
 import classes from './styles.scss'
 
@@ -22,10 +23,7 @@ function Experience(props) {
 
       {props.link && (
         <h3 className={classes.company}>
-          @
-          <Link href={props.link}>
-            <a>{props.company}</a>
-          </Link>
+          @<Link to={props.link}>{props.company}</Link>
         </h3>
       )}
 

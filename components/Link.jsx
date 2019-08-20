@@ -1,28 +1,15 @@
 import React from 'react'
 import NextLink from 'next/link'
-import noop from 'lodash/fp/noop'
 
-function Link({className = '', style = {}, to = '#', onClick = noop, children}) {
-  const customStyle = {padding: 0, height: 'inherit', lineHeight: 'inherit', ...style}
+function Link({to = '/', className = '', children, ...customProps}) {
+  const targetProps = to.startsWith('/') ? {} : {target: '_blank', rel: 'noopener noreferrer'}
 
-  return to.startsWith('/') ? (
-    <RouterLink to={to} onClick={onClick}>
-      <Button type="link" className={className} style={customStyle}>
+  return (
+    <NextLink href={to} {...customProps}>
+      <a className={className} {...targetProps}>
         {children}
-      </Button>
-    </RouterLink>
-  ) : (
-    <Button
-      type="link"
-      className={className}
-      style={customStyle}
-      href={to}
-      onClick={onClick}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {children || to}
-    </Button>
+      </a>
+    </NextLink>
   )
 }
 

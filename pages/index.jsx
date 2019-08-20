@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 
+import Link from '../components/Link'
 import SEO from '../components/SEO'
 
 const title = 'Clément DOUIN | Développeur web indépendant'
@@ -27,10 +27,7 @@ function HomePage() {
         Je travaille maintenant en tant qu'indépendant (micro-entreprise), et j'accompagne mes
         clients dans leur évolution numérique (développement de sites web et de modules
         personnalisés, mise à niveau, formations). N'hésitez-pas à{' '}
-        <Link href="/job">
-          <a>me contacter</a>
-        </Link>{' '}
-        pour plus d'informations !
+        <Link to="/job">me contacter</Link> pour plus d'informations !
       </p>
     </>
   )

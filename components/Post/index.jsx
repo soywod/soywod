@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import {DateTime} from 'luxon'
 import {DiscussionEmbed} from 'disqus-react'
 
+import Link from '../Link'
 import CodeBlock from './CodeBlock'
 import IconArrowBack from './IconArrowBack'
 
@@ -16,10 +16,8 @@ function Post(props) {
   return (
     <>
       <h1 className={classes.title}>
-        <Link prefetch href="/blog">
-          <a className={classes.back}>
-            <IconArrowBack />
-          </a>
+        <Link className={classes.back} prefetch to="/blog">
+          <IconArrowBack />
         </Link>
         <span>{title}</span>
         <em>{DateTime.fromISO(date).toRelative()}</em>
