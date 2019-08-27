@@ -1,3 +1,8 @@
+require('dotenv').config()
+
+const path = require('path')
+const Dotenv = require('dotenv-webpack')
+
 const withSass = require('@zeit/next-sass')
 const withPlugins = require('next-compose-plugins')
 const withOptimizedImages = require('next-optimized-images')
@@ -22,6 +27,15 @@ module.exports = withPlugins([images, sass, offline], {
         use: 'raw-loader',
       },
     )
+
+    config.plugins = config.plugins || []
+    config.plugins = [
+      ...config.plugins,
+      new Dotenv({
+        path: path.join(__dirname, '.env'),
+        systemvars: true,
+      }),
+    ]
 
     return config
   },

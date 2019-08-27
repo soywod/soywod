@@ -11,7 +11,7 @@ import classes from './styles.scss'
 
 function Post(props) {
   const {title, date, tags, content, slug} = props
-  const disqusConfig = {identifier: slug, title}
+  const disqusConfig = {url: process.env.HOSTNAME + '/blog/' + slug, identifier: slug, title}
 
   return (
     <>
