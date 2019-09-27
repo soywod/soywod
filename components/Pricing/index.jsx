@@ -14,8 +14,8 @@ function Pricing() {
       </thead>
       <tbody>
         <tr>
-          <td>75 €</td>
-          <td>600 €</td>
+          <td>70 €</td>
+          <td>550 €</td>
           <td>Sur devis</td>
         </tr>
       </tbody>
