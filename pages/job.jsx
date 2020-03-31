@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react"
 
-import Pricing from '../components/Pricing'
-import Contact from '../components/Contact'
-import SEO from '../components/SEO'
+import Pricing from "../components/Pricing"
+import Contact from "../components/Contact"
+import SEO from "../components/SEO"
 
-const title = 'Clément DOUIN | Me recruter'
+const title = "Clément DOUIN | Me recruter"
 const desc =
   "Avec 4 ans d'expérience en JavaScript (React), je vous accompagne dans votre évolution numérique."
 const tags =
-  'clément,douin,soywod,développement,développeur,web,disponible,paris,freelance,indépendant,tarif'
+  "clément,douin,soywod,développement,développeur,web,disponible,paris,freelance,indépendant,tarif"
 
 function JobPage() {
   return (

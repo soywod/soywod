@@ -1,17 +1,17 @@
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
-import {DateTime} from 'luxon'
-import {DiscussionEmbed} from 'disqus-react'
+import React from "react"
+import ReactMarkdown from "react-markdown"
+import {DateTime} from "luxon"
+import {DiscussionEmbed} from "disqus-react"
 
-import Link from '../Link'
-import CodeBlock from './CodeBlock'
-import IconArrowBack from './IconArrowBack'
+import Link from "../Link"
+import CodeBlock from "./CodeBlock"
+import IconArrowBack from "./IconArrowBack"
 
-import classes from './styles.scss'
+import classes from "./styles.scss"
 
 function Post(props) {
   const {title, date, tags, content, slug} = props
-  const disqusConfig = {url: process.env.HOSTNAME + '/blog/' + slug, identifier: slug, title}
+  const disqusConfig = {url: process.env.HOSTNAME + "/blog/" + slug, identifier: slug, title}
 
   return (
     <>

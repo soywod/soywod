@@ -1,0 +1,15 @@
+extends:
+  - stylelint-config-recommended
+  - ./node_modules/prettier-stylelint/config.js
+
+plugins:
+  - stylelint-order
+  - stylelint-prettier
+
+rules:
+  prettier/prettier: true
+  order/order:
+    - custom-properties
+    - declarations
+  order/properties-alphabetical-order: true
+  at-rule-no-unknown: null

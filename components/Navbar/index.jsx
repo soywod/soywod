@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react"
 
-import Link from '../Link'
-import avatar from '../../images/clement-douin.jpeg?size=80'
+import Link from "../Link"
+import avatar from "../../images/clement-douin.jpeg?size=80"
 
-import classes from './styles.scss'
+import classes from "./styles.scss"
 
 function Navbar() {
   return (

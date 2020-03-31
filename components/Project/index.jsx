@@ -1,12 +1,12 @@
-import React from 'react'
-import {DateTime} from 'luxon'
+import React from "react"
+import {DateTime} from "luxon"
 
-import Link from '../Link'
+import Link from "../Link"
 
-import classes from './styles.scss'
+import classes from "./styles.scss"
 
 function Project(props) {
-  const date = DateTime.fromFormat(String(props.date), 'yyLL', {locale: 'fr'}).toFormat('LLL yyyy')
+  const date = DateTime.fromFormat(String(props.date), "yyLL", {locale: "fr"}).toFormat("LLL yyyy")
 
   return (
     <>
@@ -42,7 +42,7 @@ function Project(props) {
 
       <p>{props.desc}</p>
 
-      {props.source && <Link to={props.source}>> Sources</Link>}
+      {props.source && <Link to={props.source}>&gt; Sources</Link>}
     </>
   )
 }

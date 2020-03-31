@@ -1,14 +1,14 @@
-@import '../../pages/variables';
-@import '../../pages/mixins';
+@import "../../pages/variables";
+@import "../../pages/mixins";
 
 .nav {
-  display: flex;
   align-items: center;
+  display: flex;
 
   img {
-    width: 80px;
-    height: 80px;
     border-radius: 50%;
+    height: 80px;
+    width: 80px;
   }
 }
 
@@ -20,16 +20,16 @@
   border: 0;
   border-top: 2px dashed $greyF0;
   height: 0;
-  padding: 0;
   margin: 30px 0;
+  padding: 0;
 }
 
 .date {
-  @include font('space mono');
+  @include font("space mono");
   opacity: 0.75;
 }
 
 .separator {
-  @include font('space mono');
+  @include font("space mono");
   color: $greyD3;
 }

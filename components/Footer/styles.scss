@@ -1,5 +1,5 @@
-@import '../../pages/variables';
-@import '../../pages/mixins';
+@import "../../pages/variables";
+@import "../../pages/mixins";
 
 .footer {
   display: flex;
@@ -17,22 +17,22 @@
 }
 
 .available {
-  font-size: 0.8rem;
   color: $greyD3;
-  @include font('space mono');
+  font-size: 0.8rem;
+  @include font("space mono");
 }
 
 .status {
+  fill: $green52;
   margin-left: 5px;
   width: 8px;
-  fill: $green52;
 }
 
 .socials {
-  display: flex;
   align-items: center;
-  justify-content: flex-end;
+  display: flex;
   flex: 1;
+  justify-content: flex-end;
 }
 
 .social {
@@ -42,6 +42,6 @@
 
 .separator {
   color: $greyD3;
-  @include font('space mono');
   margin-bottom: 1px;
+  @include font("space mono");
 }

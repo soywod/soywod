@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
-import Link from '../components/Link'
-import SEO from '../components/SEO'
+import Link from "../components/Link"
+import SEO from "../components/SEO"
 
-const title = 'Clément DOUIN | Développeur web indépendant'
+const title = "Clément DOUIN | Développeur web indépendant"
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
 const tags =
-  'clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant'
+  "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
 
 function HomePage() {
   return (
@@ -26,7 +26,7 @@ function HomePage() {
       <p>
         Je travaille maintenant en tant qu'indépendant (micro-entreprise), et j'accompagne mes
         clients dans leur évolution numérique (développement de sites web et de modules
-        personnalisés, mise à niveau, formations). N'hésitez-pas à{' '}
+        personnalisés, mise à niveau, formations). N'hésitez-pas à{" "}
         <Link to="/job">me contacter</Link> pour plus d'informations !
       </p>
     </>

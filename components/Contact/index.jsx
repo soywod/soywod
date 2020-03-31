@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState} from "react"
 
-import IconArrowDown from './IconArrowDown'
+import IconArrowDown from "./IconArrowDown"
 
-import classes from './styles.scss'
+import classes from "./styles.scss"
 
 function Contact() {
   const [emailVisible, setEmailVisible] = useState(false)

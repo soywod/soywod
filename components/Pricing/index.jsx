@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-import classes from './styles.scss'
+import classes from "./styles.scss"
 
 function Pricing() {
   return (

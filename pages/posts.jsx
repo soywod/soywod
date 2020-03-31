@@ -1,13 +1,13 @@
-import React from 'react'
-import matter from 'gray-matter'
+import React from "react"
+import matter from "gray-matter"
 
-import Post from '../components/Post'
-import SEO from '../components/SEO'
+import Post from "../components/Post"
+import SEO from "../components/SEO"
 
 function PostPage({post}) {
   const {desc} = post
-  const title = 'Clément DOUIN | ' + post.title
-  const tags = post.tags.concat(['clément', 'douin', 'blog', 'soywod']).join(',')
+  const title = "Clément DOUIN | " + post.title
+  const tags = post.tags.concat(["clément", "douin", "blog", "soywod"]).join(",")
   const url = `/blog/${post.slug}`
 
   return (

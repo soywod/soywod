@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
-import Experience from '../components/Experience'
-import SEO from '../components/SEO'
+import Experience from "../components/Experience"
+import SEO from "../components/SEO"
 
-const title = 'Clément DOUIN | Expériences'
+const title = "Clément DOUIN | Expériences"
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
 const tags =
-  'clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant'
+  "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
 
 function ExperiencesPage({experiences}) {
   return (
@@ -21,7 +21,7 @@ function ExperiencesPage({experiences}) {
 }
 
 ExperiencesPage.getInitialProps = async () => {
-  const webpackCtx = await require.context('../experiences', true, /\.yml/)
+  const webpackCtx = await require.context("../experiences", true, /\.yml/)
   const keys = webpackCtx.keys()
   const experiences = keys.map(webpackCtx).sort((a, b) => b.begin - a.begin)
 

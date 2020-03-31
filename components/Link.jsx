@@ -1,15 +1,19 @@
-import React from 'react'
-import NextLink from 'next/link'
+import React from "react"
+import NextLink from "next/link"
 
-function Link({to = '/', className = '', children, ...customProps}) {
-  const targetProps = to.startsWith('/') ? {} : {target: '_blank', rel: 'noopener noreferrer'}
+function Link({className, to, children, ...props}) {
+  if (to.startsWith("/")) {
+    return (
+      <NextLink href={to} {...props}>
+        <a className={className}>{children}</a>
+      </NextLink>
+    )
+  }
 
   return (
-    <NextLink href={to} {...customProps}>
-      <a className={className} {...targetProps}>
-        {children}
-      </a>
-    </NextLink>
+    <a className={className} href={to} target="_blank" rel="noopener noreferrer" {...props}>
+      {children}
+    </a>
   )
 }
 

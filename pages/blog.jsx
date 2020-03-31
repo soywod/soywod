@@ -1,13 +1,13 @@
-import React from 'react'
-import matter from 'gray-matter'
-import {DateTime} from 'luxon'
+import React from "react"
+import matter from "gray-matter"
+import {DateTime} from "luxon"
 
-import SEO from '../components/SEO'
-import PostPreview from '../components/PostPreview'
+import SEO from "../components/SEO"
+import PostPreview from "../components/PostPreview"
 
-const title = 'Clément DOUIN | Blog'
-const desc = 'Blog tech sur mes réflexions et mes expériences.'
-const tags = 'clément,douin,soywod,blog,web,javascript,react,code,tech,dev'
+const title = "Clément DOUIN | Blog"
+const desc = "Blog tech sur mes réflexions et mes expériences."
+const tags = "clément,douin,soywod,blog,web,javascript,react,code,tech,dev"
 
 function BlogPage(props) {
   return (
@@ -23,7 +23,7 @@ function BlogPage(props) {
 }
 
 BlogPage.getInitialProps = async () => {
-  const webpackCtx = await require.context('../posts', true, /\.md$/)
+  const webpackCtx = await require.context("../posts", true, /\.md$/)
   const keys = webpackCtx.keys()
   const slugs = keys.map(path => path.slice(2, -3))
   const posts = keys

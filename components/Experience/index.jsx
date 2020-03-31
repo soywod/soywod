@@ -1,16 +1,16 @@
-import React from 'react'
-import {DateTime, Interval} from 'luxon'
+import React from "react"
+import {DateTime, Interval} from "luxon"
 
-import Link from '../Link'
+import Link from "../Link"
 
-import classes from './styles.scss'
+import classes from "./styles.scss"
 
 function Experience(props) {
-  const begin = DateTime.fromFormat(String(props.begin), 'yyLL', {locale: 'fr'})
-  const end = props.end ? DateTime.fromFormat(String(props.end), 'yyLL', {locale: 'fr'}) : null
+  const begin = DateTime.fromFormat(String(props.begin), "yyLL", {locale: "fr"})
+  const end = props.end ? DateTime.fromFormat(String(props.end), "yyLL", {locale: "fr"}) : null
   const interval = end
-    ? Interval.fromDateTimes(begin, end).toFormat('LLL yy')
-    : begin.toFormat('LLL yy') + ' – maintenant'
+    ? Interval.fromDateTimes(begin, end).toFormat("LLL yy")
+    : begin.toFormat("LLL yy") + " – maintenant"
 
   return (
     <>

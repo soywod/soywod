@@ -1,22 +1,22 @@
-@import '../../pages/variables';
-@import '../../pages/mixins';
+@import "../../pages/variables";
+@import "../../pages/mixins";
 
 .nav {
-  display: flex;
   align-items: center;
   border-bottom: 2px dashed $greyF0;
-  padding-bottom: 15px;
+  display: flex;
   margin-bottom: 30px;
+  padding-bottom: 15px;
 
-  &>:first-child {
+  & > :first-child {
     flex: 1;
   }
 }
 
 .avatarLink {
   @include no-hover;
-  display: flex;
   align-items: center;
+  display: flex;
 
   span {
     color: $grey3D;
@@ -29,13 +29,13 @@
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
   border-radius: 50%;
+  height: 48px;
+  width: 48px;
 
   @include media(sm) {
-    width: 32px;
     height: 32px;
+    width: 32px;
   }
 }
 

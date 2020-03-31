@@ -1,20 +1,22 @@
-@import './variables';
-@import './mixins';
+@import "./variables";
+@import "./mixins";
 
 @font-face {
-  font-family: 'Space Mono';
+  font-display: swap;
+  font-family: "Space Mono";
   font-style: normal;
   font-weight: 400;
-  src: local('Space Mono'), local('SpaceMono-Regular'), url(/static/fonts/SpaceMono-Regular.woff2), url(https://fonts.gstatic.com/s/spacemono/v4/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2');
-  font-display: swap;
+  src: local("Space Mono"), local("SpaceMono-Regular"), url(/fonts/SpaceMono-Regular.woff2),
+    url(https://fonts.gstatic.com/s/spacemono/v4/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'Quicksand';
+  font-display: swap;
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(/static/fonts/Quicksand-Regular.woff2), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
-  font-display: swap;
+  src: local("Quicksand Regular"), local("Quicksand-Regular"), url(/fonts/Quicksand-Regular.woff2),
+    url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format("woff2");
 }
 
 * {
@@ -23,16 +25,16 @@
 
 body {
   @include font(quicksand);
-  margin: 15px 0;
-  padding: 0;
   color: $grey3D;
+  margin: 15px 0;
   overflow-y: scroll;
+  padding: 0;
 }
 
 a {
+  border-bottom: 1px solid transparent;
   color: $blue18;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
   transition: border-bottom 250ms;
 
   &:hover {
@@ -61,12 +63,12 @@ li {
 }
 
 pre {
-  padding: 15px !important;
   border-radius: 0.2em;
+  padding: 15px !important;
 }
 
 code {
-  @include font('space mono');
+  @include font("space mono");
   font-size: 0.9em;
 }
 
@@ -75,7 +77,11 @@ code {
   padding: 0.1em 0.3em;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 30px 0;
 }
 
@@ -83,28 +89,29 @@ hr {
   border: 0;
   border-top: 2px dashed $greyF0;
   height: 0;
-  padding: 0;
   margin: 30px 0;
+  padding: 0;
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
   margin: 30px 0;
+  width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid $greyF0;
   padding: 5px 10px;
 }
 
 .container {
-  width: 100%;
-  max-width: 48em;
-  margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
+  margin-right: auto;
+  max-width: 48em;
   padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
 
   @include media(md) {
     max-width: 42em;

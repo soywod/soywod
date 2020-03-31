@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
-import Project from '../components/Project'
-import SEO from '../components/SEO'
+import Project from "../components/Project"
+import SEO from "../components/SEO"
 
-const title = 'Clément DOUIN | Projets'
+const title = "Clément DOUIN | Projets"
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
 const tags =
-  'clément,douin,soywod,développement,développeur,projets,web,javascript,typescript,react,startup'
+  "clément,douin,soywod,développement,développeur,projets,web,javascript,typescript,react,startup"
 
 function ProjectsPage({projects}) {
   return (
@@ -21,7 +21,7 @@ function ProjectsPage({projects}) {
 }
 
 ProjectsPage.getInitialProps = async () => {
-  const webpackCtx = await require.context('../projects', true, /\.yml/)
+  const webpackCtx = await require.context("../projects", true, /\.yml/)
   const keys = webpackCtx.keys()
   const names = keys.map(path => path.slice(2, -4))
   const projects = keys

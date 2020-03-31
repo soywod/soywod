@@ -1,6 +1,6 @@
 .env
 .next/
-out/
+build/
 node_modules/
 
 yarn-debug.log*
