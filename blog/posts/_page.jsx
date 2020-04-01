@@ -24,7 +24,7 @@ function PostPage({post}) {
         url={`/blog/${slug}`}
       />
       <h1 className={cs.title}>
-        <Link className={cs.back} prefetch to="/blog">
+        <Link className={cs.back} to="/blog">
           <IconBack />
         </Link>
         <span>{title}</span>
