@@ -1,0 +1,9 @@
+title: Unfog
+subtitle: CLI - Gestion tâches & temps
+link: "https://github.com/unfog-io/unfog-cli"
+desc: Outil multiplateforme de gestion de tâches et de temps en ligne de commande.
+source: "https://github.com/unfog-io/unfog-cli"
+date: 1911
+tags:
+  - cli
+  - haskell

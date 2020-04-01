@@ -1,5 +1,6 @@
 import React, {Fragment} from "react"
 import {DateTime} from "luxon"
+import isNull from "lodash/fp/isNull"
 
 import Link from "../_shared/link"
 import SEO from "../_shared/seo"
@@ -17,9 +18,9 @@ function ProjectsPage({projects}) {
       <SEO title={title} desc={desc} tags={tags} />
       <h1>Projets</h1>
       {projects.map((project, key) => {
-        const date = DateTime.fromFormat(String(project.date), "yyLL", {locale: "fr"}).toFormat(
-          "LLL yyyy",
-        )
+        const date = project.date
+          ? DateTime.fromFormat(String(project.date), "yyLL", {locale: "fr"}).toFormat("LLL yyyy")
+          : "En cours"
 
         return (
           <Fragment key={key}>
@@ -75,7 +76,11 @@ ProjectsPage.getInitialProps = async () => {
       ...project,
       image: require(`../projects/${names[index]}.jpeg`),
     }))
-    .sort((a, b) => b.date - a.date)
+    .sort((a, b) => {
+      if (isNull(a.date)) return -1
+      if (isNull(b.date)) return 1
+      return b.date - a.date
+    })
 
   return {projects}
 }

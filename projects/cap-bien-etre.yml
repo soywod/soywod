@@ -1,0 +1,11 @@
+title: Cap Bien-Être
+subtitle: Web app - Formation
+link: "https://cap-bien-etre.soywod.me"
+desc: Formation distancielle sur le bien-être pour la MSA, composée de 5 modules. Chaque module comprend des pages regroupées dans des chapitres. Chaque fin de module se termine par un mini QCM. L'authentification est gérée par Firebase.
+source: "https://github.com/soywod/cap-bien-etre"
+date: null
+tags:
+  - react
+  - typescript
+  - sass
+  - firebase

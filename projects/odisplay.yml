@@ -1,0 +1,11 @@
+title: Odisplay
+subtitle: Web app - Diffusion de contenu
+link: null
+desc: Développement d'un outil de création et de diffusion de contenu sur des écrans physiques.
+source: null
+date: null
+tags:
+  - react
+  - typescript
+  - sass
+  - firebase
