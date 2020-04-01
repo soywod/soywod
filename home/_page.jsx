@@ -1,4 +1,5 @@
 import React from "react"
+import {DateTime} from "luxon"
 
 import Link from "../_shared/link"
 import SEO from "../_shared/seo"
@@ -9,14 +10,18 @@ const tags =
   "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
 
 function HomePage() {
+  const yearsOld = Math.trunc(
+    DateTime.local().diff(DateTime.fromISO("1990-02-02", {locale: "fr"}), "years").years,
+  )
+
   return (
     <>
       <SEO title={title} desc={desc} tags={tags} />
       <h1>Hello, world!</h1>
       <hr />
       <p>
-        Je m'appelle <code>Clément DOUIN</code>, j'ai 29 ans et je suis développeur web indépendant
-        avec 4 ans d'expérience en JavaScript.
+        Je m'appelle <code>Clément DOUIN</code>, j'ai {yearsOld} ans et je suis développeur web
+        indépendant avec 4 ans d'expérience en JavaScript.
       </p>
       <p>
         Je développe des applications depuis plus de 10 ans. J'ai commencé par du C, du Java et du
