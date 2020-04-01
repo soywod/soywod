@@ -1,7 +1,7 @@
 import React, {Fragment} from "react"
 import Document, {Html, Head, Main, NextScript} from "next/document"
 
-import avatar from "../images/clement-douin.jpeg?size=1024"
+import avatar from "../_shared/avatar.jpeg?size=1024"
 
 // From https://github.com/zeit/next.js/blob/b4e4bcda9b6c3c3f43bd1dadef061d3b6ee0cc4d/packages/next/pages/_document.tsx#L132-L154
 class MyHead extends Head {

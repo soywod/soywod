@@ -3,7 +3,7 @@ const fs = require("fs")
 const sitemap = require("sitemap")
 require("dotenv").config()
 
-const buildPaths = require("./path")
+const getRoutes = require("./routes")
 
 function buildSitemapFile(paths) {
   const urls = Object.keys(paths).map(path => ({
@@ -23,6 +23,4 @@ function buildSitemapFile(paths) {
   fs.writeFileSync(path.resolve(__dirname, "../build/sitemap.xml"), xml.toString())
 }
 
-buildPaths().then(paths => {
-  buildSitemapFile(paths)
-})
+getRoutes().then(buildSitemapFile)

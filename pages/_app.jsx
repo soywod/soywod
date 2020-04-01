@@ -2,10 +2,10 @@ import React from "react"
 import App from "next/app"
 import ReactGA from "react-ga"
 
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
+import Navbar from "../_shared/navbar"
+import Footer from "../_shared/footer"
 
-import classes from "./_styles.scss"
+import cs from "./_app.scss"
 
 class MyApp extends App {
   static async getInitialProps({Component, ctx}) {
@@ -27,7 +27,7 @@ class MyApp extends App {
     const {Component, pageProps} = this.props
 
     return (
-      <div className={classes.container}>
+      <div className={cs.container}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />

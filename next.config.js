@@ -8,7 +8,7 @@ const withPlugins = require("next-compose-plugins")
 const withOptimizedImages = require("next-optimized-images")
 const withOffline = require("next-offline")
 
-const exportPathMap = require("./utils/path")
+const exportPathMap = require("./scripts/routes")
 
 const images = [withOptimizedImages]
 const sass = [withSass, {cssModules: true}]

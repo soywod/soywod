@@ -1,8 +1,8 @@
 import React, {Fragment} from "react"
 
-import Link from "../Link"
+import Link from "./link"
 
-import classes from "./styles.scss"
+import classes from "./footer.scss"
 
 const medias = [
   {name: "LinkedIn", href: "https://www.linkedin.com/in/soywod"},
@@ -17,7 +17,7 @@ function Footer() {
       <hr />
       <footer className={classes.footer}>
         <div>
-          <Link to="/job" className={classes.recruit}>
+          <Link to="/contact" className={classes.recruit}>
             <span>Recrutez-moi !</span>
             <span className={classes.available}>
               Actuellement disponible
