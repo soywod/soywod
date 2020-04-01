@@ -1,8 +1,8 @@
 title: Hélène Gidel Soto
 subtitle: Site web - Gallerie d'art
-link: null
+link: "https://helene-gidel-soto.com"
 desc: Gallerie d'art en ligne développé pour une amie, afin de l'aider à gérer ses toiles.
-source: null
+source: "https://github.com/soywod/helene"
 date: 1612
 tags:
   - php

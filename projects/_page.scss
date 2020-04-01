@@ -52,10 +52,10 @@
   border-radius: 4px;
   transition: border 250ms;
   width: 150px;
+}
 
-  &:hover {
-    border: 1px solid $blue18;
-  }
+a .image:hover {
+  border: 1px solid $blue18;
 }
 
 .imageLink {
