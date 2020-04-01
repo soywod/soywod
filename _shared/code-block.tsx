@@ -1,5 +1,5 @@
-import React from "react"
-import SyntaxHighlighter from "react-syntax-highlighter"
+import React, {FC} from "react"
+import SyntaxHighlighter, {SyntaxHighlighterProps} from "react-syntax-highlighter"
 
 const style = {
   hljs: {
@@ -238,12 +238,10 @@ const style = {
   },
 }
 
-function CodeBlock(props) {
-  return (
-    <SyntaxHighlighter showLineNumbers language={props.language} style={style}>
-      {props.value}
-    </SyntaxHighlighter>
-  )
-}
+const CodeBlock: FC<SyntaxHighlighterProps> = props => (
+  <SyntaxHighlighter showLineNumbers language={props.language} style={style}>
+    {props.value}
+  </SyntaxHighlighter>
+)
 
 export default CodeBlock

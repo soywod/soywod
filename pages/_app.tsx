@@ -7,7 +7,7 @@ import Footer from "../_shared/footer"
 
 import cs from "./_app.scss"
 
-class MyApp extends App {
+class CustomApp extends App {
   static async getInitialProps({Component, ctx}) {
     let pageProps = {}
 
@@ -36,4 +36,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp
+export default CustomApp

@@ -1,10 +1,10 @@
 import React, {Fragment} from "react"
-import Document, {Html, Head, Main, NextScript} from "next/document"
+import Document, {Html, Head, Main, NextScript, DocumentContext} from "next/document"
 
-import avatar from "../_shared/avatar.jpeg?size=1024"
+import {src as avatar} from "../_shared/avatar.jpeg?size=1024"
 
 // From https://github.com/zeit/next.js/blob/b4e4bcda9b6c3c3f43bd1dadef061d3b6ee0cc4d/packages/next/pages/_document.tsx#L132-L154
-class MyHead extends Head {
+class CustomHead extends Head {
   getCssLinks() {
     const {assetPrefix, files} = this.context._documentProps
 
@@ -24,13 +24,13 @@ class MyHead extends Head {
             rel="preload"
             as="style"
             href={`${assetPrefix}/_next/${file}`}
-            crossOrigin={this.props.crossOrigin || process.crossOrigin}
+            crossOrigin={this.props.crossOrigin}
           />
           <link
             nonce={this.props.nonce}
             rel="stylesheet"
             href={`${assetPrefix}/_next/${file}`}
-            crossOrigin={this.props.crossOrigin || process.crossOrigin}
+            crossOrigin={this.props.crossOrigin}
           />
         </Fragment>
       )
@@ -38,8 +38,8 @@ class MyHead extends Head {
   }
 }
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+class CustomDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
     return {...initialProps}
   }
@@ -47,7 +47,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="fr">
-        <MyHead>
+        <CustomHead>
           <link rel="preload" href="/fonts/Quicksand-Regular.woff2" as="font" crossOrigin="true" />
           <link rel="preload" href="/fonts/SpaceMono-Regular.woff2" as="font" crossOrigin="true" />
           <link rel="preconnect" href="https://links.services.disqus.com" />
@@ -58,8 +58,8 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#1976d2" />
           <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
           <meta name="theme-color" content="#1976d2" />
-          <meta property="og:image" content={avatar.src} />
-          <meta name="twitter:image" content={avatar.src} />
+          <meta property="og:image" content={avatar} />
+          <meta name="twitter:image" content={avatar} />
           <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -79,7 +79,7 @@ class MyDocument extends Document {
               color: rgb(76, 86, 106);
             }`}
           </style>
-        </MyHead>
+        </CustomHead>
         <body>
           <Main />
           <NextScript />
@@ -90,4 +90,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument
+export default CustomDocument

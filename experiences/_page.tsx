@@ -1,4 +1,5 @@
 import React, {Fragment} from "react"
+import {NextPage} from "next"
 import {DateTime, Interval} from "luxon"
 
 import Link from "../_shared/link"
@@ -11,7 +12,21 @@ const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScri
 const tags =
   "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
 
-function ExperiencesPage({experiences}) {
+type Experience = {
+  title: string
+  company: string
+  desc: string
+  tags: string[]
+  begin: DateTime
+  end: DateTime
+  link: string | null
+}
+
+type ExperiencesPageProps = {
+  experiences: Experience[]
+}
+
+const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
   return (
     <>
       <SEO title={title} desc={desc} tags={tags} />
@@ -56,10 +71,13 @@ function ExperiencesPage({experiences}) {
   )
 }
 
-ExperiencesPage.getInitialProps = async () => {
-  const webpackCtx = await require.context("../experiences", true, /\.yml/)
+ExperiencesPage.getInitialProps = () => {
+  const webpackCtx = require.context("../experiences", true, /\.yml/)
   const keys = webpackCtx.keys()
-  const experiences = keys.map(webpackCtx).sort((a, b) => b.begin - a.begin)
+  const experiences = keys
+    .map(webpackCtx)
+    .map((experience: Experience) => experience)
+    .sort((a, b) => (b.begin as any) - (a.begin as any))
 
   return {experiences}
 }

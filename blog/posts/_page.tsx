@@ -1,4 +1,5 @@
 import React from "react"
+import {NextPage} from "next"
 import ReactMarkdown from "react-markdown"
 import {DiscussionEmbed} from "disqus-react"
 import {DateTime} from "luxon"
@@ -11,7 +12,20 @@ import CodeBlock from "../../_shared/code-block"
 
 import cs from "./_page.scss"
 
-function PostPage({post}) {
+export type Post = {
+  title: string
+  slug: string
+  desc: string
+  tags: string[]
+  content: string
+  date: string
+}
+
+type PostPageProps = {
+  post: Post
+}
+
+const PostPage: NextPage<PostPageProps> = ({post}) => {
   const {date, title, desc, tags, content, slug} = post
   const disqusConfig = {url: process.env.HOSTNAME + "/blog/" + slug, identifier: slug, title}
 
@@ -49,9 +63,10 @@ function PostPage({post}) {
 
 PostPage.getInitialProps = async ctx => {
   const {slug} = ctx.query
-  const module = await import(`../posts/${slug}.md`)
+  const module = await import(`./${slug}.md`)
   const {content, data} = matter(module.default)
-  const post = {...data, content, slug}
+  const {title, desc, tags, date} = data
+  const post: Post = {title, slug: String(slug), desc, tags, date, content}
 
   return {post}
 }

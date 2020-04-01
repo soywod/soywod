@@ -1,4 +1,4 @@
-import React from "react"
+import React, {FC} from "react"
 import {DateTime} from "luxon"
 
 import Link from "../_shared/link"
@@ -9,7 +9,7 @@ const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScri
 const tags =
   "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
 
-function HomePage() {
+const HomePage: FC = () => {
   const now = DateTime.local()
   const yearsOld = Math.trunc(
     now.diff(DateTime.fromISO("1990-02-02", {locale: "fr"}), "years").years,

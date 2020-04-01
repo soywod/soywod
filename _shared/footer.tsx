@@ -1,4 +1,4 @@
-import React, {Fragment} from "react"
+import React, {FC, Fragment} from "react"
 
 import Link from "./link"
 
@@ -11,7 +11,7 @@ const medias = [
   {name: "Twitter", href: "https://twitter.com/soywod"},
 ]
 
-function Footer() {
+const Footer: FC = () => {
   return (
     <>
       <hr />

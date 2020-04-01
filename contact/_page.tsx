@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {FC, useState} from "react"
 
 import SEO from "../_shared/seo"
 import IconDown from "../_shared/icon-down"
@@ -11,17 +11,17 @@ const desc =
 const tags =
   "clément,douin,soywod,développement,développeur,web,disponible,paris,freelance,indépendant,tarif"
 
-function ContactPage() {
+const ContactPage: FC = () => {
   const [isEmailVisible, setEmailVisible] = useState(false)
   const [isPhoneVisible, setPhoneVisible] = useState(false)
 
-  function showEmail(event) {
-    event.preventDefault()
+  function showEmail(evt: React.MouseEvent<HTMLAnchorElement>) {
+    evt.preventDefault()
     setEmailVisible(true)
   }
 
-  function showPhone(event) {
-    event.preventDefault()
+  function showPhone(evt: React.MouseEvent<HTMLAnchorElement>) {
+    evt.preventDefault()
     setPhoneVisible(true)
   }
 
