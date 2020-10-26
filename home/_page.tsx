@@ -34,7 +34,7 @@ const HomePage: FC = () => {
         Je développe des applications depuis plus de {yearsDevExp} ans. J'ai commencé par du C, du
         Java et du Visual Basic. Puis, je me suis tourné vers les technologies du web (PHP,
         JavaScript, NodeJS, jQuery), pour enfin me spécialiser dans le développement front-end avec
-        React.
+        React. Je découvre également la programmation fonctionnelle avec Haskell et Elm.
       </p>
       <p>
         Je travaille maintenant en tant qu'indépendant (micro-entrepreneur), et j'accompagne mes

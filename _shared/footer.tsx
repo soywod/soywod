@@ -6,6 +6,7 @@ import classes from "./footer.scss"
 
 const medias = [
   {name: "LinkedIn", href: "https://www.linkedin.com/in/soywod"},
+  {name: "Malt", href: "https://www.malt.fr/profile/soywod"},
   {name: "GitHub", href: "https://github.com/soywod"},
   {name: "Stack Overflow", href: "https://stackoverflow.com/users/6213048/soywod"},
   {name: "Twitter", href: "https://twitter.com/soywod"},
