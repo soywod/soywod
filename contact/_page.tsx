@@ -39,8 +39,8 @@ const ContactPage: FC = () => {
         </thead>
         <tbody>
           <tr>
-            <td>80 €</td>
-            <td>600 €</td>
+            <td>100 €</td>
+            <td>700 €</td>
             <td>Sur devis</td>
           </tr>
         </tbody>
