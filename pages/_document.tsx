@@ -1,9 +1,13 @@
-import NextDocument, {Html, Head, Main, NextScript, DocumentContext} from "next/document"
+import NextDocument, {Html, Head, Main, NextScript, DocumentContext} from "next/document";
+import React from "react";
+import {I18nextProvider} from "react-i18next";
+
+import i18n from "../_shared/i18n";
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await NextDocument.getInitialProps(ctx)
-    return initialProps
+    const initialProps = await NextDocument.getInitialProps(ctx);
+    return initialProps;
   }
 
   render() {
@@ -12,10 +16,7 @@ class Document extends NextDocument {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap"
-          />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap" />
           <link rel="preload" href="/fonts/Quicksand-Regular.woff2" as="font" crossOrigin="true" />
           <link rel="preload" href="/fonts/SpaceMono-Regular.woff2" as="font" crossOrigin="true" />
 
@@ -42,13 +43,15 @@ class Document extends NextDocument {
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
-          <Main />
+          <I18nextProvider i18n={i18n}>
+            <Main />
+          </I18nextProvider>
           <NextScript />
           <noscript>You need to enable JavaScript to run this blog.</noscript>
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default Document
+export default Document;

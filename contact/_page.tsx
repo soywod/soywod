@@ -1,27 +1,26 @@
-import {FC, useState} from "react"
+import {FC, useState} from "react";
 
-import SEO from "../_shared/seo"
-import IconDown from "../_shared/icon-down"
-import cs from "./_page.module.scss"
+import SEO from "../_shared/seo";
+import IconDown from "../_shared/icon-down";
+import cs from "./_page.module.scss";
+import {GetStaticProps} from "next";
 
-const title = "Clément DOUIN | Me contacter"
-const desc =
-  "Avec 5 ans d'expérience en JavaScript (React), je vous accompagne dans votre évolution numérique."
-const tags =
-  "clément,douin,soywod,développement,développeur,web,disponible,paris,freelance,indépendant,tarif"
+const title = "Clément DOUIN | Me contacter";
+const desc = "Avec 5 ans d'expérience en JavaScript (React), je vous accompagne dans votre évolution numérique.";
+const tags = "clément,douin,soywod,développement,développeur,web,disponible,paris,freelance,indépendant,tarif";
 
 const ContactPage: FC = () => {
-  const [isEmailVisible, setEmailVisible] = useState(false)
-  const [isPhoneVisible, setPhoneVisible] = useState(false)
+  const [isEmailVisible, setEmailVisible] = useState(false);
+  const [isPhoneVisible, setPhoneVisible] = useState(false);
 
   function showEmail(evt: React.MouseEvent<HTMLAnchorElement>) {
-    evt.preventDefault()
-    setEmailVisible(true)
+    evt.preventDefault();
+    setEmailVisible(true);
   }
 
   function showPhone(evt: React.MouseEvent<HTMLAnchorElement>) {
-    evt.preventDefault()
-    setPhoneVisible(true)
+    evt.preventDefault();
+    setPhoneVisible(true);
   }
 
   return (
@@ -65,7 +64,12 @@ const ContactPage: FC = () => {
         <IconDown className={cs.icon} />
       </p>
     </>
-  )
-}
+  );
+};
 
-export default ContactPage
+export const getStaticProps: GetStaticProps<any> = async ctx => {
+  console.log(ctx);
+  return {props: {lang: ctx.params.lang}};
+};
+
+export default ContactPage;

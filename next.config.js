@@ -4,11 +4,11 @@ module.exports = {
   images: {
     loader: "custom",
   },
-  webpack: (config) => {
+  webpack: config => {
     config.module.rules.push({
       test: /\.ya?ml$/,
       use: "js-yaml-loader",
-    })
-    return config
+    });
+    return config;
   },
-}
+};

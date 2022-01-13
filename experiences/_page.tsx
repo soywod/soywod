@@ -1,30 +1,29 @@
-import React, {Fragment} from "react"
-import {NextPage} from "next"
-import {DateTime, Interval} from "luxon"
+import {Fragment} from "react";
+import {GetStaticProps, NextPage} from "next";
+import {DateTime, Interval} from "luxon";
 
-import Link from "../_shared/link"
-import SEO from "../_shared/seo"
+import Link from "../_shared/link";
+import SEO from "../_shared/seo";
 
-import classes from "./_page.module.scss"
+import classes from "./_page.module.scss";
 
-const title = "Clément DOUIN | Expériences"
-const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
-const tags =
-  "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
+const title = "Clément DOUIN | Expériences";
+const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React).";
+const tags = "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant";
 
 type Experience = {
-  title: string
-  company: string
-  desc: string
-  tags: string[]
-  begin: DateTime
-  end: DateTime
-  link: string | null
-}
+  title: string;
+  company: string;
+  desc: string;
+  tags: string[];
+  begin: DateTime;
+  end: DateTime;
+  link: string | null;
+};
 
 type ExperiencesPageProps = {
-  experiences: Experience[]
-}
+  experiences: Experience[];
+};
 
 const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
   return (
@@ -32,13 +31,11 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
       <SEO title={title} desc={desc} tags={tags} />
       <h1>Expériences</h1>
       {experiences.map((props, key) => {
-        const begin = DateTime.fromFormat(String(props.begin), "yyLL", {locale: "fr"})
-        const end = props.end
-          ? DateTime.fromFormat(String(props.end), "yyLL", {locale: "fr"})
-          : null
+        const begin = DateTime.fromFormat(String(props.begin), "yyLL", {locale: "fr"});
+        const end = props.end ? DateTime.fromFormat(String(props.end), "yyLL", {locale: "fr"}) : null;
         const interval = end
           ? Interval.fromDateTimes(begin, end).toFormat("LLL yy")
-          : begin.toFormat("LLL yy") + " – maintenant"
+          : begin.toFormat("LLL yy") + " – maintenant";
 
         return (
           <Fragment key={key}>
@@ -56,7 +53,7 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
             )}
 
             <div className={classes.tags}>
-              {props.tags.map((tag) => (
+              {props.tags.map(tag => (
                 <span key={tag} className={classes.tag}>
                   {tag}
                 </span>
@@ -65,21 +62,21 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
 
             <p>{props.desc}</p>
           </Fragment>
-        )
+        );
       })}
     </>
-  )
-}
+  );
+};
 
-ExperiencesPage.getInitialProps = () => {
-  const webpackCtx = require.context("../experiences", true, /\.yml/)
-  const keys = webpackCtx.keys()
+export const getStaticProps: GetStaticProps = () => {
+  const webpackCtx = require.context("../experiences", true, /\.yml/);
+  const keys = webpackCtx.keys();
   const experiences = keys
     .map(webpackCtx)
     .map((experience: Experience) => experience)
-    .sort((a, b) => (b.begin as any) - (a.begin as any))
+    .sort((a, b) => (b.begin as any) - (a.begin as any));
 
-  return {experiences}
-}
+  return {props: {experiences}};
+};
 
-export default ExperiencesPage
+export default ExperiencesPage;

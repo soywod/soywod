@@ -1,5 +1,5 @@
 import {Fragment} from "react";
-import {NextPage} from "next";
+import {GetStaticProps, NextPage} from "next";
 import {DateTime} from "luxon";
 
 import Link from "../_shared/link";
@@ -101,7 +101,7 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({projects}) => {
   );
 };
 
-ProjectsPage.getInitialProps = () => {
+export const getStaticProps: GetStaticProps = () => {
   const webpackCtx = require.context("../projects", true, /\.yml/);
   const keys = webpackCtx.keys();
   const names = keys.map(path => path.slice(2, -4));
@@ -109,7 +109,7 @@ ProjectsPage.getInitialProps = () => {
     .map(webpackCtx)
     .map((project: Project, idx) => ({
       ...project,
-      image: require(`../projects/${names[idx]}.jpeg`),
+      image: require(`../projects/${names[idx]}.jpeg`).default.src,
     }))
     .sort((a, b) => {
       if (a.date === null) return -1;
@@ -117,7 +117,7 @@ ProjectsPage.getInitialProps = () => {
       return (b.date as any) - (a.date as any);
     });
 
-  return {projects};
+  return {props: {projects}};
 };
 
 export default ProjectsPage;
