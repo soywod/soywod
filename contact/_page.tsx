@@ -1,9 +1,8 @@
-import React, {FC, useState} from "react"
+import {FC, useState} from "react"
 
 import SEO from "../_shared/seo"
 import IconDown from "../_shared/icon-down"
-
-import cs from "./_page.scss"
+import cs from "./_page.module.scss"
 
 const title = "Clément DOUIN | Me contacter"
 const desc =

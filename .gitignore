@@ -1,7 +1,9 @@
-.env
-.next/
 build/
 node_modules/
+.direnv/
+.log/
+.next/
+.env
 
 yarn-debug.log*
 yarn-error.log*

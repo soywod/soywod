@@ -1,65 +1,31 @@
-import React, {Fragment} from "react"
-import Document, {Html, Head, Main, NextScript, DocumentContext} from "next/document"
+import NextDocument, {Html, Head, Main, NextScript, DocumentContext} from "next/document"
 
-import {src as avatar} from "../_shared/avatar.jpeg?size=1024"
-
-// From https://github.com/zeit/next.js/blob/b4e4bcda9b6c3c3f43bd1dadef061d3b6ee0cc4d/packages/next/pages/_document.tsx#L132-L154
-class CustomHead extends Head {
-  getCssLinks() {
-    const {assetPrefix, files} = this.context._documentProps
-
-    if (!files || files.length === 0) {
-      return null
-    }
-
-    return files.map(file => {
-      if (!/\.css$/.exec(file)) {
-        return null
-      }
-
-      return (
-        <Fragment key={file}>
-          <link
-            nonce={this.props.nonce}
-            rel="preload"
-            as="style"
-            href={`${assetPrefix}/_next/${file}`}
-            crossOrigin={this.props.crossOrigin}
-          />
-          <link
-            nonce={this.props.nonce}
-            rel="stylesheet"
-            href={`${assetPrefix}/_next/${file}`}
-            crossOrigin={this.props.crossOrigin}
-          />
-        </Fragment>
-      )
-    })
-  }
-}
-
-class CustomDocument extends Document {
+class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
-    return {...initialProps}
+    const initialProps = await NextDocument.getInitialProps(ctx)
+    return initialProps
   }
 
   render() {
     return (
-      <Html lang="fr">
-        <CustomHead>
+      <Html>
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap"
+          />
           <link rel="preload" href="/fonts/Quicksand-Regular.woff2" as="font" crossOrigin="true" />
           <link rel="preload" href="/fonts/SpaceMono-Regular.woff2" as="font" crossOrigin="true" />
-          <link rel="preconnect" href="https://links.services.disqus.com" />
 
-          <meta charSet="UTF-8" />
+          <meta charSet="utf-8" />
           <meta name="author" content="Clément DOUIN" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="msapplication-TileColor" content="#1976d2" />
           <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
           <meta name="theme-color" content="#1976d2" />
-          <meta property="og:image" content={avatar} />
-          <meta name="twitter:image" content={avatar} />
+          <meta property="og:image" content="/avatar.jpeg" />
+          <meta name="twitter:image" content="/avatar.jpeg" />
           <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -74,12 +40,7 @@ class CustomDocument extends Document {
           <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="manifest" href="/manifest.json" />
-          <style>
-            {`.react-syntax-highlighter-line-number {
-              color: rgb(76, 86, 106);
-            }`}
-          </style>
-        </CustomHead>
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -90,4 +51,4 @@ class CustomDocument extends Document {
   }
 }
 
-export default CustomDocument
+export default Document

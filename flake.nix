@@ -7,7 +7,7 @@
     flake-compat = {
       url = "github:edolstra/flake-compat";
       flake = false;
-      };
+    };
   };
 
   outputs = { self, nixpkgs, utils, ... }:
@@ -24,9 +24,9 @@
             inherit name;
             src = ./.;
             extraBuildInputs = with pkgs; [
-                              rnix-lsp
-                nixpkgs-fmt
-
+              ripgrep
+              rnix-lsp
+              nixpkgs-fmt
               nodePackages.prettier
               nodePackages.typescript
               nodePackages.typescript-language-server

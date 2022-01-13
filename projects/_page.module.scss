@@ -39,8 +39,10 @@
 .imageContainer {
   align-items: center;
   display: flex;
-  justify-content: center;
-  margin-right: 15px;
+  justify-content: flex-start;
+  border-radius: $border-radius;
+  align-self: flex-start;
+  margin-right: 1rem;
 
   @include media(sm) {
     display: none;
@@ -49,9 +51,10 @@
 
 .image {
   border: 1px solid $greyF0;
-  border-radius: 4px;
   transition: border 250ms;
-  width: 150px;
+  border-radius: $border-radius;
+  width: 12rem;
+  display: flex;
 }
 
 a .image:hover {
@@ -75,9 +78,21 @@ a .image:hover {
 .tag {
   background: $greyF0;
   border: 1px solid $greyD3;
-  border-radius: 0.2rem;
+  border-radius: $border-radius;
   font-size: 0.8rem;
   font-weight: 400;
   margin: 0.3rem 0.3rem 0 0;
   padding: 0.1rem 0.3rem;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-column-gap: 0.25rem;
+  justify-items: center;
 }

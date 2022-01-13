@@ -39,14 +39,6 @@ a {
   &:hover {
     border-bottom: 1px solid $blue18;
   }
-
-  svg {
-    margin-right: 4px;
-
-    > path {
-      fill: $blue18;
-    }
-  }
 }
 
 p {
@@ -102,17 +94,4 @@ td,
 th {
   border: 1px solid $greyF0;
   padding: 5px 10px;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 48em;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-
-  @include media(md) {
-    max-width: 42em;
-  }
 }

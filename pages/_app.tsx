@@ -1,39 +1,26 @@
-import React from "react"
-import App from "next/app"
-import ReactGA from "react-ga"
+import {FC} from "react"
+import Head from "next/head"
+import {AppProps} from "next/app"
 
 import Navbar from "../_shared/navbar"
 import Footer from "../_shared/footer"
 
-import cs from "./_app.scss"
+import "./_app.scss"
+import cs from "./_app.module.scss"
 
-class CustomApp extends App {
-  static async getInitialProps({Component, ctx}) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return {pageProps}
-  }
-
-  componentDidMount() {
-    ReactGA.initialize(process.env.GOOGLE_ANALYTICS_ID)
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }
-
-  render() {
-    const {Component, pageProps} = this.props
-
-    return (
+const App: FC<AppProps> = ({Component, pageProps}) => {
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <div className={cs.container}>
         <Navbar />
         <Component {...pageProps} />
         <Footer />
       </div>
-    )
-  }
+    </>
+  )
 }
 
-export default CustomApp
+export default App

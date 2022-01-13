@@ -5,7 +5,7 @@ import {DateTime, Interval} from "luxon"
 import Link from "../_shared/link"
 import SEO from "../_shared/seo"
 
-import classes from "./_page.scss"
+import classes from "./_page.module.scss"
 
 const title = "Clément DOUIN | Expériences"
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
@@ -56,7 +56,7 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
             )}
 
             <div className={classes.tags}>
-              {props.tags.map(tag => (
+              {props.tags.map((tag) => (
                 <span key={tag} className={classes.tag}>
                   {tag}
                 </span>

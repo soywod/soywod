@@ -4,7 +4,7 @@ import {DateTime} from "luxon"
 import Link from "../_shared/link"
 import SEO from "../_shared/seo"
 
-const title = "Clément DOUIN | Développeur web indépendant"
+const title = "Clément DOUIN | Développeur Web Indépendant"
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React)."
 const tags =
   "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant"
@@ -27,20 +27,20 @@ const HomePage: FC = () => {
       <h1>Hello, world!</h1>
       <hr />
       <p>
-        Je m'appelle <code>Clément DOUIN</code>, j'ai {yearsOld} ans et je suis développeur web
-        indépendant avec {yearsJSExp} ans d'expérience en JavaScript.
+        Je m&rsquo;appelle <code>Clément DOUIN</code>, j’ai {yearsOld} ans et je suis développeur
+        web indépendant avec {yearsJSExp} ans d’expérience en JavaScript.
       </p>
       <p>
-        Je développe des applications depuis plus de {yearsDevExp} ans. J'ai commencé par du C, du
+        Je développe des applications depuis plus de {yearsDevExp} ans. J’ai commencé par du C, du
         Java et du Visual Basic. Puis, je me suis tourné vers les technologies du web (PHP,
         JavaScript, NodeJS, jQuery), pour enfin me spécialiser dans le développement front-end avec
         React. Je découvre également la programmation fonctionnelle avec Haskell et Elm.
       </p>
       <p>
-        Je travaille maintenant en tant qu'indépendant (micro-entrepreneur), et j'accompagne mes
+        Je travaille maintenant en tant qu’indépendant (micro-entrepreneur), et j’accompagne mes
         clients dans leur évolution numérique (développement de sites web et de modules
-        personnalisés, mise à niveau, formations). N'hésitez-pas à{" "}
-        <Link to="/contact">me contacter</Link> pour plus d'informations !
+        personnalisés, mise à niveau, formations). N’hésitez-pas à{" "}
+        <Link to="/contact">me contacter</Link> pour plus d’informations !
       </p>
     </>
   )

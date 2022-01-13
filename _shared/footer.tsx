@@ -2,7 +2,7 @@ import React, {FC, Fragment} from "react"
 
 import Link from "./link"
 
-import classes from "./footer.scss"
+import classes from "./footer.module.scss"
 
 const medias = [
   {name: "LinkedIn", href: "https://www.linkedin.com/in/soywod"},
