@@ -1,0 +1,19 @@
+[build]
+command = "yarn build"
+publish = "build"
+
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
+
+[[redirects]]
+from = "/"
+to = "/fr/"
+status = 302
+force = false
+conditions = {Language = ["fr"]}
+
+[[redirects]]
+from = "/"
+to = "/en/"
+status = 302
+force = false
