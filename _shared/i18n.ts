@@ -1,16 +1,24 @@
 import {GetStaticPaths} from "next";
 import i18n from "i18next";
-import {initReactI18next, useSSR, useTranslation} from "react-i18next";
+import {initReactI18next, Namespace, useSSR, useTranslation} from "react-i18next";
 
 import homeEn from "../home/_page-en.json";
 import homeFr from "../home/_page-fr.json";
+import experienceEn from "../experiences/_page-en.json";
+import experienceFr from "../experiences/_page-fr.json";
+import projectEn from "../projects/_page-en.json";
+import projectFr from "../projects/_page-fr.json";
 
 export const resources = {
   en: {
     home: homeEn,
+    experience: experienceEn,
+    project: projectEn,
   },
   fr: {
     home: homeFr,
+    experience: experienceFr,
+    project: projectFr,
   },
 };
 
@@ -25,7 +33,7 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export function useI18n(lang: Lang, ns: string) {
+export function useI18n(lang: Lang, ns: Namespace) {
   useSSR(resources, lang);
   return useTranslation(ns, {useSuspense: false});
 }

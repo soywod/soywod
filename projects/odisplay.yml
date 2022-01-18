@@ -1,9 +1,16 @@
 title: Odisplay
-subtitle: Web app - Diffusion de contenu
+subtitle-en: Web app - Content broadcasting
+subtitle-fr: Appli web - Diffusion de contenu
+desc-en: |
+  Development of a solution to create, manage and stream content in real time to physical devices. The project is composed of a realtime database, a content manager (back office) and streamers apps (smartphones, tablets, screens). The source code is not available (private licence).
+  <strong>[Update] :</strong> The project has been abandoned along the way due to the COVID-19 health crisis.
+desc-fr: |
+  Développement d’une solution de création et de diffusion de contenu sur écrans physiques. Le projet est composé d’une base de données temps réel, d’un panel d’administration pour gérer/positionner/planifier ses contenus et de clients pour la diffusion de ces contenus (téléphones, tablettes, écrans). Le code source n’est pas accessible (license privée).
+  <strong>[Màj] :</strong> Le projet a été abandonné en cours de route dû à la crise sanitaire de la COVID-19.
 link: null
-desc: Outil de création et de diffusion de contenu sur des écrans physiques.
 source: null
-date: null
+begin: "2019-12-03"
+end: "2020-01-16"
 tags:
   - react
   - typescript

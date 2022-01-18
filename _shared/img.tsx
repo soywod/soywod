@@ -8,7 +8,7 @@ const loader: ImageLoader = ({src}) => {
 export type ImgProps = Omit<NextImageProps, "loader">;
 
 export const Img: FC<ImgProps> = props => {
-  return <NextImg loader={loader} unoptimized {...props} />;
+  return <NextImg loader={loader} layout="fill" objectFit="cover" unoptimized {...props} />;
 };
 
 export default Img;

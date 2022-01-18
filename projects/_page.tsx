@@ -1,11 +1,13 @@
 import {Fragment} from "react";
 import {GetStaticProps, NextPage} from "next";
-import {DateTime} from "luxon";
+import {DateTime, Interval} from "luxon";
+import humanizeDuration from "humanize-duration";
 
 import Link from "../_shared/link";
 import SEO from "../_shared/seo";
 import Img from "../_shared/img";
 import cs from "./_page.module.scss";
+import {LangProps, parseLang, useI18n} from "../_shared/i18n";
 
 const title = "Clément DOUIN | Projets";
 const desc = "Développeur web indépendant avec 5 ans d'expérience en JavaScript (React).";
@@ -17,24 +19,46 @@ type Project = {
   desc: string;
   image: string;
   tags: string[];
-  date: DateTime;
+  date: DateTime | null;
+  begin: string | null;
+  end: string | null;
   link: string | null;
   source: string | null;
 };
 
-type ProjectsPageProps = {
+type ProjectsPageProps = LangProps & {
   projects: Project[];
 };
 
-const ProjectsPage: NextPage<ProjectsPageProps> = ({projects}) => {
+const ProjectsPage: NextPage<ProjectsPageProps> = ({lang, projects}) => {
+  const {t} = useI18n(lang, "project");
+
   return (
     <>
       <SEO title={title} desc={desc} tags={tags} />
       <h1>Projets</h1>
       {projects.map((project, key) => {
-        const date = project.date
-          ? DateTime.fromFormat(String(project.date), "yyLL", {locale: "fr"}).toFormat("LLL yyyy")
-          : "En cours";
+        let date = t("in-progress");
+        let duration = null;
+        const begin = project.begin ? DateTime.fromFormat(project.begin, "yyyy-MM-dd", {locale: lang}) : null;
+        const end = project.end ? DateTime.fromFormat(project.end, "yyyy-MM-dd", {locale: lang}) : null;
+
+        if (begin && end) {
+          if (begin.month === end.month) {
+            date = t("from-to", {from: begin.toFormat("dd"), to: end.toFormat("dd")});
+            date += begin.toFormat("LLL yyyy");
+          } else if (begin.year === end.year) {
+            date = t("from-to", {from: begin.toFormat("dd LLL"), to: end.toFormat("dd LLL")});
+            date += begin.toFormat("yyyy");
+          } else {
+            date = t("from-to", {from: begin.toFormat("dd LLL yyyy"), to: end.toFormat("dd LLL yyyy")});
+          }
+          duration = humanizeDuration(Interval.fromDateTimes(begin, end).toDuration(["month"]).valueOf(), {
+            language: lang,
+            units: ["mo", "d"],
+            round: true,
+          });
+        }
 
         return (
           <Fragment key={key}>
@@ -44,21 +68,20 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({projects}) => {
               <div className={cs.imageContainer}>
                 {project.link ? (
                   <Link className={cs.imageLink} to={project.link}>
-                    <div className={cs.image}>
-                      <Img src={project.image} alt={project.title} className={cs.image} />
-                    </div>
+                    <Img src={project.image} alt={project.title} className={cs.image} />
                   </Link>
                 ) : (
-                  <div className={cs.image}>
-                    <Img src={project.image} alt={project.title} />
-                  </div>
+                  <Img src={project.image} alt={project.title} className={cs.image} />
                 )}
               </div>
 
               <div className={cs.content}>
                 <h2 className={cs.title}>
                   <span>{project.link ? <Link to={project.link}>{project.title}</Link> : project.title}</span>
-                  <em>{date}</em>
+                  <em>
+                    {date}
+                    <br />({duration})
+                  </em>
                 </h2>
 
                 <h3 className={cs.subtitle}>{project.subtitle}</h3>
@@ -72,7 +95,10 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({projects}) => {
               </div>
             </div>
 
-            <p>{project.desc}</p>
+            {project.desc
+              .split("\n")
+              .map(__html => <p dangerouslySetInnerHTML={{__html}} />)
+              .slice(0, -1)}
 
             {project.source && (
               <div className={cs.linkContainer}>
@@ -101,15 +127,24 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({projects}) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = () => {
+export const getStaticProps: GetStaticProps = ctx => {
+  const lang = parseLang(ctx?.params?.lang);
   const webpackCtx = require.context("../projects", true, /\.yml/);
   const keys = webpackCtx.keys();
   const names = keys.map(path => path.slice(2, -4));
   const projects: Project[] = keys
     .map(webpackCtx)
     .map((project: Project, idx) => ({
-      ...project,
+      title: project.title,
+      subtitle: project.subtitle || project[`subtitle-${lang}`],
+      desc: project.desc || project[`desc-${lang}`],
       image: require(`../projects/${names[idx]}.jpeg`).default.src,
+      tags: project.tags || [],
+      date: project.date || null,
+      begin: project.begin || null,
+      end: project.end || null,
+      link: project.link || null,
+      source: project.source || null,
     }))
     .sort((a, b) => {
       if (a.date === null) return -1;
@@ -117,7 +152,7 @@ export const getStaticProps: GetStaticProps = () => {
       return (b.date as any) - (a.date as any);
     });
 
-  return {props: {projects}};
+  return {props: {lang, projects}};
 };
 
 export default ProjectsPage;

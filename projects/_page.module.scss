@@ -37,12 +37,16 @@
 }
 
 .imageContainer {
+  position: relative;
   align-items: center;
   display: flex;
   justify-content: flex-start;
   border-radius: $border-radius;
   align-self: flex-start;
   margin-right: 1rem;
+  border-radius: $border-radius;
+  width: 12rem;
+  height: 8rem;
 
   @include media(sm) {
     display: none;
@@ -50,19 +54,19 @@
 }
 
 .image {
-  border: 1px solid $greyF0;
+  border: 0.1rem solid $greyF0 !important;
   transition: border 250ms;
   border-radius: $border-radius;
   width: 12rem;
-  display: flex;
-}
-
-a .image:hover {
-  border: 1px solid $blue18;
+  height: 8rem;
 }
 
 .imageLink {
   @include no-hover;
+
+  &:hover .image {
+    border-color: $blue18 !important;
+  }
 }
 
 .tags {

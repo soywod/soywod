@@ -6,6 +6,7 @@ import Link from "../_shared/link";
 import SEO from "../_shared/seo";
 
 import classes from "./_page.module.scss";
+import {LangProps, parseLang, useI18n} from "../_shared/i18n";
 
 const title = "Clément DOUIN | Expériences";
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React).";
@@ -21,18 +22,20 @@ type Experience = {
   link: string | null;
 };
 
-type ExperiencesPageProps = {
+type ExperiencesPageProps = LangProps & {
   experiences: Experience[];
 };
 
-const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
+const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) => {
+  const {t} = useI18n(lang, "experience");
+
   return (
     <>
       <SEO title={title} desc={desc} tags={tags} />
-      <h1>Expériences</h1>
+      <h1>{t("title")}</h1>
       {experiences.map((props, key) => {
-        const begin = DateTime.fromFormat(String(props.begin), "yyLL", {locale: "fr"});
-        const end = props.end ? DateTime.fromFormat(String(props.end), "yyLL", {locale: "fr"}) : null;
+        const begin = DateTime.fromFormat(String(props.begin), "yyLL", {locale: lang});
+        const end = props.end ? DateTime.fromFormat(String(props.end), "yyLL", {locale: lang}) : null;
         const interval = end
           ? Interval.fromDateTimes(begin, end).toFormat("LLL yy")
           : begin.toFormat("LLL yy") + " – maintenant";
@@ -68,7 +71,8 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences}) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = () => {
+export const getStaticProps: GetStaticProps = ctx => {
+  const lang = parseLang(ctx?.params?.lang);
   const webpackCtx = require.context("../experiences", true, /\.yml/);
   const keys = webpackCtx.keys();
   const experiences = keys
@@ -76,7 +80,7 @@ export const getStaticProps: GetStaticProps = () => {
     .map((experience: Experience) => experience)
     .sort((a, b) => (b.begin as any) - (a.begin as any));
 
-  return {props: {experiences}};
+  return {props: {lang, experiences}};
 };
 
 export default ExperiencesPage;

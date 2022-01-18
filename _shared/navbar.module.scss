@@ -28,9 +28,11 @@
 }
 
 .avatar {
+  position: relative;
+  overflow: hidden;
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 3rem;
+  width: 3rem;
 
   @include media(sm) {
     height: 32px;

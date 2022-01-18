@@ -1,12 +1,12 @@
-import {FC} from "react"
-import Head from "next/head"
-import {AppProps} from "next/app"
+import {FC} from "react";
+import Head from "next/head";
+import {AppProps} from "next/app";
 
-import Navbar from "../_shared/navbar"
-import Footer from "../_shared/footer"
+import Navbar from "../_shared/navbar";
+import Footer from "../_shared/footer";
 
-import "./_app.scss"
-import cs from "./_app.module.scss"
+import "./_app.scss";
+import cs from "./_app.module.scss";
 
 const App: FC<AppProps> = ({Component, pageProps}) => {
   return (
@@ -15,12 +15,12 @@ const App: FC<AppProps> = ({Component, pageProps}) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className={cs.container}>
-        <Navbar />
+        <Navbar lang={pageProps.lang} />
         <Component {...pageProps} />
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

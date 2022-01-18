@@ -31,13 +31,13 @@ body {
 }
 
 a {
-  border-bottom: 1px solid transparent;
+  border-bottom: 0.1rem solid transparent;
   color: $blue18;
   text-decoration: none;
   transition: border-bottom 250ms;
 
   &:hover {
-    border-bottom: 1px solid $blue18;
+    border-bottom-color: $blue18;
   }
 }
 
