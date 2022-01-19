@@ -1,12 +1,27 @@
 @import "../_shared/theme";
 
 .container {
-  align-items: center;
   display: flex;
 }
 
 .content {
   flex: 1;
+}
+
+.times {
+  @include font("space mono");
+  font-style: italic;
+  color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0;
+
+  @include media(sm) {
+    display: none;
+  }
 }
 
 .title {
@@ -17,56 +32,36 @@
   span {
     flex: 1;
   }
-
-  em {
-    @include font("space mono");
-    color: $greyD3;
-    font-size: 0.9rem;
-    font-weight: 400;
-    margin-top: 0;
-
-    @include media(sm) {
-      display: none;
-    }
-  }
 }
 
 .subtitle {
-  color: $greyD3;
+  color: $grey;
   margin: 5px 0 0 0;
 }
 
 .imageContainer {
+  box-sizing: content-box;
   position: relative;
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  border-radius: $border-radius;
   align-self: flex-start;
   margin-right: 1rem;
   border-radius: $border-radius;
-  width: 12rem;
-  height: 8rem;
+  box-shadow: 0 1px 3px rgba($grey, 0.12), 0 1px 2px rgba($grey, 0.24);
+  width: 10rem;
+  height: 6rem;
+  transition: box-shadow 125ms;
+  overflow: hidden;
 
   @include media(sm) {
     display: none;
   }
 }
 
-.image {
-  border: 0.1rem solid $greyF0 !important;
-  transition: border 250ms;
-  border-radius: $border-radius;
-  width: 12rem;
-  height: 8rem;
-}
-
 .imageLink {
   @include no-hover;
-
-  &:hover .image {
-    border-color: $blue18 !important;
-  }
+  cursor: pointer;
 }
 
 .tags {

@@ -2,6 +2,7 @@ import {Fragment} from "react";
 import {GetStaticProps, NextPage} from "next";
 import {DateTime, Interval} from "luxon";
 import humanizeDuration from "humanize-duration";
+import showdown from "showdown";
 
 import Link from "../_shared/link";
 import SEO from "../_shared/seo";
@@ -13,21 +14,21 @@ const title = "Clément DOUIN | Projets";
 const desc = "Développeur web indépendant avec 5 ans d'expérience en JavaScript (React).";
 const tags = "clément,douin,soywod,développement,développeur,projets,web,javascript,typescript,react,startup";
 
-type Project = {
+type SerializableProject = {
   title: string;
   subtitle: string;
   desc: string;
   image: string;
   tags: string[];
-  date: DateTime | null;
-  begin: string | null;
+  draft: boolean;
+  begin: string;
   end: string | null;
   link: string | null;
-  source: string | null;
+  sources: string | null;
 };
 
 type ProjectsPageProps = LangProps & {
-  projects: Project[];
+  projects: SerializableProject[];
 };
 
 const ProjectsPage: NextPage<ProjectsPageProps> = ({lang, projects}) => {
@@ -37,53 +38,46 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({lang, projects}) => {
     <>
       <SEO title={title} desc={desc} tags={tags} />
       <h1>Projets</h1>
-      {projects.map((project, key) => {
+      {projects.map(project => {
         let date = t("in-progress");
-        let duration = null;
-        const begin = project.begin ? DateTime.fromFormat(project.begin, "yyyy-MM-dd", {locale: lang}) : null;
-        const end = project.end ? DateTime.fromFormat(project.end, "yyyy-MM-dd", {locale: lang}) : null;
+        const begin = DateTime.fromISO(project.begin, {locale: lang});
+        const end = project.end ? DateTime.fromISO(project.end, {locale: lang}) : DateTime.local();
 
-        if (begin && end) {
-          if (begin.month === end.month) {
-            date = t("from-to", {from: begin.toFormat("dd"), to: end.toFormat("dd")});
-            date += begin.toFormat("LLL yyyy");
-          } else if (begin.year === end.year) {
-            date = t("from-to", {from: begin.toFormat("dd LLL"), to: end.toFormat("dd LLL")});
-            date += begin.toFormat("yyyy");
-          } else {
-            date = t("from-to", {from: begin.toFormat("dd LLL yyyy"), to: end.toFormat("dd LLL yyyy")});
-          }
-          duration = humanizeDuration(Interval.fromDateTimes(begin, end).toDuration(["month"]).valueOf(), {
-            language: lang,
-            units: ["mo", "d"],
-            round: true,
-          });
+        if (begin.month === end.month) {
+          date = t("from-to", {from: begin.toFormat("d"), to: end.toFormat("d")});
+          date += begin.toFormat(" LLL yyyy");
+        } else if (begin.year === end.year) {
+          date = t("from-to", {from: begin.toFormat("LLL"), to: end.toFormat("LLL")});
+          date += begin.toFormat(" yyyy");
+        } else {
+          date = t("from-to", {from: begin.toFormat("LLL yyyy"), to: end.toFormat("LLL yyyy")});
         }
 
+        const duration = humanizeDuration(Interval.fromDateTimes(begin, end).toDuration().valueOf(), {
+          language: lang,
+          largest: 2,
+          maxDecimalPoints: 1,
+        });
+
         return (
-          <Fragment key={key}>
+          <Fragment key={project.title}>
             <hr />
-
             <div className={cs.container}>
-              <div className={cs.imageContainer}>
-                {project.link ? (
-                  <Link className={cs.imageLink} to={project.link}>
+              {project.link ? (
+                <Link className={cs.imageLink} to={project.link}>
+                  <div className={cs.imageContainer}>
                     <Img src={project.image} alt={project.title} className={cs.image} />
-                  </Link>
-                ) : (
+                  </div>
+                </Link>
+              ) : (
+                <div className={cs.imageContainer}>
                   <Img src={project.image} alt={project.title} className={cs.image} />
-                )}
-              </div>
-
+                </div>
+              )}
               <div className={cs.content}>
                 <h2 className={cs.title}>
-                  <span>{project.link ? <Link to={project.link}>{project.title}</Link> : project.title}</span>
-                  <em>
-                    {date}
-                    <br />({duration})
-                  </em>
+                  {project.link ? <Link to={project.link}>{project.title}</Link> : project.title}
                 </h2>
-
                 <h3 className={cs.subtitle}>{project.subtitle}</h3>
                 <div className={cs.tags}>
                   {project.tags.map(tag => (
@@ -93,16 +87,17 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({lang, projects}) => {
                   ))}
                 </div>
               </div>
+              <div className={cs.times}>
+                <time>{date}</time>
+                <time>({duration})</time>
+              </div>
             </div>
 
-            {project.desc
-              .split("\n")
-              .map(__html => <p dangerouslySetInnerHTML={{__html}} />)
-              .slice(0, -1)}
+            <div dangerouslySetInnerHTML={{__html: project.desc}} />
 
-            {project.source && (
+            {project.sources && (
               <div className={cs.linkContainer}>
-                <Link className={cs.link} to={project.source}>
+                <Link className={cs.link} to={project.sources}>
                   <span>Code source</span>
                   <svg
                     aria-hidden="true"
@@ -129,28 +124,34 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({lang, projects}) => {
 
 export const getStaticProps: GetStaticProps = ctx => {
   const lang = parseLang(ctx?.params?.lang);
-  const webpackCtx = require.context("../projects", true, /\.yml/);
+  const webpackCtx = require.context("../projects", true, /\.toml/);
   const keys = webpackCtx.keys();
-  const names = keys.map(path => path.slice(2, -4));
-  const projects: Project[] = keys
+  const names = keys.map(path => path.slice(2, -5));
+  const projects: SerializableProject[] = keys
     .map(webpackCtx)
-    .map((project: Project, idx) => ({
-      title: project.title,
-      subtitle: project.subtitle || project[`subtitle-${lang}`],
-      desc: project.desc || project[`desc-${lang}`],
+    .map((toml: any, idx) => ({
+      title: toml.title,
+      subtitle: toml[lang].subtitle,
+      desc: new showdown.Converter({openLinksInNewWindow: true}).makeHtml(toml[lang].desc),
       image: require(`../projects/${names[idx]}.jpeg`).default.src,
-      tags: project.tags || [],
-      date: project.date || null,
-      begin: project.begin || null,
-      end: project.end || null,
-      link: project.link || null,
-      source: project.source || null,
+      tags: toml.tags || [],
+      draft: toml.draft || false,
+      begin: DateTime.fromISO(toml.begin),
+      end: toml.end ? DateTime.fromISO(toml.end) : null,
+      link: toml.link || null,
+      sources: toml.sources || null,
     }))
-    .sort((a, b) => {
-      if (a.date === null) return -1;
-      if (b.date === null) return 1;
-      return (b.date as any) - (a.date as any);
-    });
+    .filter(p => !p.draft)
+    .sort((p1, p2) => {
+      if (p1.begin < p2.begin) return 1;
+      else if (p1.begin > p2.begin) return -1;
+      else return 0;
+    })
+    .map(p => ({
+      ...p,
+      begin: p.begin.toISO(),
+      end: p.end ? p.end.toISO() : null,
+    }));
 
   return {props: {lang, projects}};
 };

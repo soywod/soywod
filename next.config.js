@@ -9,6 +9,10 @@ module.exports = {
       test: /\.ya?ml$/,
       use: "js-yaml-loader",
     });
+    config.module.rules.push({
+      test: /\.toml$/,
+      use: "@lcdev/toml-loader",
+    });
     return config;
   },
 };

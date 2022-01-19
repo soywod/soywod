@@ -4,7 +4,10 @@ $greyF0: #f0f0f0;
 $greyD3: #d3d3d3;
 $grey3D: #3d3d3d;
 
-$border-radius: 0.35rem;
+$grey: #666666;
+$black: #333333;
+
+$border-radius: 0.25rem;
 
 @mixin font($name) {
   font-variant-ligatures: none;

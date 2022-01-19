@@ -1,0 +1,18 @@
+title = "proPhilo Database"
+tags = ["react", "ts", "mui", "node", "postgresql", "postgrest", "nix"]
+draft = true
+begin = 2022-01-10
+end = 2022-01-14
+
+[fr]
+subtitle = "Appli web - Gestionnaire de ressources"
+desc = '''
+[proPhilo](https://prophilo.ch/) est une association suisse romande qui développe et soutient la pratique du dialogue philosophique  avec les enfants, les adolescents et les adultes. Leur besoin était de transformer un document XLS en une base interactive avec trois niveaux de permission. La partie serveur a été développée avec [PostgreSQL](https://www.postgresql.org/) et [PostgREST](https://postgrest.org/) afin de gérer de façon optimale les permissions sur les ressources. Un script [Node.js](https://nodejs.org/) a été mis en place pour la migration des données du fichier XLS vers la base de données PostgreSQL. La partie client a été développée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [MaterialUI](https://mui.com/). Toutes les dépendances du projet ont été gérées avec [Nix](https://nixos.org/).
+
+Le projet est actuellement en cours de test par proPhilo.
+'''
+
+[en]
+subtitle = "Web app - Resource manager"
+desc = '''
+'''

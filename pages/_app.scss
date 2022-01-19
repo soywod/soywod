@@ -24,10 +24,10 @@
 
 body {
   @include font(quicksand);
-  color: $grey3D;
-  margin: 15px 0;
-  overflow-y: scroll;
+  color: $black;
+  margin: 1rem 0;
   padding: 0;
+  overflow-y: scroll;
 }
 
 a {
