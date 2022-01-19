@@ -1,7 +1,7 @@
 title = "Creator v1"
 tags = ["react", "ts", "rxjs", "fabric", "sass", "prestashop"]
-begin = 2020-02-04
-end = 2020-08-13
+begin = 2020-03-04
+end = 2020-09-13
 
 [fr]
 subtitle = "Appli web - Éditeur de contenu"
