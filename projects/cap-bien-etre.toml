@@ -6,12 +6,12 @@ begin = 2020-01-26
 end = 2020-03-13
 
 [fr]
-subtitle = "Appli web - Formation"
+subtitle = "Santé — Formation distancielle"
 desc = '''
-Les ateliers Cap Bien-Être de la [MSA](https://www.msa.fr/lfp) sont des ateliers visant à mieux gérer son stress et ses émotions au quotidien. Le besoin était de créer une formation en ligne à base de modules, pages et quiz. La partie serveur a été développée avec [Firebase](https://firebase.google.com/) (elle permet de gérer l’authentification ainsi que les données utilisateurs). La partie client a été développée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [RxJS](https://rxjs.dev/). L’intégration a été effectuée à partir de planches graphiques et animations fournies par [DOGMS](https://dogms.com/).
+Les ateliers Cap Bien-Être de la [MSA](https://www.msa.fr/lfp) sont des ateliers visant à mieux gérer son stress et ses émotions au quotidien. Le besoin était de créer une formation en ligne à base de modules, pages et quiz. La partie serveur a été développée avec [Firebase](https://firebase.google.com/) (gestion de l’authentification et des données utilisateurs). La partie client a été développée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [RxJS](https://rxjs.dev/). L’intégration a été effectuée à partir de planches graphiques et animations fournies par [DOGMS](https://dogms.com/).
 '''
 
 [en]
-subtitle = "Web app - Formation"
+subtitle = ""
 desc = '''
 '''

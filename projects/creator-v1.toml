@@ -4,7 +4,7 @@ begin = 2020-03-04
 end = 2020-09-13
 
 [fr]
-subtitle = "Appli web - Éditeur de contenu"
+subtitle = "Signalétique — Éditeur de contenu"
 desc = '''
 [PictoSigns](https://www.pictosigns.com/picto/) est une entreprise familiale française de signalétique. Leur projet était de permettre aux utilisateurs de créer leur plaque personnalisée en ligne et de la recevoir directement par voie postale. PictoSigns possède une boutique en ligne basée sur PrestaShop. Cette première version a été conçue en tant que plugin PrestaShop afin de facilité la production. La partie serveur s’est donc basée sur l’environnement PrestaShop (PHP/Symfony/MySQL). La partie client a été développée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [RxJS](https://rxjs.dev/) et [Fabric.js](http://fabricjs.com/).
 

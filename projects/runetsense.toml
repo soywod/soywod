@@ -1,7 +1,7 @@
 title = "Run&Sense"
 tags = ["javascript", "css", "php", "sculpin", "twig"]
 link = "https://www.runetsense-pro.com/"
-sources = "https://github.com/soywod/runetsense"
+sources = "https://github.com/soywod/runetsense/"
 begin = 2016-08-06
 end = 2016-08-10
 

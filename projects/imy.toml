@@ -1,0 +1,14 @@
+title = "IMY"
+tags = ["js", "angular", "ionic", "rails"]
+begin = 2018-07-16
+end = 2018-07-18
+
+[fr]
+subtitle = "Appli mobile - Rencontre"
+desc = '''
+'''
+
+[en]
+subtitle = "Mobile app - Dating"
+desc = '''
+'''

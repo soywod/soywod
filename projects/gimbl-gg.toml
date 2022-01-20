@@ -1,0 +1,17 @@
+title = "Gimbl.gg"
+tags = ["js", "react", "styled components", "next", "firebase"]
+link = "https://gimbl.gg"
+begin = 2019-07-25
+end = 2019-07-31
+
+[fr]
+subtitle = "Jeux vidéo — Site vitrine"
+desc = '''
+Gimbl est une startup proposant des récompenses et des défis pour que les streamers de jeux vidéos. Ils avaient besoin de mettre en place un site vitrine de qualité au design futuriste. L’intégration a été effectuée à partir de planches graphiques [InVision](https://www.invisionapp.com/) avec [React.js](https://reactjs.org/), [Styled Components](https://styled-components.com/) et [Next.js](https://nextjs.org/).
+'''
+
+[en]
+subtitle = ""
+desc = '''
+Gimbl empowers you with rewards and challenges for streamers to get out of their way during their game.
+'''

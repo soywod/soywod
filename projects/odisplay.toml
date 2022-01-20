@@ -4,15 +4,12 @@ begin = 2019-12-03
 end = 2020-01-16
 
 [fr]
-subtitle = "Appli web - Diffusion de contenu"
+subtitle = "Signalétique — Gestionnaire de contenu"
 desc = '''
 Odisplay est une solution de création et de diffusion de contenu sur écrans physiques. La partie serveur a été développée avec [Firebase](https://firebase.google.com/) pour pouvoir synchroniser en temps réel les écrans avec leurs contenus. Le panel d’administration a été développé avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [RxJS](https://rxjs.dev/) et permettait de gérer/positionner/planifier ses contenus. Des clients auraient dû être développés (Android, iOS, Samsung TV…) pour lier des écrans physiques au panel d’administration, mais le projet a été abandonné en cours de route à cause de la crise sanitaire de la COVID-19.
 '''
 
 [en]
-subtitle = "Web app - Content streaming"
+subtitle = ""
 desc = '''
-Odisplay is a solution for creating, managing and streaming content in real time to physical devices. The project is composed of a realtime database, a content manager (back office) and streamers apps (smartphones, tablets, screens). The source code is not available (private licence).
-
-**[Update] :**The project has been abandoned along the way due to the COVID-19 health crisis.
 '''

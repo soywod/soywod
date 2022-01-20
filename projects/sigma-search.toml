@@ -1,0 +1,17 @@
+title = "Sigma Search"
+tags = ["ts", "react", "stylus"]
+link = "https://sigma-search.com/"
+sources = "https://github.com/soywod/sigma-search/"
+begin = 2018-10-01
+end = 2018-10-20
+
+[fr]
+subtitle = "Site vitrine - Recrutement"
+desc = '''
+Site vitrine responsive multi-plateforme développé à partir de maquettes graphiques. L’administration se fait via Google Sheets et Google Drive.
+'''
+
+[en]
+subtitle = "Showcase website - Recruitment"
+desc = '''
+'''

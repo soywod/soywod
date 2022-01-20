@@ -1,0 +1,16 @@
+title = "Parc Galéa"
+tags = ["html", "js", "php", "paypal"]
+link = "http://parcgalea.com/boutique/des-plantes-et-des-hommes.php"
+begin = 2017-11-28
+end = 2017-11-29
+
+[fr]
+subtitle = "Module web - Voyage"
+desc = '''
+Galea est un parc racontant les secrets d’une Corse ouverte sur le monde, avec ses visites, ses musées et jardins.
+'''
+
+[en]
+subtitle = "Web module - Travel"
+desc = '''
+'''

@@ -1,0 +1,16 @@
+title = "Ateliers Vitalité"
+tags = ["php", "sass", "sqlite"]
+link = "http://www.ateliersvitalite.fr"
+begin = 2018-11-01
+end = 2018-11-05
+
+[fr]
+subtitle = "Appli web - Santé"
+desc = '''
+Ajout d’un nouveau module comprenant des fiches, des animations canvas et un QCM.
+'''
+
+[en]
+subtitle = "Web app - Health"
+desc = '''
+'''

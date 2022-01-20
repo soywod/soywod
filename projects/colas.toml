@@ -1,0 +1,15 @@
+title = "Colas"
+tags = ["js", "ts", "node", "mssql"]
+begin = 2018-08-16
+end = 2018-09-25
+
+[fr]
+subtitle = "API - Synchro base de données"
+desc = '''
+Dévoloppement d’un script Node.js de synchronisation d’une base de données Microsoft SQL Server et une solution SaaS (Serena). Le code source n’est pas disponible (privé).
+'''
+
+[en]
+subtitle = "API - Sync database"
+desc = '''
+'''

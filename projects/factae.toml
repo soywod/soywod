@@ -1,0 +1,15 @@
+title = "factAE"
+tags = ["js", "react", "next", "firebase"]
+sources = "https://github.com/factae/"
+begin = 2019-06-24
+end = 2019-10-18
+
+[fr]
+subtitle = "Appli web - Facturation"
+desc = '''
+'''
+
+[en]
+subtitle = "Web app - Invoicing"
+desc = '''
+'''

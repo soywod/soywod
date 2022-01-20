@@ -1,0 +1,15 @@
+title = "Angèle Concept"
+tags = ["react native", "php"]
+begin = 2018-01-01
+end = 2018-01-25
+
+[fr]
+subtitle = "Appli mobile - Gestionnaire de stage"
+desc = '''
+Application mobile d’aide à la gestion de sessions de stages et de présence. Le code source n’est pas disponible (privé).
+'''
+
+[en]
+subtitle = "Mobile app - Trainee manager"
+desc = '''
+'''

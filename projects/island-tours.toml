@@ -1,0 +1,17 @@
+title = "Island Tours"
+tags = ["ts", "angular", "less"]
+link = "https://www.islandtours.fr/"
+sources = "https://github.com/soywod/island-tours/"
+begin = 2016-11-06
+end = 2016-11-09
+
+[fr]
+subtitle = "Formulaire dynamique - Voyage"
+desc = '''
+Formulaire dynamique développé en Angular. Le résultat du formulaire est stocké dans un simple .csv. Le formulaire n’est plus en ligne, mais le code est toujours disponible.
+'''
+
+[en]
+subtitle = "Dynamic form - Travel"
+desc = '''
+'''
