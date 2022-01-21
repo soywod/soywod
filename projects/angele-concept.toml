@@ -4,12 +4,12 @@ begin = 2018-01-01
 end = 2018-01-25
 
 [fr]
-subtitle = "Appli mobile - Gestionnaire de stage"
+subtitle = "Formation — Appli mobile"
 desc = '''
-Application mobile d’aide à la gestion de sessions de stages et de présence. Le code source n’est pas disponible (privé).
+Développement d‘une application mobile d’aide à la gestion de sessions de stages et de présence. Les sessions étaient sauvegardées localement et pouvaient être synchronisées manuellement dès lors qu’une connection internet fiable était détectée.
 '''
 
 [en]
-subtitle = "Mobile app - Trainee manager"
+subtitle = ""
 desc = '''
 '''

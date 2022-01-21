@@ -6,12 +6,12 @@ begin = 2016-11-06
 end = 2016-11-09
 
 [fr]
-subtitle = "Formulaire dynamique - Voyage"
+subtitle = "Voyage — Formulaire dynamique"
 desc = '''
-Formulaire dynamique développé en Angular. Le résultat du formulaire est stocké dans un simple .csv. Le formulaire n’est plus en ligne, mais le code est toujours disponible.
+Island Tours est une agence de voyage autour de l’Island. Il avait besoin d’un formulaire interactif en lien avec une newsletter.
 '''
 
 [en]
-subtitle = "Dynamic form - Travel"
+subtitle = ""
 desc = '''
 '''

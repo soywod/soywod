@@ -6,12 +6,12 @@ begin = 2018-05-22
 end = 2018-07-16
 
 [fr]
-subtitle = "Site vitrine - Camping"
+subtitle = "Camping — Site vitrine"
 desc = '''
-Site vitrine responsive développé à partir de maquettes graphiques. L’administration se fait via Google Sheets et Google Drive.
+Camping Calamar est un camping au cœur de la Corse. Ils avaient besoin de refaire leur site vitrine. L‘intégration a été effectuée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [Sass](https://sass-lang.com/) à partir de planches graphiques et animations fournies par [DOGMS](https://dogms.com/).
 '''
 
 [en]
-subtitle = "Showcase website - Camping"
+subtitle = ""
 desc = '''
 '''

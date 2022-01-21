@@ -6,12 +6,12 @@ begin = 2018-10-01
 end = 2018-10-20
 
 [fr]
-subtitle = "Site vitrine - Recrutement"
+subtitle = "Recrutement — Site vitrine"
 desc = '''
-Site vitrine responsive multi-plateforme développé à partir de maquettes graphiques. L’administration se fait via Google Sheets et Google Drive.
+Sigma Search est une boîte de recrutement internationale. Ils avaient besoin de refaire leur site vitrine. L‘intégration a été effectuée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [Stylus](https://stylus-lang.com/) à partir de planches graphiques et animations fournies par [DOGMS](https://dogms.com/).
 '''
 
 [en]
-subtitle = "Showcase website - Recruitment"
+subtitle = ""
 desc = '''
 '''
