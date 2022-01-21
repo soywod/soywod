@@ -2,7 +2,7 @@ company = "Wincor Nixdorf"
 link = "https://www.dieboldnixdorf.com/"
 tags = ["c", "c++", "java", "php", "js", "node"]
 begin = 2012-01-01
-end = 2015-10-10
+end = 2015-09-10
 
 [fr]
 title = "Technicien test support logiciel"

@@ -1,0 +1,15 @@
+company = "Swan"
+link = "https://www.swan.io/"
+tags = []
+begin = 2021-08-30
+end = 2021-11-30
+
+[fr]
+title = "Développeur web"
+desc = """
+"""
+
+[en]
+title = "Web developer"
+desc = """
+"""

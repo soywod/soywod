@@ -50,9 +50,10 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) =>
         }
 
         const duration = humanizeDuration(Interval.fromDateTimes(begin, end).toDuration().valueOf(), {
+          units: ["y", "mo", "w", "d"],
           language: lang,
+          round: true,
           largest: 2,
-          maxDecimalPoints: 1,
         });
 
         return (

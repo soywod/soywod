@@ -1,0 +1,15 @@
+company = "Colas (via Strategy Partners)"
+link = "https://www.colas.com/"
+tags = []
+begin = 2017-11-01
+end = 2018-09-22
+
+[fr]
+title = "Développeur web"
+desc = """
+"""
+
+[en]
+title = "Web developer"
+desc = """
+"""

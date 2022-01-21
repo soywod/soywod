@@ -1,0 +1,15 @@
+title = "Konbini"
+link = "https://www.konbini.com/"
+tags = []
+begin = 2019-10-01
+end = 2019-12-02
+
+[fr]
+subtitle = ""
+desc = """
+"""
+
+[en]
+subtitle = ""
+desc = """
+"""
