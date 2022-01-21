@@ -7,16 +7,16 @@ end = 2016-08-10
 
 [fr]
 subtitle = "Coaching — Site vitrine"
-desc = '''
-Run&Sense est un organisme de formation professionnel en management et développement personnel. Ils avaient besoin d’un site vitrine pour lancer leur activité. Le site a été développé avec le générateur de site statique [Sculpin](https://sculpin.io/) et le moteur de templates [Twig](https://twig.symfony.com/).
+desc = """
+Run&Sense est un organisme de formation professionnel en management et développement personnel. Ils avaient besoin d'un site vitrine pour lancer leur activité. Le site a été développé avec le générateur de site statique [Sculpin](https://sculpin.io/) et le moteur de templates [Twig](https://twig.symfony.com/).
 
 Le site a été refait depuis en WordPress par un autre développeur.
-'''
+"""
 
 [en]
 subtitle = "Coaching — Showcase website"
-desc = '''
+desc = """
 Run&Sense is a training organisation in management and personal development. They needed a showcase website to start up their activity. The website has been developped with the static site generator [Sculpin](https://sculpin.io/) and the template engine [Twig](https://twig.symfony.com/).
 
 The website has been refactored with WordPress by another developer since then.
-'''
+"""

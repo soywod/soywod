@@ -6,13 +6,13 @@ end = 2019-10-18
 
 [fr]
 subtitle = "Facturation — Appli web"
-desc = '''
-FactAE est un outil de facturation dédié aux auto-entrepreneurs à un euro par mois. La partie client a été développée avec [React.js](https://reactjs.org/) et [Next.js](https://nextjs.org/). [Google Firebase](https://firebase.google.com/) a été mis en place pour l‘authentification et les données utilisateurs, et [Google Cloud Functions](https://cloud.google.com/functions) a été utilisé pour la partie souscription, paiement ([Stripe](https://stripe.com/)) et génération de PDFs.
+desc = """
+FactAE est un outil de facturation dédié aux auto-entrepreneurs à un euro par mois. La partie client a été développée avec [React.js](https://reactjs.org/) et [Next.js](https://nextjs.org/). [Google Firebase](https://firebase.google.com/) a été mis en place pour l'authentification et les données utilisateurs, et [Google Cloud Functions](https://cloud.google.com/functions) a été utilisé pour la partie souscription, paiement ([Stripe](https://stripe.com/)) et génération de PDFs.
 
-J’ai d’abord créé cet outil pour mon usage personnel, puis je me suis rendu compte que beaucoup d’autres auto-entrepreneurs de mon entourage avaient le même besoin. J‘ai donc investi du temps et de l‘argent pour monter cette plateforme. Je n‘ai malheureusement pas réussi à faire décoller le concept. D‘autres outils sont venus prendre le marché par la suite, ce qui m‘a conduit à abandonner le projet. Ce fût néamoins une expérience très enrichissante !
-'''
+J'ai d'abord créé cet outil pour mon usage personnel, puis je me suis rendu compte que beaucoup d'autres auto-entrepreneurs de mon entourage avaient le même besoin. J'ai donc investi du temps et de l'argent pour monter cette plateforme. Je n'ai malheureusement pas réussi à faire décoller le concept. D'autres outils sont venus prendre le marché par la suite, ce qui m'a conduit à abandonner le projet. Ce fût néamoins une expérience très enrichissante !
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

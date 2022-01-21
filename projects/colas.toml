@@ -5,11 +5,11 @@ end = 2018-09-25
 
 [fr]
 subtitle = "Génie civil — Synchro base de données"
-desc = '''
-Dévoloppement d’un script [Node.js](https://nodejs.org/) de synchronisation d’une base de données [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server) avec une solution SaaS (Serena).
-'''
+desc = """
+Dévoloppement d'un script [Node.js](https://nodejs.org/) de synchronisation d'une base de données [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server) avec une solution SaaS (Serena).
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

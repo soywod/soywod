@@ -6,11 +6,11 @@ end = 2018-11-05
 
 [fr]
 subtitle = "Santé — Formation distancielle"
-desc = '''
-Les Ateliers Vitalité de la [MSA](https://www.msa.fr/) sont des ateliers visant à améliorer sa qualité de vie et à préserver son capital santé. Leur besoin était d’ajouter des nouveaux modules dans une base existante développée avec PHP, Sass et SQLite. Les fiches, animations et QCM de ces nouveaux modules ont été intégrés à partir de planches graphiques fournies par [DOGMS](https://dogms.com/).
-'''
+desc = """
+Les Ateliers Vitalité de la [MSA](https://www.msa.fr/) sont des ateliers visant à améliorer sa qualité de vie et à préserver son capital santé. Leur besoin était d'ajouter des nouveaux modules dans une base existante développée avec PHP, Sass et SQLite. Les fiches, animations et QCM de ces nouveaux modules ont été intégrés à partir de planches graphiques fournies par [DOGMS](https://dogms.com/).
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

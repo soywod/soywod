@@ -5,11 +5,11 @@ end = 2018-01-25
 
 [fr]
 subtitle = "Formation — Appli mobile"
-desc = '''
-Développement d‘une application mobile d’aide à la gestion de sessions de stages et de présence. Les sessions étaient sauvegardées localement et pouvaient être synchronisées manuellement dès lors qu’une connection internet fiable était détectée.
-'''
+desc = """
+Développement d‘une application mobile d'aide à la gestion de sessions de stages et de présence. Les sessions étaient sauvegardées localement et pouvaient être synchronisées manuellement dès lors qu'une connection internet fiable était détectée.
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

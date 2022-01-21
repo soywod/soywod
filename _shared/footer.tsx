@@ -1,8 +1,8 @@
-import React, {FC, Fragment} from "react"
+import React, {FC, Fragment} from "react";
 
-import Link from "./link"
+import Link from "./link";
 
-import classes from "./footer.module.scss"
+import cs from "./footer.module.scss";
 
 const medias = [
   {name: "LinkedIn", href: "https://www.linkedin.com/in/soywod"},
@@ -10,29 +10,29 @@ const medias = [
   {name: "GitHub", href: "https://github.com/soywod"},
   {name: "Stack Overflow", href: "https://stackoverflow.com/users/6213048/soywod"},
   {name: "Twitter", href: "https://twitter.com/soywod"},
-]
+];
 
 const Footer: FC = () => {
   return (
     <>
       <hr />
-      <footer className={classes.footer}>
+      <footer className={cs.footer}>
         <div>
-          <Link to="/contact" className={classes.recruit}>
+          <Link to="/contact" className={cs.recruit}>
             <span>Recrutez-moi !</span>
-            <span className={classes.available}>
+            <span className={cs.available}>
               Actuellement disponible
-              <svg className={classes.status} viewBox="0 0 100 100">
+              <svg className={cs.status} viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="50" />
               </svg>
             </span>
           </Link>
         </div>
-        <div className={classes.socials}>
+        <div className={cs.socials}>
           {medias.map(({name, href}, index) => (
             <Fragment key={name}>
-              {index > 0 && <span className={classes.separator}>{" / "}</span>}
-              <Link to={href} className={classes.social}>
+              {index > 0 && <span className={cs.separator}>{" / "}</span>}
+              <Link to={href} className={cs.social}>
                 {name}
               </Link>
             </Fragment>
@@ -40,7 +40,7 @@ const Footer: FC = () => {
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

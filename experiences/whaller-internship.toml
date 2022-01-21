@@ -1,0 +1,16 @@
+company = "Whaller"
+link = "https://waller.com/"
+tags = ["php", "codeigniter", "js", "jquery", "docker"]
+begin = 2015-09-15
+end = 2015-10-09
+
+[fr]
+title = "Stagiaire"
+desc = '''
+Corrections de bugs back-end sur CodeIgniter (PHP) et sur un front-end en jQuery. Développement dun lecteur de flux RSS en jQuery. Développement dun gestionnaire de fichiers en jQuery.
+'''
+
+[en]
+title = ""
+desc = '''
+'''

@@ -6,11 +6,11 @@ end = 2021-08-28
 
 [fr]
 subtitle = "Signalétique — Éditeur de contenu"
-desc = '''
-[PictoSigns](https://www.pictosigns.com/picto/) est une entreprise familiale française de signalétique. Leur projet était de permettre aux utilisateurs de créer leur plaque personnalisée en ligne et de la recevoir directement par voie postale. Une première version avait déjà été développée et tournait en production. Cependant, PictoSigns rencontrait de nombreux soucis liés à l’infrastructure PrestaShop. Une étude de marché a également permis de cibler plus précisément les besoins des utilisateurs. Pour cette seconde version, la partie serveur a été développée avec [Rust](https://www.rust-lang.org/), [Diesel](https://diesel.rs/), [PostgreSQL](https://www.postgresql.org/) et [Docker](https://www.docker.com/), afin de pallier les problèmes d’infrastructure et de performances. Le panel d’administration a été extrait de PrestaShop et développé avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [Ant Design](https://ant.design/). La partie client, quant à elle, a gardée les mêmes technologies que la première version (un simple "lifting" a été opéré pour rendre la rendre plus fluide, plus UX).
-'''
+desc = """
+[PictoSigns](https://www.pictosigns.com/picto/) est une entreprise familiale française de signalétique. Leur projet était de permettre aux utilisateurs de créer leur plaque personnalisée en ligne et de la recevoir directement par voie postale. Une première version avait déjà été développée et tournait en production. Cependant, PictoSigns rencontrait de nombreux soucis liés à l'infrastructure PrestaShop. Une étude de marché a également permis de cibler plus précisément les besoins des utilisateurs. Pour cette seconde version, la partie serveur a été développée avec [Rust](https://www.rust-lang.org/), [Diesel](https://diesel.rs/), [PostgreSQL](https://www.postgresql.org/) et [Docker](https://www.docker.com/), afin de pallier les problèmes d'infrastructure et de performances. Le panel d'administration a été extrait de PrestaShop et développé avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [Ant Design](https://ant.design/). La partie client, quant à elle, a gardée les mêmes technologies que la première version (un simple "lifting" a été opéré pour rendre la rendre plus fluide, plus UX).
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

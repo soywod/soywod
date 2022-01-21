@@ -6,11 +6,11 @@ end = 2016-09-20
 
 [fr]
 subtitle = "Conseil — Site vitrine"
-desc = '''
-Smart Services est un cabinet de conseil. Ils avaient besoin d’un site vitrine sous forme de diaporama. Le site a été développé avec [fullPage.js](https://alvarotrigo.com/fullPage/) et [jQuery](https://jquery.com/).
-'''
+desc = """
+Smart Services est un cabinet de conseil. Ils avaient besoin d'un site vitrine sous forme de diaporama. Le site a été développé avec [fullPage.js](https://alvarotrigo.com/fullPage/) et [jQuery](https://jquery.com/).
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

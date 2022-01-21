@@ -1,0 +1,16 @@
+company = "Fluo (via SFEIR)"
+link = "https://www.fluo.com"
+tags = ["js", "flow", "react", "angular", "ios"]
+begin = 2017-01-09
+end = 2017-11-30
+
+[fr]
+title = "Ingénieur d'études et développement"
+desc = """
+Développement dun système de hook en JavaScript. Maintenance dun outil de simulation dassurance en React. Correction de bugs sur une application mobile et sur un back-end en AngularJS. Intégration dune solution dauthentification SaaS (Okta).
+"""
+
+[en]
+title = ""
+desc = """
+"""

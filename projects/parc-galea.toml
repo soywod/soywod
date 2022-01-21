@@ -6,11 +6,11 @@ end = 2017-11-29
 
 [fr]
 subtitle = "Voyage — Module web"
-desc = '''
-Galea est un parc racontant les secrets d’une Corse ouverte sur le monde, avec ses visites, ses musées et jardins. Ils avaient besoin d‘ajouter un bouton PayPal pour la vente d’un de leur ouvrage.
-'''
+desc = """
+Galea est un parc racontant les secrets d'une Corse ouverte sur le monde, avec ses visites, ses musées et jardins. Ils avaient besoin d‘ajouter un bouton PayPal pour la vente d'un de leur ouvrage.
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

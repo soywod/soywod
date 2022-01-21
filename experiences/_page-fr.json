@@ -1,4 +1,5 @@
 {
   "navbar": "Expériences",
-  "title": "Expériences"
+  "title": "Expériences",
+  "from-to": "{{from}} — {{to}}"
 }

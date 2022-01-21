@@ -7,11 +7,11 @@ end = 2016-11-09
 
 [fr]
 subtitle = "Voyage — Formulaire dynamique"
-desc = '''
-Island Tours est une agence de voyage autour de l’Island. Il avait besoin d’un formulaire interactif en lien avec une newsletter.
-'''
+desc = """
+Island Tours est une agence de voyage autour de l'Island. Il avait besoin d'un formulaire interactif en lien avec une newsletter.
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

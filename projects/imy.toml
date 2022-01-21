@@ -5,11 +5,11 @@ end = 2018-07-18
 
 [fr]
 subtitle = "Rencontre — Appli mobile"
-desc = '''
+desc = """
 Ajout de fonctionnalités dans une application mobile de rencontres en ligne. La partie client avait été développée avec [Angular](https://angular.io/) et [Ionic](https://ionicframework.com/). La partie serveur, quant à elle, était basée sur [Ruby on Rails](https://rubyonrails.org/).
-'''
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

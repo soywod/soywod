@@ -1,29 +1,30 @@
 import {Fragment} from "react";
 import {GetStaticProps, NextPage} from "next";
 import {DateTime, Interval} from "luxon";
+import humanizeDuration from "humanize-duration";
+import showdown from "showdown";
 
 import Link from "../_shared/link";
 import SEO from "../_shared/seo";
-
-import classes from "./_page.module.scss";
 import {LangProps, parseLang, useI18n} from "../_shared/i18n";
+import cs from "./_page.module.scss";
 
 const title = "Clément DOUIN | Expériences";
 const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React).";
 const tags = "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant";
 
-type Experience = {
+type SerializableExperience = {
   title: string;
   company: string;
   desc: string;
   tags: string[];
-  begin: DateTime;
-  end: DateTime;
+  begin: string;
+  end: string | null;
   link: string | null;
 };
 
 type ExperiencesPageProps = LangProps & {
-  experiences: Experience[];
+  experiences: SerializableExperience[];
 };
 
 const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) => {
@@ -33,37 +34,50 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) =>
     <>
       <SEO title={title} desc={desc} tags={tags} />
       <h1>{t("title")}</h1>
-      {experiences.map((props, key) => {
-        const begin = DateTime.fromFormat(String(props.begin), "yyLL", {locale: lang});
-        const end = props.end ? DateTime.fromFormat(String(props.end), "yyLL", {locale: lang}) : null;
-        const interval = end
-          ? Interval.fromDateTimes(begin, end).toFormat("LLL yy")
-          : begin.toFormat("LLL yy") + " – maintenant";
+      {experiences.map(experience => {
+        let date = t("in-progress");
+        const begin = DateTime.fromISO(experience.begin, {locale: lang});
+        const end = experience.end ? DateTime.fromISO(experience.end, {locale: lang}) : DateTime.local();
+
+        if (begin.month === end.month) {
+          date = t("from-to", {from: begin.toFormat("d"), to: end.toFormat("d")});
+          date += begin.toFormat(" LLL yyyy");
+        } else if (begin.year === end.year) {
+          date = t("from-to", {from: begin.toFormat("LLL"), to: end.toFormat("LLL")});
+          date += begin.toFormat(" yyyy");
+        } else {
+          date = t("from-to", {from: begin.toFormat("LLL yyyy"), to: end.toFormat("LLL yyyy")});
+        }
+
+        const duration = humanizeDuration(Interval.fromDateTimes(begin, end).toDuration().valueOf(), {
+          language: lang,
+          largest: 2,
+          maxDecimalPoints: 1,
+        });
 
         return (
-          <Fragment key={key}>
+          <Fragment key={experience.company + experience.title}>
             <hr />
-
-            <h2 className={classes.title}>
-              <span>{props.title}</span>
-              <em>{interval}</em>
-            </h2>
-
-            {props.link && (
-              <h3 className={classes.company}>
-                @<Link to={props.link}>{props.company}</Link>
-              </h3>
-            )}
-
-            <div className={classes.tags}>
-              {props.tags.map(tag => (
-                <span key={tag} className={classes.tag}>
-                  {tag}
-                </span>
-              ))}
+            <div className={cs.container}>
+              <div className={cs.content}>
+                <h2 className={cs.title}>{experience.title}</h2>
+                <h3 className={cs.company}>
+                  @{experience.link ? <Link to={experience.link}>{experience.company}</Link> : experience.company}
+                </h3>
+                <div className={cs.tags}>
+                  {experience.tags.map(tag => (
+                    <span key={tag} className={cs.tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className={cs.times}>
+                <time>{date}</time>
+                <time>({duration})</time>
+              </div>
             </div>
-
-            <p>{props.desc}</p>
+            <div dangerouslySetInnerHTML={{__html: experience.desc}} />
           </Fragment>
         );
       })}
@@ -73,12 +87,29 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) =>
 
 export const getStaticProps: GetStaticProps = ctx => {
   const lang = parseLang(ctx?.params?.lang);
-  const webpackCtx = require.context("../experiences", true, /\.yml/);
+  const webpackCtx = require.context("../experiences", true, /\.toml/);
   const keys = webpackCtx.keys();
-  const experiences = keys
+  const experiences: SerializableExperience[] = keys
     .map(webpackCtx)
-    .map((experience: Experience) => experience)
-    .sort((a, b) => (b.begin as any) - (a.begin as any));
+    .map((toml: any) => ({
+      title: toml[lang].title,
+      company: toml.company,
+      desc: new showdown.Converter({openLinksInNewWindow: true}).makeHtml(toml[lang].desc),
+      tags: toml.tags || [],
+      begin: DateTime.fromISO(toml.begin),
+      end: toml.end ? DateTime.fromISO(toml.end) : null,
+      link: toml.link || null,
+    }))
+    .sort((e1, e2) => {
+      if (e1.begin < e2.begin) return 1;
+      else if (e1.begin > e2.begin) return -1;
+      else return 0;
+    })
+    .map(p => ({
+      ...p,
+      begin: p.begin.toISO(),
+      end: p.end ? p.end.toISO() : null,
+    }));
 
   return {props: {lang, experiences}};
 };

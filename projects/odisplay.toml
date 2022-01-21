@@ -5,11 +5,11 @@ end = 2020-01-16
 
 [fr]
 subtitle = "Signalétique — Gestionnaire de contenu"
-desc = '''
-Odisplay est une solution de création et de diffusion de contenu sur écrans physiques. La partie serveur a été développée avec [Firebase](https://firebase.google.com/) pour pouvoir synchroniser en temps réel les écrans avec leurs contenus. Le panel d’administration a été développé avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [RxJS](https://rxjs.dev/) et permettait de gérer/positionner/planifier ses contenus. Des clients auraient dû être développés (Android, iOS, Samsung TV…) pour lier des écrans physiques au panel d’administration, mais le projet a été abandonné en cours de route à cause de la crise sanitaire de la COVID-19.
-'''
+desc = """
+Odisplay est une solution de création et de diffusion de contenu sur écrans physiques. La partie serveur a été développée avec [Firebase](https://firebase.google.com/) pour pouvoir synchroniser en temps réel les écrans avec leurs contenus. Le panel d'administration a été développé avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [RxJS](https://rxjs.dev/) et permettait de gérer/positionner/planifier ses contenus. Des clients auraient dû être développés (Android, iOS, Samsung TV…) pour lier des écrans physiques au panel d'administration, mais le projet a été abandonné en cours de route à cause de la crise sanitaire de la COVID-19.
+"""
 
 [en]
 subtitle = ""
-desc = '''
-'''
+desc = """
+"""

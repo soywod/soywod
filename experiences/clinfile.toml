@@ -1,0 +1,16 @@
+company = "Clinfile"
+link = "https://clinfile.com/"
+tags = ["php", "js"]
+begin = 2016-10-03
+end = 2016-12-16
+
+[fr]
+title = "Développeur"
+desc = '''
+Réécriture dune partie dun outil de gestion de ressources (chefs de projet).
+'''
+
+[en]
+title = ""
+desc = '''
+'''

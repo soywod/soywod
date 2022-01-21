@@ -1,0 +1,16 @@
+company = "Afrimarket"
+link = "https://afrimarket.fr/"
+tags = ["php", "laravel", "js", "angular"]
+begin = 2016-02-22
+end = 2016-04-15
+
+[fr]
+title = "Lead développeur"
+desc = '''
+Correction de bugs sur un back-end en AngularJS et Laravel (PHP). Correction de bugs sur PrestaShop. Réécriture dune module de paiement en AngularJS.
+'''
+
+[en]
+title = ""
+desc = '''
+'''
