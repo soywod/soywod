@@ -1,0 +1,97 @@
+@import "../theme";
+
+.container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+}
+
+.times {
+  @include font("space mono");
+  font-style: italic;
+  color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0;
+
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.title {
+  align-items: flex-start;
+  display: flex;
+  margin: 0;
+
+  span {
+    flex: 1;
+  }
+}
+
+.subtitle {
+  color: $grey;
+  margin: 5px 0 0 0;
+}
+
+.imageContainer {
+  box-sizing: content-box;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin-right: 1rem;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 3px rgba($grey, 0.12), 0 1px 2px rgba($grey, 0.24);
+  width: 10rem;
+  height: 6rem;
+  transition: box-shadow 125ms;
+  overflow: hidden;
+
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.imageLink {
+  @include no-hover;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 0 0 0;
+
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.tag {
+  background: $greyF0;
+  border: 1px solid $greyD3;
+  border-radius: $border-radius;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0.3rem 0.3rem 0 0;
+  padding: 0.1rem 0.3rem;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-column-gap: 0.25rem;
+  justify-items: center;
+}

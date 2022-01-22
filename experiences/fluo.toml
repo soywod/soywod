@@ -1,5 +1,7 @@
-company = "Fluo (via SFEIR)"
-link = "https://www.fluo.com"
+company = "Fluo"
+companyLink = "https://www.fluo.com/"
+subcompany = "SFEIR"
+subcompanyLink = "https://www.sfeir.com/"
 tags = ["js", "flow", "react", "angular", "ios"]
 begin = 2017-01-09
 end = 2017-11-30

@@ -1,5 +1,5 @@
 company = "The green data"
-link = "https://www.thegreendata.com/"
+companyLink = "https://www.thegreendata.com/"
 tags = ["js", "ts", "react", "mui", "blockchain"]
 begin = 2020-11-16
 end = 2021-01-10

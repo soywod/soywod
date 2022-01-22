@@ -1,5 +1,5 @@
 company = "Tokeny"
-link = "https://tokeny.com/"
+companyLink = "https://tokeny.com/"
 tags = ["js", "ts", "react", "mui", "blockchain"]
 begin = 2018-09-25
 end = 2019-02-28

@@ -1,5 +1,5 @@
-company = "L‘École Multimédia"
-link = "https://www.ecole-multimedia.com/"
+company = "L'École Multimédia"
+companyLink = "https://www.ecole-multimedia.com/"
 tags = ["js", "angular"]
 begin = 2016-08-17
 end = 2016-08-26

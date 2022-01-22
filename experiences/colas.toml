@@ -1,5 +1,6 @@
-company = "Colas (via Strategy Partners)"
-link = "https://www.colas.com/"
+company = "Colas"
+companyLink = "https://www.colas.com/"
+subcompany = "Strategy Partner"
 tags = []
 begin = 2017-11-01
 end = 2018-09-22

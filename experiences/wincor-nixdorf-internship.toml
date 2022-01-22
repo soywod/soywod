@@ -1,5 +1,5 @@
 company = "Wincor Nixdorf"
-link = "https://www.dieboldnixdorf.com/"
+companyLink = "https://www.dieboldnixdorf.com/"
 tags = ["vb.net", "vba", "qtp"]
 begin = 2010-04-01
 end = 2010-06-01

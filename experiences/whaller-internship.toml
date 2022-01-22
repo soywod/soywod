@@ -1,5 +1,5 @@
 company = "Whaller"
-link = "https://waller.com/"
+companyLink = "https://whaller.com/"
 tags = ["php", "codeigniter", "js", "jquery", "docker"]
 begin = 2015-09-15
 end = 2015-10-09
