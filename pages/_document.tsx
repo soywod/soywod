@@ -1,15 +1,9 @@
-import NextDocument, {Html, Head, Main, NextScript, DocumentContext} from "next/document";
-import React from "react";
+import NextDocument, {Html, Head, Main, NextScript} from "next/document";
 import {I18nextProvider} from "react-i18next";
 
 import i18n from "../_shared/i18n";
 
 class Document extends NextDocument {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await NextDocument.getInitialProps(ctx);
-    return initialProps;
-  }
-
   render() {
     return (
       <Html>

@@ -1,10 +1,16 @@
 {
-  "seo-title": "Clément DOUIN | Independent Web Developer",
-  "seo-desc": "Independent web developer with {{yearsJSExp}} years of experience in JavaScript technologies",
-  "seo-tags": "clément,douin,soywod,development,developer,application,web,javascript,typescript,react,independent",
-  "p-1": "My name is <code>Clément DOUIN</code>, I am a {{yearsOld}} years old independent web developer with {{yearsJSExp}} years of experience in JavaScript technologies.",
-  "p-2": "I have been developping applications for more than {{yearsDevExp}} years. I started with C, Java and Visual Basic. Then I switched to web technologies with TypeScript, React.js, Next.js, and more lately Rust. I discovered functional programming with Haskell/OCaml/Elm and devops with Docker/Nix.",
-  "p-3-1": "I work now as a freelance web developer. My expertise makes me highly autonomous in all kind of projects, both frontend (UX, integration, application) and backend (API, perfs, devops). Feel free to",
-  "p-3-contact-link-text": "contact me",
-  "p-3-2": "if you need any further information!"
+  "seo-title": "Clément DOUIN | Développeur Web Indépendant",
+  "seo-desc": "Développeur web indépendant avec {{yearsJSExp}} ans d'expérience en JavaScript",
+  "seo-tags": "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant",
+  "footer-link-label": "Hire me !",
+  "footer-availability": "Available",
+  "title": "Hire me",
+  "per-hour": "Per hour",
+  "per-day": "Per day",
+  "per-service": "Per service",
+  "on-estimate": "On estimate",
+  "p-1": "For more information, feel free to contact me by email",
+  "p-2": ", by phone",
+  "p-3": "or by any social network you will find bellow",
+  "reveal": "REVEAL"
 }

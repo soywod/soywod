@@ -4,7 +4,6 @@ import {AppProps} from "next/app";
 
 import Navbar from "../_shared/navbar";
 import Footer from "../_shared/footer";
-
 import "./_app.scss";
 import cs from "./_app.module.scss";
 

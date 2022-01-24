@@ -1,8 +1,2 @@
-import {GetStaticProps} from "next";
-
 export {getStaticPaths} from "../../_shared/i18n";
-export const getStaticProps: GetStaticProps = () => {
-  return {props: {}};
-};
-
-export {default} from "../../contact/_page";
+export {default, getStaticProps} from "../../contact/_page";

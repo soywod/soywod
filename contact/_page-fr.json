@@ -3,5 +3,14 @@
   "seo-desc": "Développeur web indépendant avec {{yearsJSExp}} ans d'expérience en JavaScript",
   "seo-tags": "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant",
   "footer-link-label": "Recrutez-moi !",
-  "footer-availability": "Actuellement disponible"
+  "footer-availability": "Actuellement disponible",
+  "title": "Recrutez-moi",
+  "per-hour": "Par heure",
+  "per-day": "Par jour",
+  "per-service": "Par prestation",
+  "on-estimate": "Sur devis",
+  "p-1": "Pour plus d'informations, n'hésitez pas à me contacter par email",
+  "p-2": ", par téléphone",
+  "p-3": "ou via l'un des réseaux sociaux situés juste en dessous",
+  "reveal": "AFFICHER"
 }
