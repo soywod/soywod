@@ -1,12 +1,12 @@
 title = "Agorastore"
-link = "https://www.agorastore.fr/"
-tags = ["ts", "sass", "react", "react-spring"]
+tags = ["ts", "sass", "react", "react-spring", "storybook"]
 begin = 2020-06-25
 end = 2020-07-27
 
 [fr]
 subtitle = ""
 desc = """
+[Agorastore](https://www.agorastore.fr/) est un site de ventes aux enchères de matériel d'occasion et de biens immobiliers. La mission consistait à rendre responsive une collection de composants [React](https://reactjs.org/), et à en implémenter quelques nouveaux (un carousel, un gestionnaire de plans, des cartes spécifiques…). La bibliothèque de composants était gérée par un [Storybook](https://storybook.js.org/). J'ai également pris certaines initiatives, comme par exemple repasser sur certains composants afin de les rendre plus UX, ou encore ajouter quelques animations avec [React Spring](https://react-spring.io/).
 """
 
 [en]

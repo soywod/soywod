@@ -35,7 +35,6 @@ function renderCompany(company: string, link?: string | null): JSX.Element {
 
 const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) => {
   const {t} = useI18n(lang, "experience");
-
   return (
     <>
       <SEO title={title} desc={desc} tags={tags} />

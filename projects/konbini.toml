@@ -1,12 +1,12 @@
 title = "Konbini"
-link = "https://www.konbini.com/"
-tags = []
+tags = ["ts", "react", "elm", "antd", "wordpress", "stripe"]
 begin = 2019-10-01
 end = 2019-12-02
 
 [fr]
 subtitle = ""
 desc = """
+[Konbini](https://www.konbini.com/) est un média en ligne français. La mission était composée de trois sous projets. Le premier était le développement d'un widget de micro-dons. L'objectif était de pouvoir sélectionner rapidement (au scroll) un montant entre un et dix euros et de procéder directement au virement via un composant [Stripe](https://stripe.com/). Une première version a été développée en [Elm](https://elm-lang.org/), mais le client a opté pour une réécriture en [React](https://reactjs.org/). Le deuxième était la mise en place d'un plugin WordPress utilisant ce widget pour une intégration plus rapide par les utilisateurs. Le troisième était le développement d'un panel d'administration pour pouvoir configurer les compagnes de dons et les montants disponibles. Cette administration a été développée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [Ant Design](https://www.typescriptlang.org/).
 """
 
 [en]
