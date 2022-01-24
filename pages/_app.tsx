@@ -17,7 +17,7 @@ const App: FC<AppProps> = ({Component, pageProps}) => {
       <div className={cs.container}>
         <Navbar lang={pageProps.lang} />
         <Component {...pageProps} />
-        <Footer />
+        <Footer lang={pageProps.lang} />
       </div>
     </>
   );

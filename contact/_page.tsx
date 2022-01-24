@@ -4,6 +4,7 @@ import SEO from "../_shared/seo";
 import IconDown from "../_shared/icon-down";
 import cs from "./_page.module.scss";
 import {GetStaticProps} from "next";
+import {parseLang} from "../_shared/i18n";
 
 const title = "Clément DOUIN | Me contacter";
 const desc = "Avec 5 ans d'expérience en JavaScript (React), je vous accompagne dans votre évolution numérique.";
@@ -67,9 +68,9 @@ const ContactPage: FC = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps<any> = async ctx => {
-  console.log(ctx);
-  return {props: {lang: ctx.params.lang}};
+export const getStaticProps: GetStaticProps = ctx => {
+  const lang = parseLang(ctx?.params?.lang);
+  return {props: {lang}};
 };
 
 export default ContactPage;

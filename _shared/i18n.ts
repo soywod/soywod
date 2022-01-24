@@ -8,17 +8,21 @@ import experienceEn from "../experiences/_page-en.json";
 import experienceFr from "../experiences/_page-fr.json";
 import projectEn from "../projects/_page-en.json";
 import projectFr from "../projects/_page-fr.json";
+import contactEn from "../contact/_page-en.json";
+import contactFr from "../contact/_page-fr.json";
 
 export const resources = {
   en: {
     home: homeEn,
     experience: experienceEn,
     project: projectEn,
+    contact: contactEn,
   },
   fr: {
     home: homeFr,
     experience: experienceFr,
     project: projectFr,
+    contact: contactFr,
   },
 };
 

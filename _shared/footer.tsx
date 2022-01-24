@@ -1,7 +1,7 @@
-import React, {FC, Fragment} from "react";
+import {FC, Fragment} from "react";
 
 import Link from "./link";
-
+import {LangProps, useI18n} from "./i18n";
 import cs from "./footer.module.scss";
 
 const medias = [
@@ -12,16 +12,20 @@ const medias = [
   {name: "Twitter", href: "https://twitter.com/soywod"},
 ];
 
-const Footer: FC = () => {
+type FooterProps = LangProps;
+
+const Footer: FC<FooterProps> = ({lang}) => {
+  const {t} = useI18n(lang, ["contact"]);
+
   return (
     <>
       <hr />
       <footer className={cs.footer}>
         <div>
-          <Link to="/contact" className={cs.recruit}>
-            <span>Recrutez-moi !</span>
+          <Link to={`/${lang}/contact`} className={cs.recruit}>
+            <span>{t("footer-link-label")}</span>
             <span className={cs.available}>
-              Actuellement disponible
+              {t("footer-availability")}
               <svg className={cs.status} viewBox="0 0 100 100">
                 <circle cx="50" cy="50" r="50" />
               </svg>

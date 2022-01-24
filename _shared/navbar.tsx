@@ -21,11 +21,9 @@ const Navbar: FC<NavbarProps> = ({lang}) => {
           <span>Clément DOUIN</span>
         </Link>
       </div>
-
       <Link className={cs.link} to={`/${lang}/experiences`}>
         {t("navbar", {ns: "experience"})}
       </Link>
-
       <Link className={cs.link} to={`/${lang}/projects`}>
         {t("navbar", {ns: "project"})}
       </Link>
