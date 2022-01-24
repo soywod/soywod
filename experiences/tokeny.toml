@@ -5,11 +5,13 @@ begin = 2018-09-25
 end = 2019-02-28
 
 [fr]
-title = "Développeur web"
+title = "Ingénieur R&D"
 desc = """
+Tokeny fournit une infrastructure pour permettre aux entreprises et aux acteurs financiers d'émettre, de transférer et de gérer des actifs sur la blockchain. La mission consistait à améliorer les composants [React](https://reactjs.org/) du panel d'administration. La couche graphique était basée sur [MaterialUI](https://mui.com/).
 """
 
 [en]
-title = "Web developer"
+title = "Frontend web developer"
 desc = """
+Tokeny provides an enterprise-grade infrastructure to allow companies and financial actors to compliantly issue, transfer, and manage assets on blockchain, enabling them to improve asset liquidity.
 """

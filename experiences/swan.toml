@@ -1,15 +1,17 @@
 company = "Swan"
 companyLink = "https://www.swan.io/"
-tags = []
+tags = ["ts", "fp-ts", "node", "nest", "graphql", "apollo", "sequelize"]
 begin = 2021-08-30
 end = 2021-11-30
 
 [fr]
-title = "Développeur web"
+title = "Ingénieur R&D"
 desc = """
+Swan est une plateforme de [Banking-as-a-Service](https://fr.wikipedia.org/wiki/Banking-as-a-Service). Lors de cette mission, j'ai été chargé d'améliorer et de sécuriser l'API d'intégration des nouveaux clients (onboarding). J'ai également participé à l'amélioration de l'API de création de projets. Swan utilisait beaucoup [fp-ts](https://gcanti.github.io/fp-ts/), et ça a été une très belle découverte pour ma part. Cette librairie permet d'utiliser, en [TypeScript](https://www.typescriptlang.org/), des concepts fonctionnels tels que les [applicatives](https://en.wikipedia.org/wiki/Applicative_functor) ou les [monades](https://fr.wikipedia.org/wiki/Monade_(informatique)). Ça a été une excellente opportunité pour moi de mettre en pratique mes connaissances dans ce domaine : réécriture de certaines parties de l'API en mode plus fonctionnel, présentation de concepts fonctionnels devant toute l'équipe tech, mise en place d'un validateur de données basé sur les applicatives…
 """
 
 [en]
-title = "Web developer"
+title = "Backend web developer"
 desc = """
+Swan is a banking platform that lets you embed banking services directly into your product in under 5 minutes.
 """

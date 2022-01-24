@@ -1,16 +1,16 @@
 company = "Wincor Nixdorf"
 companyLink = "https://www.dieboldnixdorf.com/"
-tags = ["vb.net", "vba", "qtp"]
+tags = ["vb.net", "vba", "quick test pro"]
 begin = 2010-04-01
 end = 2010-06-01
 
 [fr]
 title = "Stagiaire"
-desc = '''
-Au sein de l’équipe QA de Wincor Nixdorf Retail, j‘ai participé à l‘automatisation des tests d‘intégration des logiciels d‘encaissement (notamment Picard et Super U). J‘ai appris à coder en Visual Basic et à utiliser le logiciel Quick Test Pro.
-'''
+desc = """
+Au sein de l'équipe QA de Wincor Nixdorf Retail, j'ai participé à l'automatisation des tests d'intégration des logiciels d'encaissement (notamment Picard et Super U). J'ai appris à coder en Visual Basic et à utiliser le logiciel Quick Test Pro.
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""

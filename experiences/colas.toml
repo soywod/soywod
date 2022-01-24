@@ -6,8 +6,14 @@ begin = 2017-11-01
 end = 2018-09-22
 
 [fr]
-title = "Développeur web"
+title = "Ingénieur R&D"
 desc = """
+Colas est une entreprise française de travaux publics. La mission consistait à développer une interface au dessus de leur CRM Serena. Cette interface a été utilisée par plusieurs sous-projets qui m'ont été également attribués par la suite :
+
+- un script [Node.js](https://nodejs.org/) de synchronisation de données avec un [Microsoft SQL Server](https://www.microsoft.com/sql-server/)
+- une API JSON de gestion de commandes
+
+La plupart des outils ont été développés avec [TypeScript](https://www.typescriptlang.org/) et [Node.js](https://nodejs.org/). 
 """
 
 [en]

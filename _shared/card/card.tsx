@@ -22,27 +22,29 @@ export type CardProps = LangProps & {
   begin: string;
   end: string | null;
   link: string | null;
-  sourcesLink: string | null;
+  sourcesLink?: string | null;
 };
 
 export const Card: FC<CardProps> = props => {
-  let date = "";
   const begin = DateTime.fromISO(props.begin, {locale: props.lang});
+  let beginStr = begin.toFormat("d LLL yyyy");
   const end = props.end ? DateTime.fromISO(props.end, {locale: props.lang}) : DateTime.local();
+  let endStr = end.toFormat("d LLL yyyy");
 
   if (begin.month === end.month) {
-    date = renderDateRange(begin, end, "d", " LLL yyyy");
+    beginStr = begin.toFormat("d");
+    endStr = end.toFormat("d LLL yyyy");
   } else if (begin.year === end.year) {
-    date = renderDateRange(begin, end, "LLL", " yyyy");
-  } else {
-    date = renderDateRange(begin, end, "LLL yyyy");
+    beginStr = begin.toFormat("LLL");
+    endStr = end.toFormat("LLL yyyy");
   }
 
-  const duration = humanizeDuration(Interval.fromDateTimes(begin, end).toDuration().valueOf(), {
+  const duration = Interval.fromDateTimes(begin, end).toDuration();
+  const durationStr = humanizeDuration(duration.valueOf(), {
     language: props.lang,
-    units: ["y", "mo", "w", "d"],
-    round: true,
+    units: ["y", "mo", "d"],
     largest: 2,
+    round: true,
   });
 
   return (
@@ -72,8 +74,16 @@ export const Card: FC<CardProps> = props => {
           </div>
         </div>
         <div className={cs.times}>
-          <time>{date}</time>
-          <time>({duration})</time>
+          <div>
+            <time dateTime={begin.toISODate()} title={begin.toFormat("d LLLL yyyy")}>
+              {beginStr}
+            </time>
+            {" — "}
+            <time dateTime={end.toISODate()} title={end.toFormat("d LLLL yyyy")}>
+              {endStr}
+            </time>
+          </div>
+          <time dateTime={duration.toISO()}>({durationStr})</time>
         </div>
       </div>
 

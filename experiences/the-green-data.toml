@@ -1,15 +1,16 @@
 company = "The green data"
 companyLink = "https://www.thegreendata.com/"
-tags = ["js", "ts", "react", "mui", "blockchain"]
+tags = ["js", "python", "pyodide", "wa"]
 begin = 2020-11-16
 end = 2021-01-10
 
 [fr]
-title = "Développeur web"
+title = "Ingénieur R&D"
 desc = """
+The green data est une plateforme décisionnelle de l'agriculture régénératrice. L'objectif de la mission était de faire fonctionner un simulateur écrit en Python par des data scientists dans un navigateur web grâce à [Pyodide](https://github.com/pyodide/pyodide/), un interpréteur Python basé sur la technologie [WebAssembly](https://webassembly.org/).
 """
 
 [en]
-title = "Web developer"
+title = "Frontend web developer"
 desc = """
 """

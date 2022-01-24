@@ -29,8 +29,8 @@ type ExperiencesPageProps = LangProps & {
   experiences: SerializableExperience[];
 };
 
-function renderCompany(company: string, link?: string | null): JSX.Element | string {
-  return link ? <Link to={link}>{company}</Link> : company;
+function renderCompany(company: string, link?: string | null): JSX.Element {
+  return link ? <Link to={link}>{company}</Link> : <>{company}</>;
 }
 
 const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) => {
@@ -40,10 +40,11 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) =>
     <>
       <SEO title={title} desc={desc} tags={tags} />
       <h1>{t("title")}</h1>
-      {experiences.map(experience => (
+      {experiences.map((experience, key) => (
         <Card
+          key={key}
           lang={lang}
-          title={experience.title}
+          title={<>{experience.title}</>}
           subtitle={
             <>
               @{renderCompany(experience.company, experience.companyLink)}
@@ -64,7 +65,7 @@ const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) =>
 
 export const getStaticProps: GetStaticProps = ctx => {
   const lang = parseLang(ctx?.params?.lang);
-  const webpackCtx = require.context("../experiences", true, /\.toml/);
+  const webpackCtx = require.context("../experiences", true, /\.toml$/);
   const keys = webpackCtx.keys();
   const names = keys.map(path => path.slice(2, -5));
   const experiences: SerializableExperience[] = keys
