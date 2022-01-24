@@ -1,16 +1,16 @@
 company = "Clinfile"
 companyLink = "https://clinfile.com/"
-tags = ["php", "js"]
+tags = ["php", "js", "jquery"]
 begin = 2016-10-03
 end = 2016-12-16
 
 [fr]
 title = "Développeur"
-desc = '''
-Réécriture dune partie dun outil de gestion de ressources (chefs de projet).
-'''
+desc = """
+Clinfile est une société de recherche contractuelle informatique. La mission consistait ajouter des fonctionnalités dans un outil de gestion de ressources à destination des chefs de projet dans le domaine du médical. J'ai également pu corriger de nombreux bugs et préparer l'outil pour leur première mise en production. L'outil était développé en PHP, JavaScript et jQuery.
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""

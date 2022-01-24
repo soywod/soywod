@@ -6,11 +6,14 @@ end = 2016-02-20
 
 [fr]
 title = "Développeur"
-desc = '''
-Corrections de bugs back-end sur CodeIgniter (PHP) et sur un front-end en jQuery. Développement dun lecteur de flux RSS en jQuery. Développement dun gestionnaire de fichiers en jQuery.
-'''
+desc = """
+Whaller est une plateforme qui permet aux utilisateurs de créer leurs propres réseaux sociaux et collaboratifs sécurisés. Lors de cette mission j'ai eu l'occasion :
+- d'ajouter des nouvelles fonctionnalités et de corriger des bugs liés au backend en PHP ([CodeIgniter](https://codeigniter.com/))
+- de développer un lecteur de flux RSS en PHP et jQuery
+- de développer un gestionnaire de fichiers (*alla* [Dropbox](https://www.dropbox.com/home)) en PHP et jQuery
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""

@@ -6,10 +6,11 @@ end = 2016-07-29
 
 [fr]
 title = "Formateur"
-desc = '''
-'''
+desc = """
+L'École Multimédia est une école proposant de nombreuses formations aux métiers du numérique. J'ai eu l'occasion d'y donner des cours d'initiation au framework [AngularJS](https://angularjs.org/).
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""

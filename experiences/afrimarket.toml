@@ -6,11 +6,11 @@ end = 2016-04-15
 
 [fr]
 title = "Lead développeur"
-desc = '''
-Correction de bugs sur un back-end en AngularJS et Laravel (PHP). Correction de bugs sur PrestaShop. Réécriture dune module de paiement en AngularJS.
-'''
+desc = """
+Afrimarket est une startup spécialisée dans la vente de biens et de services en Afrique de l'Ouest. La mission consistait à refondre leur back-end avec [AngularJS](https://angularjs.org/) et [Laraval](https://laravel.com/). J'ai également eu l'occasion de corriger quelques bugs sur leur boutique en ligne PrestaShop.
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""

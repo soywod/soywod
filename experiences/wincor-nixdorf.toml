@@ -6,11 +6,14 @@ end = 2015-09-10
 
 [fr]
 title = "Technicien test et support logiciel"
-desc = '''
-Développement doutils daide au diagnostic pour logiciels dencaissement. Développement de scripts dinstallation de logiciels dencaissement. Support de niveau 1, 2 et 3 (matériel et logiciel).
-'''
+desc = """
+Wincor Nixdorf est un fournisseur de solutions pour la grande distribution. J'ai eu l'occasion :
+- de développer des outils d'aide au diagnostic pour logiciels d'encaissement
+- de développer des scripts d'installation de logiciels d'encaissement
+- d'effectuer le support materiel et logiciel de systèmes d'encaissement (Picard, Castorama, Bricorama)
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""

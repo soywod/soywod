@@ -2,15 +2,16 @@
 
 .container {
   display: flex;
+  align-items: center;
 }
 
 .content {
   flex: 1;
-  align-self: center;
 }
 
 .times {
   @include font("space mono");
+  align-self: flex-start;
   font-style: italic;
   color: $grey;
   display: flex;

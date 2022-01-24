@@ -2,15 +2,18 @@ company = "Fluo"
 companyLink = "https://www.fluo.com/"
 subcompany = "SFEIR"
 subcompanyLink = "https://www.sfeir.com/"
-tags = ["js", "flow", "react", "angular", "ios"]
+tags = ["js", "flow", "react", "react-native"]
 begin = 2017-01-09
 end = 2017-11-30
 
 [fr]
 title = "Ingénieur d'études et développement"
 desc = """
-
-Développement dun système de hook en JavaScript. Maintenance dun outil de simulation dassurance en React. Correction de bugs sur une application mobile et sur un back-end en AngularJS. Intégration dune solution dauthentification SaaS (Okta).
+Fluo est le spécialiste de la distribution d'assurance qui permet de comparer les garanties avec les tarifs des assurances. La mission a été très variée. J'ai eu l'occasion d'intervenir sur de nombreux sujets :
+- Développement d'un système de hook au sein de l'API principale avec [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) et [Flow](https://flow.org/)
+- Amélioration d'un composant [React](https://reactjs.org/) de comparaison de garanties d'assurances
+- Corrections de bugs et déploiement (Android et iOS) de l'application mobile développée avec [React Native](https://reactnative.dev/) et [Flow](https://flow.org/)
+- Intégration d'une solution d'authentification SaaS ([Okta](https://www.okta.com/))
 """
 
 [en]

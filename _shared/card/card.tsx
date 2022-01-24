@@ -7,12 +7,6 @@ import Link from "../link";
 import Img from "../img";
 import cs from "./card.module.scss";
 
-function renderDateRange(d1: DateTime, d2: DateTime, fmt: string, suffixFmt?: string): string {
-  const range = `${d1.toFormat(fmt)} — ${d2.toFormat(fmt)}`;
-  const suffix = suffixFmt ? d1.toFormat(suffixFmt) : "";
-  return range + suffix;
-}
-
 export type CardProps = LangProps & {
   title: ReactElement<any, any>;
   subtitle: ReactElement<any, any>;
@@ -86,9 +80,7 @@ export const Card: FC<CardProps> = props => {
           <time dateTime={duration.toISO()}>({durationStr})</time>
         </div>
       </div>
-
       <div dangerouslySetInnerHTML={{__html: props.desc}} />
-
       {props.sourcesLink && (
         <div className={cs.linkContainer}>
           <Link className={cs.link} to={props.sourcesLink}>

@@ -6,11 +6,11 @@ end = 2015-10-09
 
 [fr]
 title = "Stagiaire"
-desc = '''
-Corrections de bugs back-end sur CodeIgniter (PHP) et sur un front-end en jQuery. Développement dun lecteur de flux RSS en jQuery. Développement dun gestionnaire de fichiers en jQuery.
-'''
+desc = """
+Whaller est une plateforme qui permet aux utilisateurs de créer leurs propres réseaux sociaux et collaboratifs sécurisés. Durant ce stage j'ai appris à utiliser [CodeIgniter](https://codeigniter.com/) et [jQuery](https://jquery.com/), et à mettre en pratique ces nouveaux acquis en corrigeant des bugs et en ajoutant des nouvelles fonctionnalités.
+"""
 
 [en]
 title = ""
-desc = '''
-'''
+desc = """
+"""
