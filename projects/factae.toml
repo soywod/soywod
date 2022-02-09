@@ -13,6 +13,9 @@ J'ai d'abord créé cet outil pour mon usage personnel, puis je me suis rendu co
 """
 
 [en]
-subtitle = ""
+subtitle = "Invoicing — Web app"
 desc = """
+FactAE is an invoicing tool dedicated to French auto-entrepreneurs at one euro per month. The client part was developed with [React.js](https://reactjs.org/) and [Next.js](https://nextjs.org/). [Google Firebase](https://firebase.google.com/) has been implemented for authentication and user data, and [Google Cloud Functions](https://cloud.google.com/functions) has was used for the subscription part, payment ([Stripe](https://stripe.com/)) and generation of PDFs.
+
+I first created this tool for my personal use, then I realized that many other self-employed people around me had the same need. So I invested time and money to set up this platform. Unfortunately, I didn't manage to get the concept off the ground. Other tools came to take over the market afterwards, which led me to abandon the project. It was nevertheless a very rewarding experience!
 """

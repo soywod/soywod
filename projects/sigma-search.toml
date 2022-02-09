@@ -12,6 +12,7 @@ Sigma Search est une boîte de recrutement internationale. Ils avaient besoin de
 """
 
 [en]
-subtitle = ""
+subtitle = "Recruitment — Showcase website"
 desc = """
+Sigma Search is an international recruitment company. They needed to rebuid their showcase website. Integration was done with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Stylus](https://stylus-lang.com/) from graphics and animations provided by [DOGMS](https://dogms.com/).
 """

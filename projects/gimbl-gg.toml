@@ -11,7 +11,7 @@ Gimbl est une startup proposant des récompenses et des défis pour que les stre
 """
 
 [en]
-subtitle = ""
+subtitle = "Video games — Showcase website"
 desc = """
-Gimbl empowers you with rewards and challenges for streamers to get out of their way during their game.
+Gimbl empowers you with rewards and challenges for streamers to get out of their way during their game. They needed to set up a quality showcase website with a futuristic design. The integration was done from [InVision](https://www.invisionapp.com/) graphics with [React.js](https://reactjs.org/), [Styled Components](https://styled-components.com/) and [Next.js](https://nextjs.org/).
 """

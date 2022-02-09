@@ -11,6 +11,7 @@ desc = """
 """
 
 [en]
-subtitle = ""
+subtitle = "Signage — Content editor"
 desc = """
+[PictoSigns](https://www.pictosigns.com/picto/) is a French family-owned signage company. Their project was to allow users to create their personalized plate online and receive it directly by post. A first version had already been developed and was running in production. However, PictoSigns encountered many problems related to the PrestaShop infrastructure. A market study also made it possible to target user needs more precisely. For this second version, the backend was developed with [Rust](https://www.rust-lang.org/), [Diesel](https://diesel.rs/), [PostgreSQL](https://www.postgresql.org/) and [Docker](https://www.docker.com/), to address infrastructure and performance issues. The admin panel was extracted from PrestaShop and developed with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Ant Design]( https://ant.design/). The frontend, meanwhile, has kept the same technologies as the first version (a simple facelift has been made to make it more fluid, more UX).
 """

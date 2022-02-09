@@ -12,6 +12,7 @@ Les Ateliers Cap Bien-Être de la [MSA](https://www.msa.fr/lfp) sont des atelier
 """
 
 [en]
-subtitle = ""
+subtitle = "Health — Online training app"
 desc = """
+Les Ateliers Cap Bien-Être from the [MSA](https://www.msa.fr/lfp) are workshops aimed at better managing stress and emotions on a daily basis. The need was to create an online training application based on modules, pages and quizzes. The backend was developed with [Firebase](https://firebase.google.com/) (authentication and user data management). The frontend was developed with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [RxJS](https://rxjs.dev/). The integration was carried out using graphics and animations provided by [DOGMS](https://dogms.com/).
 """

@@ -11,6 +11,7 @@ Smart Services est un cabinet de conseil. Ils avaient besoin d'un site vitrine s
 """
 
 [en]
-subtitle = ""
+subtitle = "Consulting — Showcase website"
 desc = """
+Smart Services is a consulting firm. They needed a showcase site in the form of a slideshow. The site was developed with [fullPage.js](https://alvarotrigo.com/fullPage/) and [jQuery](https://jquery.com/).
 """

@@ -10,6 +10,7 @@ Développement d‘une application mobile d'aide à la gestion de sessions de st
 """
 
 [en]
-subtitle = ""
+subtitle = "Training — Mobile app"
 desc = """
+Development of a mobile application to manage internship and attendance sessions. Sessions were saved locally and could be synchronized manually as soon as a reliable internet connection was detected.
 """

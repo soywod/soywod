@@ -1,11 +1,10 @@
 title = "proPhilo Database"
 tags = ["react", "ts", "mui", "node", "postgresql", "postgrest", "nix"]
-draft = true
 begin = 2022-01-10
 end = 2022-01-14
 
 [fr]
-subtitle = "Appli web - Gestionnaire de ressources"
+subtitle = "Association — Gestionnaire de ressources"
 desc = """
 [proPhilo](https://prophilo.ch/) est une association suisse romande qui développe et soutient la pratique du dialogue philosophique  avec les enfants, les adolescents et les adultes. Leur besoin était de transformer un document XLS en une base interactive avec trois niveaux de permission. La partie serveur a été développée avec [PostgreSQL](https://www.postgresql.org/) et [PostgREST](https://postgrest.org/) afin de gérer de façon optimale les permissions sur les ressources. Un script [Node.js](https://nodejs.org/) a été mis en place pour la migration des données du fichier XLS vers la base de données PostgreSQL. La partie client a été développée avec [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) et [MaterialUI](https://mui.com/). Toutes les dépendances du projet ont été gérées avec [Nix](https://nixos.org/).
 
@@ -13,6 +12,9 @@ Le projet est actuellement en cours de test par proPhilo.
 """
 
 [en]
-subtitle = "Web app - Resource manager"
+subtitle = "Association — Resource manager"
 desc = """
+[proPhilo](https://prophilo.ch/) is a French-speaking Swiss association which develops and supports the practice of philosophical dialogue  with children, adolescents and adults. Their need was to transform an XLS document into an interactive database with three permission levels. The server part was developed with [PostgreSQL](https://www.postgresql.org/) and [PostgREST](https://postgrest.org/) in order to optimally manage resource permissions. A [Node.js](https://nodejs.org/) script has been implemented for migrating data from the XLS file to the PostgreSQL database. The client part was developed with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [MaterialUI](https://mui.com/). All project dependencies were managed with [Nix](https://nixos.org/).
+
+The project is currently being tested by proPhilo.
 """

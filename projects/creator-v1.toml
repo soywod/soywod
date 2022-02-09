@@ -12,6 +12,9 @@ Cette version n'est plus accessible car elle a été remplacée par la seconde v
 """
 
 [en]
-subtitle = "Web app - Content editor"
+subtitle = "Signage — Content editor"
 desc = """
+[PictoSigns](https://www.pictosigns.com/picto/) is a French family-owned signage company. Their project was to allow users to create their personalized plate online and receive it directly by post. PictoSigns has an online store based on PrestaShop. This first version was designed as a PrestaShop plugin to facilitate their production chain. The backend was therefore based on the PrestaShop environment (PHP/Symfony/MySQL). The frontend was developed with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [RxJS](https://rxjs.dev/) and [Fabric.js](http://fabricjs.com/).
+
+This version is no longer accessible because it has been replaced by the second version.
 """
