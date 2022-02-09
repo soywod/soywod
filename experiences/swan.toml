@@ -13,5 +13,5 @@ Swan est une plateforme de [Banking-as-a-Service](https://fr.wikipedia.org/wiki/
 [en]
 title = "Backend web developer"
 desc = """
-Swan is a banking platform that lets you embed banking services directly into your product in under 5 minutes.
+Swan is a [Banking-as-a-Service](https://fr.wikipedia.org/wiki/Banking-as-a-Service) platform. During this mission, I was in charge of improving and securing the API for onboarding new customers. I also participated in improving the project creation API. Swan used [fp-ts](https://gcanti.github.io/fp-ts/) a lot, and it was a great discovery for me. This library allows the use, in [TypeScript](https://www.typescriptlang.org/), of functional concepts such as [applicatives](https://en.wikipedia.org/wiki/Applicative_functor) or [monads](https://en.wikipedia.org/wiki/Monad_(functional_programming)). It was an excellent opportunity for me to put my knowledge into practice in this area: rewriting parts of the API in a more functional mode, introducing functional concepts in front of the entire tech team, developing a data validator using applicatives…
 """

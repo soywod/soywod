@@ -17,6 +17,12 @@ La plupart des outils ont été développés avec [TypeScript](https://www.types
 """
 
 [en]
-title = "Web developer"
+title = "R&D engineer"
 desc = """
+Colas is a French public works company. The mission was to develop an interface for their CRM Serena. This interface was used by several sub-projects which were also assigned to me later:
+
+- a [Node.js](https://nodejs.org/) script for synchronizing data with a [Microsoft SQL Server](https://www.microsoft.com/sql-server/)
+- a JSON order management API
+
+Most of the tools were developed with [TypeScript](https://www.typescriptlang.org/) and [Node.js](https://nodejs.org/).
 """

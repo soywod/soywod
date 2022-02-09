@@ -14,6 +14,10 @@ Wincor Nixdorf est un fournisseur de solutions pour la grande distribution. J'ai
 """
 
 [en]
-title = ""
+title = "Software testing technician"
 desc = """
+Wincor Nixdorf is a solution provider for large scale (wholesale) retail. There, I had an occasion to:
+- develop diagnostic tools for check cashing software
+- develop installation scripts for check cashing software
+- provide hardware and software support of cash checking systems (Picard, Castorama, Bricorama)
 """

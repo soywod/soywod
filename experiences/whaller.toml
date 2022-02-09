@@ -14,6 +14,10 @@ Whaller est une plateforme qui permet aux utilisateurs de créer leurs propres r
 """
 
 [en]
-title = ""
+title = "Developer"
 desc = """
+Whaller is a platform that permits to its users to creat their own secure social networks. I had an occasion to:
+- add new functions and fix bugs related to backend in PHP ([CodeIgniter](https://codeigniter.com/))
+- develop a RSS feed reader in PHP and jQuery
+- develop a [Dropbox](https://www.dropbox.com/home)-like file manager in PHP and jQuery
 """

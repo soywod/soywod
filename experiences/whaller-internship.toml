@@ -11,6 +11,7 @@ Whaller est une plateforme qui permet aux utilisateurs de créer leurs propres r
 """
 
 [en]
-title = ""
+title = "Trainee"
 desc = """
+Whaller is a platform that permits to its users to creat their own secure social networks. During the training I learned to use [CodeIgniter](https://codeigniter.com/) and [jQuery](https://jquery.com/) as well as to put my new skills into practice by fixing bugs and adding new functions.
 """

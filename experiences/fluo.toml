@@ -17,6 +17,11 @@ Fluo est le spécialiste de la distribution d'assurance qui permet de comparer l
 """
 
 [en]
-title = ""
+title = "R&D engineer"
 desc = """
+Fluo is the insurance distribution specialist that allows you to compare guarantees with insurance rates. The mission was very varied. I had the opportunity to:
+- develop a hook system within the main API with [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) and [Flow](https://flow.org/)
+- improve a [React](https://reactjs.org/) component for comparing insurance guarantees
+- fix bugs and deploy (Android and iOS) the mobile application developed with [React Native](https://reactnative.dev/) and [Flow](https://flow.org/)
+- integrate a SaaS authentication solution ([Okta](https://www.okta.com/))
 """

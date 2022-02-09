@@ -11,6 +11,7 @@ L'École Multimédia est une école proposant de nombreuses formations aux méti
 """
 
 [en]
-title = ""
+title = "Former"
 desc = """
+L'École Multimédia is a school offering numerous training courses in digital professions. I had the opportunity to give introductory lessons to the framework [AngularJS](https://angularjs.org/).
 """

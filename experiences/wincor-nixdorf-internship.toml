@@ -11,6 +11,7 @@ Wincor Nixdorf est un fournisseur de solutions pour la grande distribution. Au s
 """
 
 [en]
-title = ""
+title = "Trainee"
 desc = """
+Wincor Nixdorf is a solution provider for large scale (wholesale) retail. As a part of their QA team, I participated in automatisation of integration tests of check cashing software (in particular Super U and Picard). I learned to code in Visual Basic and to use Quick Test Pro software.
 """

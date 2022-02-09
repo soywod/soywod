@@ -11,7 +11,7 @@ Tokeny fournit une infrastructure pour permettre aux entreprises et aux acteurs 
 """
 
 [en]
-title = "Frontend web developer"
+title = "R&D engineer"
 desc = """
-Tokeny provides an enterprise-grade infrastructure to allow companies and financial actors to compliantly issue, transfer, and manage assets on blockchain, enabling them to improve asset liquidity.
+Tokeny provides an enterprise-grade infrastructure to allow companies and financial actors to compliantly issue, transfer, and manage assets on blockchain, enabling them to improve asset liquidity. The mission was to improve the [React](https://reactjs.org/) components of the admin panel. The graphics layer was based on [MaterialUI](https://mui.com/).
 """

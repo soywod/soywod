@@ -7,10 +7,11 @@ end = 2016-04-15
 [fr]
 title = "Lead développeur"
 desc = """
-Afrimarket est une startup spécialisée dans la vente de biens et de services en Afrique de l'Ouest. La mission consistait à refondre leur back-end avec [AngularJS](https://angularjs.org/) et [Laraval](https://laravel.com/). J'ai également eu l'occasion de corriger quelques bugs sur leur boutique en ligne PrestaShop.
+Afrimarket est une startup spécialisée dans la vente de biens et de services en Afrique de l'Ouest. La mission consistait à refondre leur back-end avec [AngularJS](https://angularjs.org/) et [Laravel](https://laravel.com/). J'ai également eu l'occasion de corriger quelques bugs sur leur boutique en ligne PrestaShop.
 """
 
 [en]
-title = ""
+title = "Lead developer"
 desc = """
+Afrimarket is a startup specialized in the sale of goods and services in West Africa. The mission was to refactor their backend written in [AngularJS](https://angularjs.org/) and [Laravel](https://laravel.com/). I also had the opportunity to fix some bugs on their PrestaShop online store.
 """

@@ -1,6 +1,6 @@
 title = "Creator v2"
 tags = ["react", "ts", "fabric", "sass", "antd", "rust", "diesel", "postgresql"]
-link = "https://www.pictosigns.com/picto/module/creator/editor/"
+link = "https://www.pictosigns.com/picto/module/creator/editor"
 begin = 2021-02-22
 end = 2021-08-28
 
