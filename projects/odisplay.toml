@@ -12,5 +12,5 @@ Odisplay est une solution de création et de diffusion de contenu sur écrans ph
 [en]
 subtitle = "Signage — Content manager"
 desc = """
-Odisplay is a solution for creating and distributing content on physical screens. The server was developed with [Firebase](https://firebase.google.com/) to be able to synchronize screens with their content in real time. The admin panel was developed with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [RxJS](https://rxjs.dev/) and allowed to manage/position/plan its contents. Clients should have been developed (Android, iOS, Samsung TV, etc.) to link physical screens to the administration panel, but the project was abandoned along the way due to the COVID-19 health crisis.
+Odisplay is a solution for creating and distributing content on physical screens. The server was developed with [Firebase](https://firebase.google.com/) to be able to synchronize screens with their content in real time. The admin panel was developed with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [RxJS](https://rxjs.dev/). Clients should have been developed (Android, iOS, Samsung TV, etc.) to link physical screens to the administration panel, but the project was abandoned along the way due to the COVID-19 health crisis.
 """

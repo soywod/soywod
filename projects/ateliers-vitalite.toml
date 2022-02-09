@@ -13,5 +13,5 @@ Les Ateliers Vitalité de la [MSA](https://www.msa.fr/) sont des ateliers visant
 [en]
 subtitle = "Health — Online training app"
 desc = """
-Les Ateliers Vitalité from the [MSA](https://www.msa.fr/) are workshops aimed to improve quality of life and to preserve health capital of retirees. Their need was to add new modules to an existing database developed with PHP, Sass and SQLite. The sheets, animations and MCQs of these new modules have been integrated from graphic boards provided by [DOGMS](https://dogms.com/).
+Les Ateliers Vitalité from the [MSA](https://www.msa.fr/) are workshops aimed to improve quality of life and to preserve health capital of retirees people. Their need was to add new modules to an existing database developed with PHP, Sass and SQLite. The design, animations and quizzes of these new modules have been integrated from graphics provided by [DOGMS](https://dogms.com/).
 """

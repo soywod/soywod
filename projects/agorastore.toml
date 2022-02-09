@@ -12,5 +12,5 @@ desc = """
 [en]
 subtitle = "Auctions — Responsive components"
 desc = """
-[Agorastore](https://www.agorastore.fr/) is an auction website for used equipment and real estate. The mission was to make a collection of [React](https://reactjs.org/) components responsive, and to implement some new ones (a carousel, a plan manager, mobile-specific cards, etc.). Components were managed by a [Storybook](https://storybook.js.org/). I also took some initiatives, such as refactoring some components to make them more UX, or adding some animations with [React Spring](https://react-spring.io/).
+[Agorastore](https://www.agorastore.fr/) is an auction website for used equipment and real estate. My task was to make a collection of [React](https://reactjs.org/) components responsive, and to implement some new ones (a carousel, a plan manager, mobile-specific cards…). Components were managed by a [Storybook](https://storybook.js.org/). I also took some initiatives, such as refactoring some components to make them more UX, or adding some animations with [React Spring](https://react-spring.io/).
 """

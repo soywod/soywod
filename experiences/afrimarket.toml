@@ -13,5 +13,5 @@ Afrimarket est une startup spécialisée dans la vente de biens et de services e
 [en]
 title = "Lead developer"
 desc = """
-Afrimarket is a startup specialized in the sale of goods and services in West Africa. The mission was to refactor their backend written in [AngularJS](https://angularjs.org/) and [Laravel](https://laravel.com/). I also had the opportunity to fix some bugs on their PrestaShop online store.
+Afrimarket is a startup specialized in the sale of goods and services in West Africa. My task was to refactor their backend written in [AngularJS](https://angularjs.org/) and [Laravel](https://laravel.com/). I also had the opportunity to fix some bugs on their PrestaShop online store.
 """

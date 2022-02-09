@@ -13,5 +13,5 @@ The green data est une plateforme décisionnelle de l'agriculture régénératri
 [en]
 title = "R&D engineer"
 desc = """
-The green data is a decision-making platform for regenerative agriculture. The objective of the mission was to run a simulator written in Python by data scientists in a web browser using [Pyodide](https://github.com/pyodide/pyodide/), a Python interpreter based on [WebAssembly](https://webassembly.org/) technology.
+The green data is a decision-making platform for regenerative agriculture. My task was to run a simulator written in Python by data scientists in a web browser using [Pyodide](https://github.com/pyodide/pyodide/), a Python interpreter based on [WebAssembly](https://webassembly.org/) technology.
 """

@@ -13,5 +13,5 @@ Clinfile est une société de recherche contractuelle informatique. La mission c
 [en]
 title = "Developer"
 desc = """
-Clinfile is a contract research organization. The mission was to add functionality to a resource management tool for project managers in the medical field. I was also able to fix many bugs and prepare the tool for their first production launch. The tool was developed in PHP, JavaScript and jQuery.
+Clinfile is a contract research organization. I added functionalities to a resource management tool for project managers in the medical field. I was also able to fix many bugs and prepare the tool for their first production launch. The tool was developed in PHP, JavaScript and jQuery.
 """

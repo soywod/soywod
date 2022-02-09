@@ -14,5 +14,5 @@ Camping Calamar est un camping au cœur de la Corse. Ils avaient besoin de refai
 [en]
 subtitle = "Camping — Showcase website"
 desc = """
-Camping Calamar is a campsite located in Corsica. They needed to redo their showcase website. The integration was done with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Sass](https://sass-lang.com/) from graphics and animations provided by [DOGMS](https://dogms.com/).
+Camping Calamar is a campsite located in Corsica. They needed to rebuild their showcase website. The integration was done with [React.js](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Sass](https://sass-lang.com/) from graphics and animations provided by [DOGMS](https://dogms.com/).
 """

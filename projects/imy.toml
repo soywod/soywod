@@ -12,5 +12,5 @@ Ajout de fonctionnalités dans une application mobile de rencontres en ligne. La
 [en]
 subtitle = "Dating — Mobile app"
 desc = """
-Added functionalities in an online dating mobile application. The client part had been developed with [Angular](https://angular.io/) and [Ionic](https://ionicframework.com/). The server part was based on [Ruby on Rails](https://rubyonrails.org/).
+IMY is an online dating mobile application. They needed some new functionalities before publishing the application to production. The application was developed with [Angular](https://angular.io/) and [Ionic](https://ionicframework.com/). The backend was based on [Ruby on Rails](https://rubyonrails.org/).
 """
