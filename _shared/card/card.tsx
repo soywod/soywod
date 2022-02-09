@@ -2,7 +2,7 @@ import {FC, ReactElement} from "react";
 import {DateTime, Interval} from "luxon";
 import humanizeDuration from "humanize-duration";
 
-import {LangProps} from "../i18n";
+import {LangProps, useI18n} from "../i18n";
 import Link from "../link";
 import Img from "../img";
 import cs from "./card.module.scss";
@@ -20,6 +20,7 @@ export type CardProps = LangProps & {
 };
 
 export const Card: FC<CardProps> = props => {
+  const {t} = useI18n(props.lang, "project");
   const begin = DateTime.fromISO(props.begin, {locale: props.lang});
   let beginStr = begin.toFormat("d LLL yyyy");
   const end = props.end ? DateTime.fromISO(props.end, {locale: props.lang}) : DateTime.local();
@@ -84,7 +85,7 @@ export const Card: FC<CardProps> = props => {
       {props.sourcesLink && (
         <div className={cs.linkContainer}>
           <Link className={cs.link} to={props.sourcesLink}>
-            <span>Code source</span>
+            <span>{t("source-code")}</span>
             <svg
               aria-hidden="true"
               focusable="false"

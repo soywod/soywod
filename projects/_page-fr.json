@@ -1,5 +1,6 @@
 {
   "navbar": "Projets",
   "title": "Projets",
-  "from-to": "{{from}} — {{to}}"
+  "from-to": "{{from}} — {{to}}",
+  "source-code": "Code source"
 }
