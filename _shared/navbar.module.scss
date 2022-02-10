@@ -16,14 +16,15 @@
   @include no-hover;
   align-items: center;
   display: flex;
+  margin-left: 0;
+}
 
-  span {
-    color: $grey3D;
-    margin-left: 15px;
+.avatarTitle {
+  color: $grey3D;
+  margin-left: 15px;
 
-    @include media(sm) {
-      display: none;
-    }
+  @include media(sm) {
+    display: none;
   }
 }
 
@@ -42,4 +43,11 @@
 
 .link {
   margin-left: 20px;
+}
+
+.lang {
+  background: none;
+  border: 1px solid $greyD3;
+  border-radius: $border-radius;
+  color: $grey;
 }
