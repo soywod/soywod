@@ -1,4 +1,7 @@
 {
+  "seo-title": "Clément DOUIN | Experiences",
+  "seo-desc": "As an independent web developer, I had the opportunity to work with {{companies}}…",
+  "seo-tags": "clément,douin,soywod,development,developer,application,web,javascript,typescript,react,rust,independent,{{companies}}",
   "navbar": "Experiences",
   "title": "Experiences",
   "from-to": "{{from}} — {{to}}"

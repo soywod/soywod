@@ -8,10 +8,6 @@ import SEO from "../_shared/seo";
 import {LangProps, parseLang, useI18n} from "../_shared/i18n";
 import Link from "../_shared/link";
 
-const title = "Clément DOUIN | Expériences";
-const desc = "Développeur web indépendant avec 4 ans d'expérience en JavaScript (React).";
-const tags = "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant";
-
 type SerializableExperience = {
   title: string;
   company: string;
@@ -35,9 +31,15 @@ function renderCompany(company: string, link?: string | null): JSX.Element {
 
 const ExperiencesPage: NextPage<ExperiencesPageProps> = ({experiences, lang}) => {
   const {t} = useI18n(lang, "experience");
+  const companies = experiences.map(exp => exp.company);
+
   return (
     <>
-      <SEO title={title} desc={desc} tags={tags} />
+      <SEO
+        title={t("seo-title")}
+        desc={t("seo-desc", {companies: companies.join(", ")})}
+        tags={t("seo-tags", {companies: companies.map(company => company.toLowerCase()).join(",")})}
+      />
       <h1>{t("title")}</h1>
       {experiences.map((experience, key) => (
         <Card

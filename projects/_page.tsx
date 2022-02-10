@@ -31,9 +31,15 @@ type ProjectsPageProps = LangProps & {
 
 const ProjectsPage: NextPage<ProjectsPageProps> = ({lang, projects}) => {
   const {t} = useI18n(lang, "project");
+  const projectNames = projects.map(proj => proj.title);
+
   return (
     <>
-      <SEO title={title} desc={desc} tags={tags} />
+      <SEO
+        title={t("seo-title")}
+        desc={t("seo-desc", {projects: projectNames.join(", ")})}
+        tags={t("seo-tags", {projects: projectNames.map(name => name.toLowerCase()).join(",")})}
+      />
       <h1>{t("title")}</h1>
       {projects.map((project, key) => (
         <Card

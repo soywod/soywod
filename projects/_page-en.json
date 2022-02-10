@@ -1,4 +1,7 @@
 {
+  "seo-title": "Clément DOUIN | Projects",
+  "seo-desc": "As an independent web developer, I was involved in many projects: {{projects}}…",
+  "seo-tags": "clément,douin,soywod,development,developer,application,web,javascript,typescript,react,rust,independent,{{projects}}",
   "navbar": "Projects",
   "title": "Projects",
   "from-to": "{{from}} — {{to}}",

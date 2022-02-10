@@ -1,7 +1,7 @@
 {
   "seo-title": "Clément DOUIN | Independent Web Developer",
   "seo-desc": "Independent web developer with {{yearsJSExp}} years of experience in JavaScript technologies",
-  "seo-tags": "clément,douin,soywod,development,developer,application,web,javascript,typescript,react,independent",
+  "seo-tags": "clément,douin,soywod,development,developer,application,web,javascript,typescript,react,rust,independent",
   "p-1": "I'm <code>Clément DOUIN</code> — a {{yearsOld}} year old independent web developer with {{yearsJSExp}} years of experience in JavaScript technologies.",
   "p-2": "I've been developping applications for the last {{yearsDevExp}} years. Having started with languages like C, Java and Visual Basic, I then switched to web technologies with TypeScript, React.js, Next.js, and more lately Rust. I've also discovered the functional programming with Haskell/OCaml/Elm and devops with Docker/Nix.",
   "p-3-1": "At the moment I work as a freelance web developer. My current expertise makes me autonomous in various domains, both frontend (UX, integration, application) and backend (API, prefs, devops).",

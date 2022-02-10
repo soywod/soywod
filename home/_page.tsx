@@ -18,7 +18,7 @@ export const HomePage: FC<HomePageProps> = ({lang}) => {
 
   return (
     <>
-      <SEO title={t("seo-title")} desc={t("seo-desc")} tags={t("seo-tags")} />
+      <SEO title={t("seo-title")} desc={t("seo-desc", {yearsJSExp})} tags={t("seo-tags")} />
       <h1>Hello, world!</h1>
       <hr />
       <p dangerouslySetInnerHTML={{__html: t("p-1", {yearsOld, yearsJSExp})}} />

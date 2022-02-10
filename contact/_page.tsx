@@ -6,15 +6,10 @@ import IconDown from "../_shared/icon-down";
 import {LangProps, parseLang, useI18n} from "../_shared/i18n";
 import cs from "./_page.module.scss";
 
-const title = "Clément DOUIN | Me contacter";
-const desc = "Avec 5 ans d'expérience en JavaScript (React), je vous accompagne dans votre évolution numérique.";
-const tags = "clément,douin,soywod,développement,développeur,web,disponible,paris,freelance,indépendant,tarif";
-
 export type ContactPageProps = LangProps;
 
 export const ContactPage: FC<ContactPageProps> = ({lang}) => {
   const {t} = useI18n(lang, "contact");
-
   const [isEmailVisible, setEmailVisible] = useState(false);
   const [isPhoneVisible, setPhoneVisible] = useState(false);
 
@@ -30,7 +25,7 @@ export const ContactPage: FC<ContactPageProps> = ({lang}) => {
 
   return (
     <>
-      <SEO title={title} desc={desc} tags={tags} />
+      <SEO title={t("seo-title")} desc={t("seo-desc")} tags={t("seo-tags")} />
       <h1>{t("title")}</h1>
       <table className={cs.table}>
         <thead>

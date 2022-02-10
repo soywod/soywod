@@ -1,7 +1,7 @@
 {
   "seo-title": "Clément DOUIN | Développeur Web Indépendant",
   "seo-desc": "Développeur web indépendant avec {{yearsJSExp}} ans d'expérience en JavaScript",
-  "seo-tags": "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,indépendant",
+  "seo-tags": "clément,douin,soywod,développement,développeur,application,web,javascript,typescript,react,rust,indépendant",
   "p-1": "Je m’appelle <code>Clément DOUIN</code>, j’ai {{yearsOld}} ans et je suis développeur web indépendant avec {{yearsJSExp}} ans d’expérience en JavaScript.",
   "p-2": "Je développe des applications depuis plus de {{yearsDevExp}} ans. J’ai commencé par du C, du Java et du Visual Basic. Puis, je me suis tourné vers les technologies du web avec TypeScript, React.js, Next.js, et plus dernièrement Rust. J’ai aussi découvert la programmation fonctionnelle avec Haskell, OCaml, Elm et le devops avec Docker et Nix.",
   "p-3-1": "Je travaille maintenant en tant qu’indépendant (micro-entrepreneur). Mon expertise actuelle me permet d’être autonomme sur de nombreux sujets, aussi bien côté client (UX, intégration, application) que côté serveur (API, perfs, devops). N’hésitez-pas à",
