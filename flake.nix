@@ -2,7 +2,7 @@
   description = "Personal portfolio.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     utils.url = "github:numtide/flake-utils";
     flake-compat = {
       url = "github:edolstra/flake-compat";
@@ -16,41 +16,21 @@
         let
           name = (builtins.fromJSON (builtins.readFile ./package.json)).name;
           pkgs = import nixpkgs { inherit system; };
-          yarn-run = "yarn run --offline --ignore-scripts --ignore-engines --";
+          nodejs = pkgs.nodejs-18_x;
+          yarn = pkgs.yarn.override { inherit nodejs; };
         in
-        rec {
-          # nix build
-          defaultPackage = pkgs.yarn2nix-moretea.mkYarnPackage {
-            inherit name;
-            src = ./.;
-            extraBuildInputs = with pkgs; [
-              ripgrep
-              rnix-lsp
-              nixpkgs-fmt
-              nodePackages.prettier
-              nodePackages.typescript
-              nodePackages.typescript-language-server
-              nodePackages.vscode-json-languageserver
-              nodePackages.vscode-css-languageserver-bin
-            ];
-            configurePhase = ''
-              ln -s $node_modules node_modules
-            '';
-            buildPhase = ''
-              ${yarn-run} next build
-              ${yarn-run} next export -o $out
-            '';
-            installPhase = ''
-              exit
-            '';
-            distPhase = ''
-              exit
-            '';
-          };
-
+        {
           # nix develop
           devShell = pkgs.mkShell {
-            inputsFrom = [ self.defaultPackage.${system} ];
+            buildInputs = [
+              nodejs
+              yarn
+            ];
+            shellHook = ''
+              export NODE_ENV="development"
+              export NODE_OPTIONS="--openssl-legacy-provider"
+              export PATH="$PWD/node_modules/.bin/:$PATH"
+            '';
           };
         }
       );
