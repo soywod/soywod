@@ -1,0 +1,16 @@
+title = "Himalaya"
+tags = ["rust", "cli", "email", "nix"]
+link = "https://github.com/soywod/himalaya"
+begin = 2022-09-01
+
+[fr]
+subtitle = "Emails — Outils"
+desc = """`
+Himalaya est un de mes projets libre de droit qui a vu le jour il y a plusieurs années. Son but est de proposer des outils novateurs dans le domaine des emails comme une librairie de gestion, un client en ligne de commande, des plugins etc. En septembre 2022, Himalaya a reçu **50 000 €** de dons grâce au programme [Next Generation Internet](https://www.ngi.eu/) de la Commission Européenne (via la fondation [nlnet](https://nlnet.nl/project/Himalaya/)), ce qui me permet de travailler à temps plein sur ce projet jusqu'en septembre 2023. Ce don me permet de réaliser mon rêve : vivre de ma passion !
+"""
+
+[en]
+subtitle = "Emails — Tools"
+desc = """
+Himalaya is an open source project I initiated few years ago. Its aim is to provide innovative tools related to the email domain like a library, a command line interface, plugins etc. In September, 2022, Himalaya received a donation of **€50,000** thanks to the [Next Generation Internet](https://www.ngi.eu/) program of the European Commission (via the [nlnet](https://nlnet.nl/project/Himalaya/) foundation), which allows me to work full time on this project till September, 2023. This donation makes my dream come true: to live from my passion!
+"""
