@@ -1,0 +1,17 @@
+company = "Piana"
+companyLink = "https://www.getpiana.com/"
+tags = ["ts", "fp-ts", "node", "nest", "react", "next", "rest", "nix"]
+begin = 2022-03-31
+end = 2022-12-30
+
+[fr]
+title = "Ingénieur R&D"
+desc = """
+Piana est une banque en ligne dédiées aux flottes modernes. Ce projet a été monté de zéro, ce qui nous a permi de prendre le temps de réfléchir aux fondations. Nous avons décidé de partir sur [TypeScript](https://www.typescriptlang.org/), [NestJS](https://nestjs.com/), [fp-ts](https://gcanti.github.io/fp-ts/), [React](https://fr.reactjs.org/) et [Next.js](https://nextjs.org/). Le reste de la mission consistait à intégrer le plus proprement possible des services tiers comme [Swan](https://www.swan.io/), [Plaid](https://plaid.com/en-eu/), [Defacto](https://www.getdefacto.com/), [Zizy](https://zizy.io/), [Auth0](https://auth0.com/), [Bridge](https://bridgeapi.io/en/homepage/) etc, et de tout faire fonctionner en harmonie.
+"""
+
+[en]
+title = "R&D engineer"
+desc = """
+Piana is a neobank dedicated to modern fleet. The project has been started from scratch, which allowed us to carefully choose the components of the technical stack. We decided to use [TypeScript](https://www.typescriptlang.org/), [NestJS](https://nestjs.com/), [fp-ts](https://gcanti.github.io/fp-ts/), [React](https://fr.reactjs.org/) and [Next.js](https://nextjs.org/). The next challenge was to integrate various services like [Swan](https://www.swan.io/), [Plaid](https://plaid.com/en-eu/), [Defacto](https://www.getdefacto.com/), [Zizy](https://zizy.io/), [Auth0](https://auth0.com/), [Bridge](https://bridgeapi.io/en/homepage/) etc, and to make them work together as smoothly as possible.
+"""
