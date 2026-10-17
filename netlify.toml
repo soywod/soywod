@@ -1,9 +1,6 @@
 [build]
-command = "yarn build"
-publish = "build"
-
-[[plugins]]
-package = "netlify-plugin-cache-nextjs"
+command = "npm run build"
+publish = "dist"
 
 [[redirects]]
 from = "/"

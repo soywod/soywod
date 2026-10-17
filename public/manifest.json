@@ -1,7 +1,7 @@
 {
-  "name": "Blog | Clément DOUIN",
-  "short_name": "Blog | Clément DOUIN",
-  "start_url": "/?utm_source=a2hs",
+  "name": "Clément DOUIN",
+  "short_name": "Clément DOUIN",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1976d2",

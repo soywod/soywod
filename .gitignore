@@ -1,9 +1,19 @@
-build/
-node_modules/
-.direnv/
-.log/
-.next/
-.env
+# Dependencies
+node_modules
 
-yarn-debug.log*
-yarn-error.log*
+# Build output
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Direnv
+.direnv
+
+# Env
+.env

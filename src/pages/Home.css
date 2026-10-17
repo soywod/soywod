@@ -1,0 +1,29 @@
+.hero {
+  padding: clamp(4rem, 10vw, 7rem) 0 clamp(4rem, 8vw, 6rem);
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0.6rem 0 1.25rem;
+  color: var(--ink);
+}
+
+.hero__lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin-bottom: 1.25rem;
+}
+
+.hero__lead:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
