@@ -1,5 +1,7 @@
 import { parse } from "smol-toml";
 import { Lang } from "../lib/lang";
+import { ANIM } from "../lib/anim";
+import { markdown, rich } from "../lib/markdown";
 import en from "./Archive.en.json";
 import fr from "./Archive.fr.json";
 import "./Archive.css";
@@ -16,21 +18,30 @@ const experienceTomls = import.meta.glob("../content/experiences/*.toml", {
   import: "default",
   eager: true,
 }) as Record<string, string>;
+const images = import.meta.glob("../content/*/*.jpeg", {
+  query: "?url",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
 
-/* Current work lives on the home page, not in the archive. */
 const CURRENT_PROJECTS = ["himalaya"];
 
-/* Stacks are cut to their first tags, so a row stays one line. */
 const MAX_TAGS = 6;
 
 type Row = {
   key: string;
+  image: string | undefined;
   when: string;
   name: string;
   link: string | null;
   detail: string;
+  desc: string | null;
   tags: string[];
 };
+
+function imageOf(tomlPath: string): string | undefined {
+  return images[tomlPath.replace(/\.toml$/, ".jpeg")];
+}
 
 function tomlDate(value: unknown): string {
   return typeof value === "string" ? value : (value as Date).toISOString().slice(0, 10);
@@ -46,10 +57,6 @@ function byBeginDesc<T extends { begin: string }>(a: T, b: T): number {
   return a.begin < b.begin ? 1 : a.begin > b.begin ? -1 : 0;
 }
 
-/*
- * One row per company: several missions or an internship followed by a job
- * at the same place read as one stretch, with its roles latest first.
- */
 function loadExperiences(lang: Lang): Row[] {
   const experiences = Object.entries(experienceTomls)
     .map(([path, raw]) => {
@@ -80,10 +87,12 @@ function loadExperiences(lang: Lang): Row[] {
     const tags = [...new Set(group.flatMap(e => e.tags))];
     return {
       key: latest.key,
+      image: imageOf(latest.key),
       when: years(earliest.begin, latest.end),
       name: latest.company,
       link: latest.link,
       detail: titles.join(", "),
+      desc: null,
       tags: tags.slice(0, MAX_TAGS),
     };
   });
@@ -99,10 +108,12 @@ function loadProjects(lang: Lang): Row[] {
     .sort(byBeginDesc)
     .map(({ path, toml, begin }) => ({
       key: path,
+      image: imageOf(path),
       when: years(begin, toml.end ? tomlDate(toml.end) : null),
       name: toml.title as string,
       link: (toml.link as string | undefined) ?? null,
       detail: (toml[lang].subtitle as string).replace(/\s+—\s+/g, " · "),
+      desc: toml[lang].desc ? markdown(toml[lang].desc as string) : null,
       tags: ((toml.tags as string[] | undefined) ?? []).slice(0, MAX_TAGS),
     }));
 }
@@ -111,7 +122,12 @@ function Rows({ rows }: { rows: Row[] }) {
   return (
     <ul className="rows">
       {rows.map(row => (
-        <li key={row.key} className="rows__item">
+        <li key={row.key} className={`rows__item ${ANIM}`}>
+          {row.image ? (
+            <img className="rows__image" src={row.image} alt="" width={112} height={70} loading="lazy" />
+          ) : (
+            <span className="rows__image" aria-hidden="true" />
+          )}
           <span className="rows__when">{row.when}</span>
           <span>
             {row.link ? (
@@ -125,6 +141,7 @@ function Rows({ rows }: { rows: Row[] }) {
             <span className="rows__detail">{row.detail}</span>
           </span>
           <span className="rows__tags">{row.tags.join(", ")}</span>
+          {row.desc && <div className="rows__desc" dangerouslySetInnerHTML={{ __html: row.desc }} />}
         </li>
       ))}
     </ul>
@@ -137,10 +154,10 @@ export function ArchivePage({ lang }: { lang: Lang }) {
   return (
     <>
       <section className="archive-head">
-        <div className="container">
+        <div className={`container ${ANIM}`}>
           <p className="label">{t.label}</p>
           <h1 className="archive-head__title">{t.title}</h1>
-          <p className="archive-head__intro">{t.intro}</p>
+          <p className="archive-head__intro" dangerouslySetInnerHTML={rich(t.intro)} />
         </div>
       </section>
 

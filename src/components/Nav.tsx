@@ -4,14 +4,13 @@ import "./Nav.css";
 
 export interface NavProps {
   lang: Lang;
-  /* Current page's slug within the language, e.g. "" for home, "archive/". */
   path: string;
 }
 
 const COPY: Record<Lang, { services: string; work: string; how: string; archive: string; contact: string; other: string }> = {
   en: {
     services: "Services",
-    work: "Work",
+    work: "Open source",
     how: "How I work",
     archive: "Archive",
     contact: "Contact",
@@ -19,7 +18,7 @@ const COPY: Record<Lang, { services: string; work: string; how: string; archive:
   },
   fr: {
     services: "Services",
-    work: "Travaux",
+    work: "Logiciel libre",
     how: "Collaborer",
     archive: "Archives",
     contact: "Contact",
@@ -36,13 +35,13 @@ export function Nav({ lang, path }: NavProps) {
     <header className="nav">
       <div className="container nav__inner">
         <a href={home} className="nav__brand">
-          <span className="nav__handle">soywod</span>
           <span className="nav__name">Clément DOUIN</span>
+          <span className="nav__handle">soywod</span>
         </a>
 
         <nav className="nav__links" aria-label="Primary">
           <a href={`${home}#services`}>{t.services}</a>
-          <a href={`${home}#work`}>{t.work}</a>
+          <a href={`${home}#open-source`}>{t.work}</a>
           <a href={`${home}#how`}>{t.how}</a>
           <a href={`${home}archive/`} aria-current={path === "archive/" ? "page" : undefined}>
             {t.archive}

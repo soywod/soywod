@@ -1,10 +1,3 @@
-// Build-time pre-render: render each page to static HTML, strip the SPA
-// module script so the shipped pages run from HTML + CSS alone, and emit
-// sitemap.xml + robots.txt. Ported from pimalaya/websites' shared prerender
-// (extracted from pimalaya.org), extended for two languages: hreflang
-// alternates per page and a static "/" fallback (Netlify's own
-// Accept-Language redirect, see netlify.toml, handles real visitors first).
-// Runs after `vite build` (client) and `vite build --ssr` (server bundle).
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -16,8 +9,6 @@ const siteUrl = "https://soywod.me";
 const { renderPages } = await import(pathToFileURL(resolve(dist, "server/entry-server.js")).href);
 const { pages } = renderPages();
 
-// The built client index.html is the shared template (it links the hashed
-// stylesheet). Read it once before we overwrite it with the rendered pages.
 const template = readFileSync(resolve(dist, "index.html"), "utf-8");
 
 function escapeHtml(text) {
@@ -28,8 +19,6 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;");
 }
 
-// The slug without its leading language segment, so the en/fr twin of a page
-// can be found: "en/archive" and "fr/archive" both reduce to "archive".
 function sansLang(page) {
   return page.slug.split("/").slice(1).join("/");
 }
@@ -81,10 +70,6 @@ for (const p of pages) {
   console.log(`✓ pre-rendered dist/${p.slug}/index.html`);
 }
 
-// "/" carries no content of its own: Netlify's redirect rules (netlify.toml)
-// send real visitors to /en/ or /fr/ by Accept-Language before this is ever
-// served. Kept only as a static fallback for a direct hit or a host that
-// doesn't run the redirect.
 writeFileSync(
   resolve(dist, "index.html"),
   `<!doctype html>
@@ -102,7 +87,6 @@ writeFileSync(
 `,
 );
 
-// --- Sitemap + robots. ---
 const urls = pages.map(p => `  <url><loc>${siteUrl}/${p.slug}/</loc></url>`).join("\n");
 writeFileSync(
   resolve(dist, "sitemap.xml"),
@@ -122,6 +106,4 @@ Sitemap: ${siteUrl}/sitemap.xml
 );
 console.log("✓ generated dist/sitemap.xml + dist/robots.txt");
 
-// The server bundle is a build artefact only; keep it out of the deployed
-// site.
 rmSync(resolve(dist, "server"), { recursive: true, force: true });

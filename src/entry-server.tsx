@@ -11,12 +11,6 @@ import archiveFr from "./pages/Archive.fr.json";
 const homeCopy = { en: homeEn, fr: homeFr };
 const archiveCopy = { en: archiveEn, fr: archiveFr };
 
-/*
- * Build-time entry (see prerender.js). Renders every page to static markup:
- * home and archive, in both languages. `slug` never includes the
- * language-less root: soywod.me is always served under /en/ or /fr/ (see
- * netlify.toml's Accept-Language redirect on "/").
- */
 export interface Page {
   slug: string;
   lang: Lang;

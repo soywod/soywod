@@ -17,20 +17,21 @@
 
 .nav__brand {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  line-height: 1.25;
   color: var(--ink);
   text-decoration: none;
 }
 
-.nav__handle {
-  font-family: var(--font-mono);
-  font-size: 15px;
-  font-weight: 500;
+.nav__name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink-900);
 }
 
-.nav__name {
-  font-size: 14px;
+.nav__handle {
+  font-family: var(--font-mono);
+  font-size: 12px;
   color: var(--ink-soft);
 }
 
@@ -72,8 +73,7 @@
 }
 
 @media (max-width: 760px) {
-  .nav__links,
-  .nav__name {
+  .nav__links {
     display: none;
   }
 }

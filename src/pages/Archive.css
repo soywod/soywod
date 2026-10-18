@@ -35,11 +35,22 @@
 
 .rows__item {
   display: grid;
-  grid-template-columns: 140px minmax(0, 1fr) minmax(0, 1.2fr);
-  gap: 8px 32px;
-  align-items: baseline;
+  grid-template-columns: 112px 110px minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 8px 28px;
+  align-items: center;
   padding: 18px 0;
   border-bottom: 1px solid var(--rule);
+}
+
+.rows__image {
+  display: block;
+  width: 112px;
+  height: 70px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  object-fit: cover;
+  object-position: top center;
 }
 
 .rows__when,
@@ -81,6 +92,35 @@ a.rows__name:hover {
   }
 
   .rows__item {
-    grid-template-columns: 1fr;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 4px 20px;
+  }
+
+  .rows__image {
+    grid-row: span 2;
+  }
+
+  .rows__tags {
+    grid-column: 1 / -1;
+  }
+}
+
+.rows__desc {
+  grid-column: 3 / -1;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.rows__desc p + p {
+  margin-top: 8px;
+}
+
+.rows__desc a {
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .rows__desc {
+    grid-column: 1 / -1;
   }
 }

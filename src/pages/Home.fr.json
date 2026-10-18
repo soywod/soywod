@@ -1,77 +1,84 @@
 {
-  "seoTitle": "Clément DOUIN | Ingénieur Rust et PIM",
-  "seoDesc": "Ingénieur indépendant, créateur de Himalaya et Pimalaya. Je développe et maintiens des intégrations email, contacts et agendas en Rust.",
-  "eyebrow": "Ingénieur indépendant · Rust · Emails, contacts, agendas",
-  "title": "Des logiciels qui parlent aux serveurs mail, durablement.",
-  "lead": "Je développe et maintiens des intégrations email, contacts et agendas en Rust : IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth et synchronisation hors ligne. Créateur de Himalaya et du projet Pimalaya, depuis 2022.",
+  "seoTitle": "Clément DOUIN | Ingénieur logiciel indépendant, Rust",
+  "seoDesc": "Ingénieur logiciel indépendant depuis 2016 : architecture, backend, outillage et web, avec une affinité forte pour Rust et pour les emails, contacts et agendas grâce à Pimalaya.",
+  "eyebrow": "Ingénieur logiciel indépendant · Backend · Rust",
+  "title": "De l'ingénierie logicielle, faite pour durer.",
+  "lead": "Je rejoins votre équipe ou je prends un projet **de bout en bout côté serveur** : architecture, backends, API, outillage. Quatorze ans d'ingénierie, dont dix en indépendant, avec **Rust** comme langage de prédilection et une affinité forte pour *les emails, contacts et agendas*, grâce au projet libre que je mène, [Pimalaya](https://pimalaya.org).",
   "ctaPrimary": "Parler de votre projet",
-  "ctaSecondary": "Voir les travaux",
+  "ctaSecondary": "Voir ce que j'apporte",
   "portraitAlt": "Portrait de Clément DOUIN",
   "portraitCaption": "soywod · France · FR, EN",
   "facts": [
     { "label": "Ingénieur depuis", "value": "2012" },
-    { "label": "Indépendant depuis", "value": "2015" },
-    { "label": "Librairies Rust écrites", "value": "30+" },
-    { "label": "Financé par", "value": "NLnet et la Commission européenne", "small": true }
+    { "label": "Indépendant depuis", "value": "2016" },
+    { "label": "Langage de prédilection", "value": "Rust" },
+    { "label": "Logiciel libre", "value": "Pimalaya, financé par NLnet", "small": true }
   ],
   "servicesLabel": "Services",
-  "servicesTitle": "Trois choses que je fais bien",
+  "servicesTitle": "Ce que je peux apporter",
   "services": [
     {
-      "icon": "mail",
-      "title": "Intégration PIM",
-      "text": "Emails, contacts et agendas dans votre produit, avec Gmail, Microsoft 365 et les serveurs standards. Connexion, découverte, synchronisation, et les particularités des fournisseurs déjà gérées."
+      "icon": "layers",
+      "title": "Ingénierie logicielle",
+      "text": "Backends, API, services et outils en ligne de commande, *de la conception à la production*. **Rust par choix**, et je m'adapte à la pile que votre équipe utilise déjà."
     },
     {
       "icon": "code",
-      "title": "Ingénierie Rust",
-      "text": "Librairies, CLI et services conçus pour durer : cœurs sans I/O, frontières claires, tests sur des systèmes réels. Audit et reprise de code Rust existant aussi."
+      "title": "Rust",
+      "text": "Nouveaux projets Rust, **audit** et **reprise** de code existant : frontières claires, cœurs sans I/O, tests sur des systèmes *réels*."
+    },
+    {
+      "icon": "mail",
+      "title": "Intégration PIM",
+      "abbr": { "short": "PIM", "title": "Gestion des informations personnelles (Personal Information Management) : emails, contacts et agendas" },
+      "text": "Votre produit qui dialogue avec **Gmail**, **Microsoft 365** ou les serveurs standards : connexion, découverte, synchronisation, avec les particularités des fournisseurs *déjà connues*."
     },
     {
       "icon": "refresh",
       "title": "Maintenance",
-      "text": "Les fournisseurs changent leurs règles chaque année. Je garde vos intégrations en état de marche au fil des changements de protocole, des renouvellements OAuth et des mises à jour des plateformes."
+      "text": "Ce que je construis *continue de fonctionner* : mises à jour des dépendances et des plateformes, changements de protocole, **une ligne de versions fiable**."
     }
   ],
-  "servicesNote": "Au-delà du PIM : dix ans de TypeScript, React et Node avant Rust. Demandez si votre projet est ailleurs.",
-  "workLabel": "Travaux",
-  "workTitle": "Pimalaya, et ce qui est construit dessus",
-  "workLead": "Depuis 2022, l'essentiel de mon temps va à Pimalaya : des outils Rust libres pour les données personnelles, écrits depuis les RFC et testés sur les fournisseurs que les gens utilisent.",
+  "workLabel": "Logiciel libre",
+  "workTitle": "Pimalaya",
+  "workLead": "Depuis 2022, je mène Pimalaya, un projet libre financé par la [fondation NLnet](https://nlnet.nl) et la Commission européenne. Il construit des **outils Rust pour les emails, contacts et agendas**, écrits *depuis les standards* et testés sur les fournisseurs que les gens utilisent. C'est de là que vient mon expérience de Rust et du PIM.",
   "work": [
     {
       "name": "Librairies Pimalaya",
       "link": "https://pimalaya.org",
       "meta": "2022 à aujourd'hui · Rust",
-      "text": "IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth et découverte, en librairies sans I/O que tout runtime peut piloter."
+      "text": "IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth et découverte, en librairies que *tout runtime* peut piloter."
     },
     {
       "name": "Himalaya",
       "link": "https://github.com/pimalaya/himalaya",
       "meta": "Rust · CLI",
-      "text": "Le client email en ligne de commande à l'origine de tout, scriptable grâce à sa sortie JSON."
+      "text": "Un client email en ligne de commande, *utilisé dans le monde entier* et scriptable grâce à sa sortie JSON."
     },
     {
       "name": "Pimalaya pour Android",
       "meta": "2026 · alpha fermée",
-      "text": "Emails, contacts et agendas dans une seule application hors ligne d'abord, sur les mêmes librairies."
+      "text": "Emails, contacts et agendas dans **une seule application hors ligne d'abord**, sur les mêmes librairies."
     },
     {
       "name": "Avec Red Arrow",
       "link": "https://redarrow.fr",
       "meta": "2026 · en développement",
-      "text": "Un client de bureau pour emails, contacts et agendas, construit sur la pile Pimalaya, en tant que premier partenaire."
+      "text": "Un client de bureau pour emails, contacts et agendas, construit sur la pile Pimalaya, en tant que **premier partenaire**."
     }
   ],
-  "archiveLink": "Travaux précédents, de 2010 à 2022 : les archives",
+  "archiveBefore": "Avant Pimalaya, *dix ans de missions* pour des entreprises comme Piana, Swan, Tokeny et Colas :",
+  "archiveLink": "voir les archives",
   "howLabel": "Collaborer",
   "howTitle": "Deux façons de travailler ensemble",
   "consultingTitle": "Conseil",
-  "consultingText": "Une intégration à construire, du code à auditer, une équipe à débloquer. À distance, depuis la France, en français ou en anglais.",
-  "consultingPrice": "Tarif journalier sur demande",
+  "consultingText": "Une fonctionnalité à livrer, un système à concevoir, du code à auditer, une équipe à débloquer. *À distance, depuis la France*, en français ou en anglais.",
+  "consultingPrice": "À partir de 800 € par jour",
+  "consultingPriceNote": "selon le projet",
   "partnershipTitle": "Partenariat",
-  "partnershipText": "Votre produit ou vos serveurs sur la pile Pimalaya, testés à chaque version et maintenus année après année.",
+  "partnershipText": "Votre produit ou vos serveurs sur la pile Pimalaya, **testés à chaque version** et maintenus *année après année*.",
   "partnershipCta": "Voir Pimalaya pour les entreprises",
-  "contactTitle": "Dites-moi ce que vous devez connecter",
-  "contactLead": "Un court appel d'abord, puis une proposition écrite au périmètre fixé.",
+  "contactTitle": "Parlez-moi de votre projet",
+  "contactLead": "Un **court appel** d'abord, puis une proposition écrite au *périmètre fixé*.",
   "revealEmail": "Afficher l'email"
 }

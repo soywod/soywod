@@ -1,9 +1,3 @@
-/*
- * Design tokens: a cool paper ground, deep navy ink and one blue accent. A
- * sibling of Pimalaya's design system (same shapes and structure), kept
- * sober: the accent is for labels and links, actions are drawn in ink.
- */
-
 :root {
   --paper: #f4f7fb;
   --surface: #ffffff;
@@ -26,5 +20,5 @@
 
   --container: 1080px;
   --nav-height: 68px;
-  --target: 44px; /* minimum height of anything clickable */
+  --target: 44px;
 }
