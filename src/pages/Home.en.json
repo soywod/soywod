@@ -7,7 +7,7 @@
   "ctaPrimary": "Discuss a project",
   "ctaSecondary": "See what I bring",
   "portraitAlt": "Portrait of Clément DOUIN",
-  "portraitCaption": "soywod · France · EN, FR",
+  "portraitCaption": "soywod · France, Switzerland · EN, FR",
   "facts": [
     { "label": "Engineering since", "value": "2012" },
     { "label": "Independent since", "value": "2016" },
@@ -39,9 +39,10 @@
       "text": "What I build *keeps working*: dependency and platform updates, protocol changes, **a version line you can rely on**."
     }
   ],
+  "servicesAi": "**AI is part of how I work.** I use it every day, and I know the building blocks behind AI products: *RAG*, *MCP* servers, tool calling, agents. I can wire them into your backend, where they belong.",
   "workLabel": "Open source",
   "workTitle": "Pimalaya",
-  "workLead": "Since 2022 I lead Pimalaya, an open-source project funded by the [NLnet foundation](https://nlnet.nl) and the European Commission. It builds **Rust tools for email, contacts and calendars**, written *from the standards up* and tested against the providers people use. It is where my Rust and PIM experience comes from.",
+  "workLead": "Since 2022 I lead Pimalaya, an open-source project funded by the [NLnet foundation](https://nlnet.nl) and the European Commission. It builds **Rust tools for email, contacts and calendars**, written *from the standards up* and tested against the providers people use. It is where my Rust and PIM experience comes from. Pimalaya ships *no AI of its own*, but every library and app is **ready to be driven by AI**: JSON output with its schemas, and documentation written for integrators and agents alike.",
   "work": [
     {
       "name": "Pimalaya libraries",
@@ -72,7 +73,7 @@
   "howLabel": "How I work",
   "howTitle": "Two ways to work together",
   "consultingTitle": "Consulting",
-  "consultingText": "A feature to ship, a system to design, code to audit, a team to unblock. *Remote, from France*, in English or French.",
+  "consultingText": "A feature to ship, a system to design, code to audit, a team to unblock. *Remote, from France or Switzerland*, in English or French.",
   "consultingPrice": "From €800 per day",
   "consultingPriceNote": "depending on the project",
   "partnershipTitle": "Partnership",

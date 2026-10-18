@@ -147,6 +147,7 @@ export function HomePage({ lang }: { lang: Lang }) {
               </article>
             ))}
           </div>
+          <p className={`services__ai ${ANIM}`} dangerouslySetInnerHTML={rich(t.servicesAi)} />
         </div>
       </section>
 

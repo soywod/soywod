@@ -7,7 +7,7 @@
   "ctaPrimary": "Parler de votre projet",
   "ctaSecondary": "Voir ce que j'apporte",
   "portraitAlt": "Portrait de Clément DOUIN",
-  "portraitCaption": "soywod · France · FR, EN",
+  "portraitCaption": "soywod · France, Suisse · FR, EN",
   "facts": [
     { "label": "Ingénieur depuis", "value": "2012" },
     { "label": "Indépendant depuis", "value": "2016" },
@@ -39,9 +39,10 @@
       "text": "Ce que je construis *continue de fonctionner* : mises à jour des dépendances et des plateformes, changements de protocole, **une ligne de versions fiable**."
     }
   ],
+  "servicesAi": "**L'IA fait partie de ma façon de travailler.** Je l'utilise au quotidien, et je connais les briques des produits d'IA : *RAG*, serveurs *MCP*, appels d'outils, agents. Je peux les intégrer à votre backend, là où elles ont leur place.",
   "workLabel": "Logiciel libre",
   "workTitle": "Pimalaya",
-  "workLead": "Depuis 2022, je mène Pimalaya, un projet libre financé par la [fondation NLnet](https://nlnet.nl) et la Commission européenne. Il construit des **outils Rust pour les emails, contacts et agendas**, écrits *depuis les standards* et testés sur les fournisseurs que les gens utilisent. C'est de là que vient mon expérience de Rust et du PIM.",
+  "workLead": "Depuis 2022, je mène Pimalaya, un projet libre financé par la [fondation NLnet](https://nlnet.nl) et la Commission européenne. Il construit des **outils Rust pour les emails, contacts et agendas**, écrits *depuis les standards* et testés sur les fournisseurs que les gens utilisent. C'est de là que vient mon expérience de Rust et du PIM. Pimalaya *n'embarque aucune IA*, mais chaque librairie et application est **prête à être pilotée par une IA** : sortie JSON avec ses schémas, et une documentation écrite pour les intégrateurs comme pour les agents.",
   "work": [
     {
       "name": "Librairies Pimalaya",
@@ -72,7 +73,7 @@
   "howLabel": "Collaborer",
   "howTitle": "Deux façons de travailler ensemble",
   "consultingTitle": "Conseil",
-  "consultingText": "Une fonctionnalité à livrer, un système à concevoir, du code à auditer, une équipe à débloquer. *À distance, depuis la France*, en français ou en anglais.",
+  "consultingText": "Une fonctionnalité à livrer, un système à concevoir, du code à auditer, une équipe à débloquer. *À distance, depuis la France ou la Suisse*, en français ou en anglais.",
   "consultingPrice": "À partir de 800 € par jour",
   "consultingPriceNote": "selon le projet",
   "partnershipTitle": "Partenariat",

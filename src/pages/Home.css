@@ -284,3 +284,9 @@ abbr[title] {
   font-size: 14px;
   color: var(--ink-soft);
 }
+
+.services__ai {
+  margin-top: 32px;
+  max-width: 760px;
+  color: var(--ink-soft);
+}
