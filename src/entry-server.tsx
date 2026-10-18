@@ -6,14 +6,22 @@ import { loadExperiences, loadProjects } from "./pages/Archive";
 
 import homeEn from "./pages/Home.en.json";
 import homeFr from "./pages/Home.fr.json";
+import homeRu from "./pages/Home.ru.json";
 import archiveEn from "./pages/Archive.en.json";
 import archiveFr from "./pages/Archive.fr.json";
+import archiveRu from "./pages/Archive.ru.json";
 
-const homeCopy = { en: homeEn, fr: homeFr };
-const archiveCopy = { en: archiveEn, fr: archiveFr };
+const homeCopy = { en: homeEn, fr: homeFr, ru: homeRu };
+const archiveCopy = { en: archiveEn, fr: archiveFr, ru: archiveRu };
 
 const SITE = "https://soywod.me";
 const PERSON_ID = `${SITE}/#person`;
+const JOB_TITLES: Record<Lang, string> = {
+  en: "Independent software engineer",
+  fr: "Ingénieur logiciel indépendant",
+  ru: "Независимый инженер-программист",
+};
+
 const SAME_AS = [
   "https://github.com/soywod",
   "https://www.linkedin.com/in/soywod",
@@ -39,7 +47,7 @@ function person(lang: Lang) {
     alternateName: "soywod",
     url: `${SITE}/${lang}/`,
     image: `${SITE}/portrait.jpeg`,
-    jobTitle: lang === "fr" ? "Ingénieur logiciel indépendant" : "Independent software engineer",
+    jobTitle: JOB_TITLES[lang],
     description: t.seoDesc,
     knowsLanguage: ["fr", "en"],
     knowsAbout: [
@@ -155,7 +163,7 @@ export function renderPages(): { pages: Page[] } {
 }
 
 function plain(text: string): string {
-  return text.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "$1");
+  return text.replace(/\*\*(.+?)\*\*/g, "$1");
 }
 
 export function renderLlmsTxt(): string {
@@ -202,6 +210,8 @@ Contact: ${SITE}/en/#contact, or ${SAME_AS.slice(0, 3).join(", ")}.
 - [Archive](${SITE}/en/archive/): experience and freelance projects, 2010 to 2022
 - [Accueil](${SITE}/fr/): the same profile in French
 - [Archives](${SITE}/fr/archive/): the archive in French
+- [Главная](${SITE}/ru/): the same profile in Russian
+- [Архив](${SITE}/ru/archive/): the archive in Russian
 
 ## Experience, 2010 to 2022
 

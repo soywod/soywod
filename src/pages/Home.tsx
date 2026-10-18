@@ -5,9 +5,10 @@ import { rich } from "../lib/markdown";
 import { Button } from "../components/ui/Button";
 import en from "./Home.en.json";
 import fr from "./Home.fr.json";
+import ru from "./Home.ru.json";
 import "./Home.css";
 
-const COPY = { en, fr };
+const COPY = { en, fr, ru };
 
 const REVEAL_SCRIPT = `
 document.querySelectorAll('a[data-reveal]').forEach(function (a) {

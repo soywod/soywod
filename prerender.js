@@ -9,16 +9,23 @@ const siteUrl = "https://soywod.me";
 const { renderPages, renderLlmsTxt } = await import(pathToFileURL(resolve(dist, "server/entry-server.js")).href);
 const { pages } = renderPages();
 
+const locales = { en: "en_US", fr: "fr_FR", ru: "ru_RU" };
+
+let css = "";
 const template = readFileSync(resolve(dist, "index.html"), "utf-8").replace(
   /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/,
   (_, href) => {
-    const css = readFileSync(resolve(dist, "." + href), "utf-8");
-    const fonts = [...css.matchAll(/url\((\/assets\/ibm-plex-sans-latin-(?:400-normal|400-italic|600-normal)-[^)]+\.woff2)\)/g)]
-      .map(m => `<link rel="preload" href="${m[1]}" as="font" type="font/woff2" crossorigin />`)
-      .join("\n    ");
-    return `${fonts}\n    <style>${css}</style>`;
+    css = readFileSync(resolve(dist, "." + href), "utf-8");
+    return `<style>${css}</style>`;
   },
 );
+
+function fontPreloads(subset) {
+  const pattern = new RegExp(`url\\((/assets/ibm-plex-sans-${subset}-(?:400-normal|600-normal)-[^)]+\\.woff2)\\)`, "g");
+  return [...css.matchAll(pattern)].map(
+    m => `<link rel="preload" href="${m[1]}" as="font" type="font/woff2" crossorigin />`,
+  );
+}
 
 function escapeHtml(text) {
   return text
@@ -32,26 +39,29 @@ function sansLang(page) {
   return page.slug.split("/").slice(1).join("/");
 }
 
+function twinsOf(page) {
+  return pages.filter(p => sansLang(p) === sansLang(page));
+}
+
 function alternateLinks(page) {
-  const sibling = pages.find(p => p.lang !== page.lang && sansLang(p) === sansLang(page));
-  const links = [`<link rel="alternate" hreflang="${page.lang}" href="${siteUrl}/${page.slug}/" />`];
-  if (sibling) {
-    links.push(`<link rel="alternate" hreflang="${sibling.lang}" href="${siteUrl}/${sibling.slug}/" />`);
-    const fallback = page.lang === "en" ? page : sibling;
-    links.push(`<link rel="alternate" hreflang="x-default" href="${siteUrl}/${fallback.slug}/" />`);
-  }
-  return links.join("\n    ");
+  const twins = twinsOf(page);
+  const links = twins.map(p => `<link rel="alternate" hreflang="${p.lang}" href="${siteUrl}/${p.slug}/" />`);
+  const fallback = twins.find(p => p.lang === "en");
+  if (fallback) links.push(`<link rel="alternate" hreflang="x-default" href="${siteUrl}/${fallback.slug}/" />`);
+  return links;
 }
 
 for (const p of pages) {
   const canonical = `${siteUrl}/${p.slug}/`;
-  const locale = p.lang === "fr" ? "fr_FR" : "en_US";
-  const altLocale = p.lang === "fr" ? "en_US" : "fr_FR";
   const jsonLd = JSON.stringify(p.jsonLd).replace(/</g, "\\u003c");
   const head = [
-    alternateLinks(p),
-    `<meta property="og:locale" content="${locale}" />`,
-    `<meta property="og:locale:alternate" content="${altLocale}" />`,
+    ...fontPreloads("latin"),
+    ...(p.lang === "ru" ? fontPreloads("cyrillic") : []),
+    ...alternateLinks(p),
+    `<meta property="og:locale" content="${locales[p.lang]}" />`,
+    ...twinsOf(p)
+      .filter(q => q.lang !== p.lang)
+      .map(q => `<meta property="og:locale:alternate" content="${locales[q.lang]}" />`),
     `<script type="application/ld+json">${jsonLd}</script>`,
   ].join("\n    ");
 
@@ -97,7 +107,7 @@ writeFileSync(
     <title>Clément DOUIN</title>
   </head>
   <body>
-    <p><a href="/en/">Continue to the English site</a> — <a href="/fr/">continuer en français</a></p>
+    <p><a href="/en/">Continue to the English site</a>, <a href="/fr/">continuer en français</a>, <a href="/ru/">перейти на русскую версию</a></p>
   </body>
 </html>
 `,

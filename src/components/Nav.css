@@ -77,3 +77,16 @@
     display: none;
   }
 }
+
+.nav__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--target);
+  height: var(--target);
+  color: var(--ink-soft);
+}
+
+.nav__icon:hover {
+  color: var(--ink);
+}

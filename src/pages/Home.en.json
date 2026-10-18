@@ -3,11 +3,11 @@
   "seoDesc": "Independent software engineer since 2016: architecture, backends, APIs and tooling, with Rust as language of choice and a strong affinity for email, contacts and calendars through Pimalaya.",
   "eyebrow": "Independent software engineer · Backend · Rust",
   "title": "Software engineering, built to last.",
-  "lead": "I join your team or take a project **end to end on the server side**: architecture, backends, APIs, tooling. Fourteen years of engineering, ten of them independent, with **Rust** as my language of choice and a strong affinity for *email, contacts and calendars*, through the open-source project I lead, [Pimalaya](https://pimalaya.org).",
+  "lead": "I join your team or take a project **end to end on the server side**: architecture, backends, APIs, tooling. Fourteen years of engineering, ten of them independent, with **Rust** as my language of choice and a strong affinity for email, contacts and calendars, through the open-source project I lead, [Pimalaya](https://pimalaya.org).",
   "ctaPrimary": "Discuss a project",
   "ctaSecondary": "See what I bring",
   "portraitAlt": "Portrait of Clément DOUIN",
-  "portraitCaption": "soywod · France, Switzerland · EN, FR",
+  "portraitCaption": "soywod · France · EN, FR, some RU",
   "facts": [
     { "label": "Engineering since", "value": "2012" },
     { "label": "Independent since", "value": "2016" },
@@ -20,41 +20,41 @@
     {
       "icon": "layers",
       "title": "Software engineering",
-      "text": "Backends, APIs, services and command-line tools, *from the first design to production*. **Rust by choice**, and I fit the stack your team already runs."
+      "text": "Backends, APIs, services and command-line tools, from the first design to production. **Rust by choice**, and I fit the stack your team already runs."
     },
     {
       "icon": "code",
       "title": "Rust",
-      "text": "New Rust projects, **audits** and **rescue** of existing code: clear boundaries, I/O-free cores, tests against *real* systems."
+      "text": "New Rust projects, **audits** and **rescue** of existing code: clear boundaries, I/O-free cores, tests against real systems."
     },
     {
       "icon": "mail",
       "title": "PIM integration",
       "abbr": { "short": "PIM", "title": "Personal information management: email, contacts and calendars" },
-      "text": "Your product talking to **Gmail**, **Microsoft 365** or standard servers: sign-in, discovery, sync, with the provider quirks *already known*."
+      "text": "Your product talking to **Gmail**, **Microsoft 365** or standard servers: sign-in, discovery, sync, with the provider quirks already known."
     },
     {
       "icon": "refresh",
       "title": "Maintenance",
-      "text": "What I build *keeps working*: dependency and platform updates, protocol changes, **a version line you can rely on**."
+      "text": "What I build keeps working: dependency and platform updates, protocol changes, **a version line you can rely on**."
     }
   ],
-  "servicesAi": "**AI is part of how I work.** I use it every day, and I know the building blocks behind AI products: *RAG*, *MCP* servers, tool calling, agents. I can wire them into your backend, where they belong.",
+  "servicesAi": "**AI is part of how I work.** I use it every day, and I know the building blocks behind AI products: RAG, MCP servers, tool calling, agents. I can wire them into your backend, where they belong.",
   "workLabel": "Open source",
   "workTitle": "Pimalaya",
-  "workLead": "Since 2022 I lead Pimalaya, an open-source project funded by the [NLnet foundation](https://nlnet.nl) and the European Commission. It builds **Rust tools for email, contacts and calendars**, written *from the standards up* and tested against the providers people use. It is where my Rust and PIM experience comes from. Pimalaya ships *no AI of its own*, but every library and app is **ready to be driven by AI**: JSON output with its schemas, and documentation written for integrators and agents alike.",
+  "workLead": "Since 2022 I lead Pimalaya, an open-source project funded by the [NLnet foundation](https://nlnet.nl) and the European Commission. It builds **Rust tools for email, contacts and calendars**, written from the standards up and tested against the providers people use. It is where my Rust and PIM experience comes from. Pimalaya ships no AI of its own, but every library and app is **ready to be driven by AI**: JSON output with its schemas, and documentation written for integrators and agents alike.",
   "work": [
     {
       "name": "Pimalaya libraries",
       "link": "https://pimalaya.org",
       "meta": "2022 to today · Rust",
-      "text": "IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth and discovery, as libraries *any runtime* can drive."
+      "text": "IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth and discovery, as libraries any runtime can drive."
     },
     {
       "name": "Himalaya",
       "link": "https://github.com/pimalaya/himalaya",
       "meta": "Rust · CLI",
-      "text": "An email client for the terminal, *used worldwide* and scriptable through its JSON output."
+      "text": "An email client for the terminal, used worldwide and scriptable through its JSON output."
     },
     {
       "name": "Pimalaya for Android",
@@ -68,18 +68,18 @@
       "text": "A desktop client for mail, contacts and calendars built on the Pimalaya stack, as its **first partner**."
     }
   ],
-  "archiveBefore": "Before Pimalaya, *ten years of missions* for companies such as Piana, Swan, Tokeny and Colas:",
+  "archiveBefore": "Before Pimalaya, ten years of missions for companies such as Piana, Swan, Tokeny and Colas:",
   "archiveLink": "see the archive",
   "howLabel": "How I work",
   "howTitle": "Two ways to work together",
   "consultingTitle": "Consulting",
-  "consultingText": "A feature to ship, a system to design, code to audit, a team to unblock. *Remote, from France or Switzerland*, in English or French.",
+  "consultingText": "A feature to ship, a system to design, code to audit, a team to unblock. Remote, from France or Switzerland, in English or French, with a few notions of Russian.",
   "consultingPrice": "From €800 per day",
   "consultingPriceNote": "depending on the project",
   "partnershipTitle": "Partnership",
-  "partnershipText": "Your product or your servers on the Pimalaya stack, **tested on every release** and maintained *year after year*.",
+  "partnershipText": "Your product or your servers on the Pimalaya stack, **tested on every release** and maintained year after year.",
   "partnershipCta": "See Pimalaya for business",
   "contactTitle": "Tell me about your project",
-  "contactLead": "A **short call** first, then a written proposal with a *fixed scope*.",
+  "contactLead": "A **short call** first, then a written proposal with a fixed scope.",
   "revealEmail": "Reveal email"
 }

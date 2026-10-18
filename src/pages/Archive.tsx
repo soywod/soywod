@@ -4,9 +4,10 @@ import { ANIM } from "../lib/anim";
 import { markdown, rich } from "../lib/markdown";
 import en from "./Archive.en.json";
 import fr from "./Archive.fr.json";
+import ru from "./Archive.ru.json";
 import "./Archive.css";
 
-const COPY = { en, fr };
+const COPY = { en, fr, ru };
 
 const projectTomls = import.meta.glob("../content/projects/*.toml", {
   query: "?raw",
@@ -65,7 +66,7 @@ export function loadExperiences(lang: Lang): Row[] {
         key: path,
         company: toml.company as string,
         link: (toml.companyLink as string | undefined) ?? null,
-        title: toml[lang].title as string,
+        title: (toml[lang] ?? toml.en).title as string,
         tags: (toml.tags as string[] | undefined) ?? [],
         begin: tomlDate(toml.begin),
         end: toml.end ? tomlDate(toml.end) : null,
@@ -112,8 +113,8 @@ export function loadProjects(lang: Lang): Row[] {
       when: years(begin, toml.end ? tomlDate(toml.end) : null),
       name: toml.title as string,
       link: (toml.link as string | undefined) ?? null,
-      detail: (toml[lang].subtitle as string).replace(/\s+—\s+/g, " · "),
-      desc: toml[lang].desc ? markdown(toml[lang].desc as string) : null,
+      detail: ((toml[lang] ?? toml.en).subtitle as string).replace(/\s+—\s+/g, " · "),
+      desc: (toml[lang] ?? toml.en).desc ? markdown((toml[lang] ?? toml.en).desc as string) : null,
       tags: ((toml.tags as string[] | undefined) ?? []).slice(0, MAX_TAGS),
     }));
 }

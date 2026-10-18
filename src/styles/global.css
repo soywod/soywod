@@ -173,7 +173,3 @@ strong {
   font-weight: 600;
   color: var(--ink-900);
 }
-
-em {
-  font-style: italic;
-}

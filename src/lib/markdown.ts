@@ -5,7 +5,6 @@ function escapeHtml(text: string): string {
 export function inline(source: string): string {
   return escapeHtml(source.replace(/\s*\n\s*/g, " "))
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
 }
 

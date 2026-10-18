@@ -8,6 +8,7 @@ export interface FooterProps {
 const COPY: Record<Lang, { archive: string }> = {
   en: { archive: "Archive" },
   fr: { archive: "Archives" },
+  ru: { archive: "Архив" },
 };
 
 export function Footer({ lang }: FooterProps) {
