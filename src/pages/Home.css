@@ -107,7 +107,7 @@
 
 .facts__value--small {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.35;
 }
 
@@ -183,7 +183,7 @@ a.work__name:hover {
 }
 
 .work__archive a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .ways {
@@ -260,7 +260,7 @@ abbr[title] {
 }
 
 .hero__lead a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .project-head {

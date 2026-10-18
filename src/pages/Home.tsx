@@ -96,7 +96,7 @@ export function HomePage({ lang }: { lang: Lang }) {
     <>
       <section className="hero">
         <div className="container hero__inner">
-          <div className={ANIM}>
+          <div>
             <p className="label hero__eyebrow">{t.eyebrow}</p>
             <h1 className="hero__title">{t.title}</h1>
             <p className="hero__lead" dangerouslySetInnerHTML={rich(t.lead)} />
@@ -110,7 +110,7 @@ export function HomePage({ lang }: { lang: Lang }) {
 
           <div className={`hero__aside ${ANIM}`}>
             <figure className="portrait">
-              <img src="/portrait.jpeg" alt={t.portraitAlt} width={120} height={120} />
+              <img src="/portrait.webp" alt={t.portraitAlt} width={120} height={120} />
               <figcaption>
                 <span className="portrait__name">Clément DOUIN</span>
                 <span className="portrait__meta">{t.portraitCaption}</span>

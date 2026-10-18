@@ -18,7 +18,7 @@ const experienceTomls = import.meta.glob("../content/experiences/*.toml", {
   import: "default",
   eager: true,
 }) as Record<string, string>;
-const images = import.meta.glob("../content/*/*.jpeg", {
+const images = import.meta.glob("../content/*/*.webp", {
   query: "?url",
   import: "default",
   eager: true,
@@ -40,7 +40,7 @@ type Row = {
 };
 
 function imageOf(tomlPath: string): string | undefined {
-  return images[tomlPath.replace(/\.toml$/, ".jpeg")];
+  return images[tomlPath.replace(/\.toml$/, ".webp")];
 }
 
 function tomlDate(value: unknown): string {
@@ -57,7 +57,7 @@ function byBeginDesc<T extends { begin: string }>(a: T, b: T): number {
   return a.begin < b.begin ? 1 : a.begin > b.begin ? -1 : 0;
 }
 
-function loadExperiences(lang: Lang): Row[] {
+export function loadExperiences(lang: Lang): Row[] {
   const experiences = Object.entries(experienceTomls)
     .map(([path, raw]) => {
       const toml = parse(raw) as any;
@@ -98,7 +98,7 @@ function loadExperiences(lang: Lang): Row[] {
   });
 }
 
-function loadProjects(lang: Lang): Row[] {
+export function loadProjects(lang: Lang): Row[] {
   return Object.entries(projectTomls)
     .map(([path, raw]) => {
       const toml = parse(raw) as any;

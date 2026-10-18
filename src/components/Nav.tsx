@@ -49,7 +49,7 @@ export function Nav({ lang, path }: NavProps) {
         </nav>
 
         <div className="nav__actions">
-          <a className="nav__lang" href={`/${other}/${path}`} hrefLang={other} aria-label={t.other}>
+          <a className="nav__lang" href={`/${other}/${path}`} hrefLang={other} aria-label={`${other.toUpperCase()}, ${t.other}`}>
             {other.toUpperCase()}
           </a>
           <Button href={`${home}#contact`} size="sm">

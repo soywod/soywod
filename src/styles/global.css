@@ -104,7 +104,7 @@ h3 {
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.15s ease, border-color 0.15s ease;

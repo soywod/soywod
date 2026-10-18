@@ -6,10 +6,19 @@ const root = dirname(fileURLToPath(import.meta.url));
 const dist = resolve(root, "dist");
 const siteUrl = "https://soywod.me";
 
-const { renderPages } = await import(pathToFileURL(resolve(dist, "server/entry-server.js")).href);
+const { renderPages, renderLlmsTxt } = await import(pathToFileURL(resolve(dist, "server/entry-server.js")).href);
 const { pages } = renderPages();
 
-const template = readFileSync(resolve(dist, "index.html"), "utf-8");
+const template = readFileSync(resolve(dist, "index.html"), "utf-8").replace(
+  /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/,
+  (_, href) => {
+    const css = readFileSync(resolve(dist, "." + href), "utf-8");
+    const fonts = [...css.matchAll(/url\((\/assets\/ibm-plex-sans-latin-(?:400-normal|400-italic|600-normal)-[^)]+\.woff2)\)/g)]
+      .map(m => `<link rel="preload" href="${m[1]}" as="font" type="font/woff2" crossorigin />`)
+      .join("\n    ");
+    return `${fonts}\n    <style>${css}</style>`;
+  },
+);
 
 function escapeHtml(text) {
   return text
@@ -37,11 +46,18 @@ function alternateLinks(page) {
 for (const p of pages) {
   const canonical = `${siteUrl}/${p.slug}/`;
   const locale = p.lang === "fr" ? "fr_FR" : "en_US";
-  const head = `${alternateLinks(p)}\n    <meta property="og:locale" content="${locale}" />`;
+  const altLocale = p.lang === "fr" ? "en_US" : "fr_FR";
+  const jsonLd = JSON.stringify(p.jsonLd).replace(/</g, "\\u003c");
+  const head = [
+    alternateLinks(p),
+    `<meta property="og:locale" content="${locale}" />`,
+    `<meta property="og:locale:alternate" content="${altLocale}" />`,
+    `<script type="application/ld+json">${jsonLd}</script>`,
+  ].join("\n    ");
 
   const html = template
-    .replace("<!--app-head-->", head)
-    .replace("<!--app-html-->", p.appHtml)
+    .replace("<!--app-head-->", () => head)
+    .replace("<!--app-html-->", () => p.appHtml)
     .replace(/\s*<script type="module"[^>]*><\/script>/g, "")
     .replace(/\s*<link rel="modulepreload"[^>]*>/g, "")
     .replace(/<html lang="[^"]*">/, `<html lang="${p.lang}">`)
@@ -87,11 +103,19 @@ writeFileSync(
 `,
 );
 
-const urls = pages.map(p => `  <url><loc>${siteUrl}/${p.slug}/</loc></url>`).join("\n");
+const urls = pages
+  .map(p => {
+    const twins = pages
+      .filter(q => sansLang(q) === sansLang(p))
+      .map(q => `\n    <xhtml:link rel="alternate" hreflang="${q.lang}" href="${siteUrl}/${q.slug}/" />`)
+      .join("");
+    return `  <url>\n    <loc>${siteUrl}/${p.slug}/</loc>${twins}\n  </url>`;
+  })
+  .join("\n");
 writeFileSync(
   resolve(dist, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls}
 </urlset>
 `,
@@ -104,6 +128,7 @@ Allow: /
 Sitemap: ${siteUrl}/sitemap.xml
 `,
 );
-console.log("✓ generated dist/sitemap.xml + dist/robots.txt");
+writeFileSync(resolve(dist, "llms.txt"), renderLlmsTxt());
+console.log("✓ generated dist/sitemap.xml, dist/robots.txt and dist/llms.txt");
 
 rmSync(resolve(dist, "server"), { recursive: true, force: true });
