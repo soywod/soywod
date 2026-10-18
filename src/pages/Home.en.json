@@ -1,10 +1,77 @@
 {
-  "seoTitle": "Clément DOUIN | Tailor-made software & AI for small businesses",
-  "seoDesc": "Freelance developer and creator of Himalaya/Pimalaya. Tailor-made, self-hosted business software with AI, built for small businesses.",
-  "eyebrow": "For small businesses",
-  "title": "Tailor-made software, powered by AI",
-  "lead1": "I design and build custom business software with AI built in — invoicing, scheduling, client records, mail and calendar automation — for small businesses that don't have the time to figure out what AI can already do for them. Every install is self-hosted and stays yours.",
-  "lead2": "Ten years as an independent developer, three of them on Himalaya, an open-source email client used worldwide and funded by the NLnet foundation and the European Commission.",
-  "ctaPrimary": "Get in touch",
-  "ctaSecondary": "See the open-source technology"
+  "seoTitle": "Clément DOUIN | Rust and PIM engineer",
+  "seoDesc": "Independent engineer, creator of Himalaya and Pimalaya. I build and maintain email, contacts and calendar integrations in Rust.",
+  "eyebrow": "Independent engineer · Rust · Email, contacts, calendars",
+  "title": "Software that talks to mail servers, and keeps talking.",
+  "lead": "I build and maintain email, contacts and calendar integrations in Rust: IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth and offline sync. The creator of Himalaya and the Pimalaya project, since 2022.",
+  "ctaPrimary": "Discuss a project",
+  "ctaSecondary": "See the work",
+  "portraitAlt": "Portrait of Clément DOUIN",
+  "portraitCaption": "soywod · France · EN, FR",
+  "facts": [
+    { "label": "Engineering since", "value": "2012" },
+    { "label": "Independent since", "value": "2015" },
+    { "label": "Rust libraries written", "value": "30+" },
+    { "label": "Funded by", "value": "NLnet and the European Commission", "small": true }
+  ],
+  "servicesLabel": "Services",
+  "servicesTitle": "Three things I do well",
+  "services": [
+    {
+      "icon": "mail",
+      "title": "PIM integration",
+      "text": "Mail, contacts and calendars in your product, across Gmail, Microsoft 365 and standard servers. Sign-in, discovery, sync, the provider quirks already handled."
+    },
+    {
+      "icon": "code",
+      "title": "Rust engineering",
+      "text": "Libraries, CLIs and services designed to last: I/O-free cores, clear boundaries, tests against real systems. Audits and rescue of existing Rust code too."
+    },
+    {
+      "icon": "refresh",
+      "title": "Maintenance",
+      "text": "Providers change their rules every year. I keep integrations working through protocol changes, OAuth renewals and platform updates."
+    }
+  ],
+  "servicesNote": "Beyond PIM: ten years of TypeScript, React and Node before Rust. Ask if your project sits elsewhere.",
+  "workLabel": "Work",
+  "workTitle": "Pimalaya, and what is built on it",
+  "workLead": "Most of my time since 2022 goes into Pimalaya: open-source Rust tools for personal information, written from the RFCs up and tested against the providers people use.",
+  "work": [
+    {
+      "name": "Pimalaya libraries",
+      "link": "https://pimalaya.org",
+      "meta": "2022 to today · Rust",
+      "text": "IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth and discovery, as I/O-free libraries any runtime can drive."
+    },
+    {
+      "name": "Himalaya",
+      "link": "https://github.com/pimalaya/himalaya",
+      "meta": "Rust · CLI",
+      "text": "The email client for the terminal that started it all, scriptable through its JSON output."
+    },
+    {
+      "name": "Pimalaya for Android",
+      "meta": "2026 · closed alpha",
+      "text": "Mail, contacts and calendars in one offline-first app, on the same libraries."
+    },
+    {
+      "name": "With Red Arrow",
+      "link": "https://redarrow.fr",
+      "meta": "2026 · in development",
+      "text": "A desktop client for mail, contacts and calendars built on the Pimalaya stack, as its first partner."
+    }
+  ],
+  "archiveLink": "Earlier work, 2010 to 2022: the archive",
+  "howLabel": "How I work",
+  "howTitle": "Two ways to work together",
+  "consultingTitle": "Consulting",
+  "consultingText": "An integration to build, code to audit, a team to unblock. Remote, from France, in English or French.",
+  "consultingPrice": "Day rate on request",
+  "partnershipTitle": "Partnership",
+  "partnershipText": "Your product or your servers on the Pimalaya stack, tested on every release and maintained year after year.",
+  "partnershipCta": "See Pimalaya for business",
+  "contactTitle": "Tell me what you need to connect",
+  "contactLead": "A short call first, then a written proposal with a fixed scope.",
+  "revealEmail": "Reveal email"
 }

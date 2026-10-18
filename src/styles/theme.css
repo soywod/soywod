@@ -1,37 +1,30 @@
 /*
- * Design tokens. Recolored from Pimalaya's own design system (same shapes
- * and structure, blue accent instead of magenta).
+ * Design tokens: a cool paper ground, deep navy ink and one blue accent. A
+ * sibling of Pimalaya's design system (same shapes and structure), kept
+ * sober: the accent is for labels and links, actions are drawn in ink.
  */
 
 :root {
   --paper: #f4f7fb;
-  --paper-raised: #ffffff;
   --surface: #ffffff;
-  --ink-900: #0f1e33;
 
+  --ink-900: #0f1e33;
   --ink: #1a2b45;
   --ink-soft: #55688a;
-  --ink-faint: #93a3c0;
-  --on-dark: #eef3fb;
-  --on-dark-soft: #9fb2d1;
 
-  --accent: #1976d2;
-  --accent-ink: #125a9c;
-  --accent-wash: #e1edfb;
-  --sky: #4f9de0;
+  --accent: #125a9c;
+  --accent-ink: #0d4275;
 
   --rule: #dde6f2;
   --rule-strong: #c2d1e6;
-  --rule-dark: rgba(238, 243, 251, 0.14);
 
   --radius-sm: 10px;
   --radius: 16px;
 
-  --shadow-sm: 0 1px 2px rgba(15, 30, 51, 0.08), 0 1px 1px rgba(15, 30, 51, 0.05);
-
-  --font-sans: "Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Helvetica, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --container: 1080px;
   --nav-height: 68px;
+  --target: 44px; /* minimum height of anything clickable */
 }

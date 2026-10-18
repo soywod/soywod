@@ -1,29 +1,256 @@
+/* ---- Hero ---- */
+
 .hero {
-  padding: clamp(4rem, 10vw, 7rem) 0 clamp(4rem, 8vw, 6rem);
+  padding: 96px 0 80px;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 56px;
+  align-items: end;
+}
+
+.hero__eyebrow {
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
 }
 
 .hero__title {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin: 0.6rem 0 1.25rem;
-  color: var(--ink);
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .hero__lead {
-  font-size: 1.15rem;
-  line-height: 1.6;
+  margin-top: 24px;
+  max-width: 560px;
+  font-size: 19px;
   color: var(--ink-soft);
-  max-width: 60ch;
-  margin-bottom: 1.25rem;
-}
-
-.hero__lead:last-of-type {
-  margin-bottom: 2rem;
 }
 
 .hero__cta {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.hero__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portrait {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.portrait img {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  object-fit: cover;
+  object-position: 60% 35%;
+}
+
+.portrait figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.portrait__name {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.portrait__meta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.facts__item {
+  background: var(--surface);
+  padding: 24px;
+}
+
+.facts__item dt {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.facts__value {
+  margin: 6px 0 0;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink-900);
+}
+
+.facts__value--small {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* ---- Services ---- */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.service {
+  padding: 28px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.service svg {
+  color: var(--accent);
+}
+
+.service h3 {
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.service p {
+  margin-top: 10px;
+}
+
+.services__note {
+  margin-top: 32px;
+}
+
+/* ---- Work ---- */
+
+.work {
+  margin-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+
+.work__item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 8px 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.work__name {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink-900);
+  text-decoration: none;
+}
+
+a.work__name:hover {
+  color: var(--accent);
+}
+
+.work__meta {
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.work__archive {
+  margin-top: 28px;
+  font-weight: 500;
+}
+
+/* ---- How I work ---- */
+
+.ways {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.way {
+  padding: 32px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.way h3 {
+  font-size: 20px;
+}
+
+.way p {
+  margin-top: 10px;
+}
+
+.way__price {
+  margin-top: 24px !important;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+.way__foot {
+  margin-top: 24px !important;
+}
+
+/* ---- Contact ---- */
+
+.contact {
+  padding: 96px 0;
+}
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 56px 0;
+  }
+
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__lead {
+    font-size: 17px;
+  }
+
+  .contact {
+    padding: 64px 0;
+  }
 }

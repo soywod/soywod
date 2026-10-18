@@ -1,4 +1,5 @@
-import { Lang, langs } from "../lib/lang";
+import { Lang } from "../lib/lang";
+import { Button } from "./ui/Button";
 import "./Nav.css";
 
 export interface NavProps {
@@ -7,40 +8,54 @@ export interface NavProps {
   path: string;
 }
 
-const COPY: Record<Lang, { archive: string; contact: string }> = {
-  en: { archive: "Archive", contact: "Contact" },
-  fr: { archive: "Archives", contact: "Contact" },
+const COPY: Record<Lang, { services: string; work: string; how: string; archive: string; contact: string; other: string }> = {
+  en: {
+    services: "Services",
+    work: "Work",
+    how: "How I work",
+    archive: "Archive",
+    contact: "Contact",
+    other: "Version française",
+  },
+  fr: {
+    services: "Services",
+    work: "Travaux",
+    how: "Collaborer",
+    archive: "Archives",
+    contact: "Contact",
+    other: "English version",
+  },
 };
 
 export function Nav({ lang, path }: NavProps) {
   const t = COPY[lang];
+  const home = `/${lang}/`;
+  const other: Lang = lang === "en" ? "fr" : "en";
 
   return (
     <header className="nav">
       <div className="container nav__inner">
-        <a href={`/${lang}/`} className="logo">
-          <span className="logo__mark">
-            <img src="/avatar.jpeg" alt="Clément DOUIN" />
-          </span>
-          <span className="logo__word">Clément DOUIN</span>
+        <a href={home} className="nav__brand">
+          <span className="nav__handle">soywod</span>
+          <span className="nav__name">Clément DOUIN</span>
         </a>
 
         <nav className="nav__links" aria-label="Primary">
-          <a href={`/${lang}/archive/`}>{t.archive}</a>
-          <a href={`/${lang}/contact/`}>{t.contact}</a>
+          <a href={`${home}#services`}>{t.services}</a>
+          <a href={`${home}#work`}>{t.work}</a>
+          <a href={`${home}#how`}>{t.how}</a>
+          <a href={`${home}archive/`} aria-current={path === "archive/" ? "page" : undefined}>
+            {t.archive}
+          </a>
         </nav>
 
         <div className="nav__actions">
-          {langs.map(l => (
-            <a
-              key={l}
-              className="nav__lang"
-              aria-current={l === lang ? "true" : undefined}
-              href={`/${l}/${path}`}
-            >
-              {l.toUpperCase()}
-            </a>
-          ))}
+          <a className="nav__lang" href={`/${other}/${path}`} hrefLang={other} aria-label={t.other}>
+            {other.toUpperCase()}
+          </a>
+          <Button href={`${home}#contact`} size="sm">
+            {t.contact}
+          </Button>
         </div>
       </div>
     </header>

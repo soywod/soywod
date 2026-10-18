@@ -1,10 +1,77 @@
 {
-  "seoTitle": "Clément DOUIN | Logiciels sur-mesure et IA pour petites entreprises",
-  "seoDesc": "Développeur indépendant, créateur de Himalaya/Pimalaya. Logiciels métier sur-mesure et auto-hébergés, avec IA, pour petites entreprises.",
-  "eyebrow": "Pour les petites entreprises",
-  "title": "Des logiciels sur-mesure, propulsés par l'IA",
-  "lead1": "Je conçois et développe des logiciels métier sur-mesure avec de l'IA intégrée — facturation, planning, fiches clients, automatisation des emails et de l'agenda — pour les petites entreprises qui n'ont pas le temps de comprendre ce que l'IA peut déjà faire pour elles. Chaque installation est auto-hébergée et vous appartient.",
-  "lead2": "Dix ans de développement indépendant, dont trois consacrés à Himalaya, un client email libre utilisé dans le monde entier et financé par la fondation NLnet et la Commission européenne.",
-  "ctaPrimary": "Me contacter",
-  "ctaSecondary": "Voir la technologie libre"
+  "seoTitle": "Clément DOUIN | Ingénieur Rust et PIM",
+  "seoDesc": "Ingénieur indépendant, créateur de Himalaya et Pimalaya. Je développe et maintiens des intégrations email, contacts et agendas en Rust.",
+  "eyebrow": "Ingénieur indépendant · Rust · Emails, contacts, agendas",
+  "title": "Des logiciels qui parlent aux serveurs mail, durablement.",
+  "lead": "Je développe et maintiens des intégrations email, contacts et agendas en Rust : IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth et synchronisation hors ligne. Créateur de Himalaya et du projet Pimalaya, depuis 2022.",
+  "ctaPrimary": "Parler de votre projet",
+  "ctaSecondary": "Voir les travaux",
+  "portraitAlt": "Portrait de Clément DOUIN",
+  "portraitCaption": "soywod · France · FR, EN",
+  "facts": [
+    { "label": "Ingénieur depuis", "value": "2012" },
+    { "label": "Indépendant depuis", "value": "2015" },
+    { "label": "Librairies Rust écrites", "value": "30+" },
+    { "label": "Financé par", "value": "NLnet et la Commission européenne", "small": true }
+  ],
+  "servicesLabel": "Services",
+  "servicesTitle": "Trois choses que je fais bien",
+  "services": [
+    {
+      "icon": "mail",
+      "title": "Intégration PIM",
+      "text": "Emails, contacts et agendas dans votre produit, avec Gmail, Microsoft 365 et les serveurs standards. Connexion, découverte, synchronisation, et les particularités des fournisseurs déjà gérées."
+    },
+    {
+      "icon": "code",
+      "title": "Ingénierie Rust",
+      "text": "Librairies, CLI et services conçus pour durer : cœurs sans I/O, frontières claires, tests sur des systèmes réels. Audit et reprise de code Rust existant aussi."
+    },
+    {
+      "icon": "refresh",
+      "title": "Maintenance",
+      "text": "Les fournisseurs changent leurs règles chaque année. Je garde vos intégrations en état de marche au fil des changements de protocole, des renouvellements OAuth et des mises à jour des plateformes."
+    }
+  ],
+  "servicesNote": "Au-delà du PIM : dix ans de TypeScript, React et Node avant Rust. Demandez si votre projet est ailleurs.",
+  "workLabel": "Travaux",
+  "workTitle": "Pimalaya, et ce qui est construit dessus",
+  "workLead": "Depuis 2022, l'essentiel de mon temps va à Pimalaya : des outils Rust libres pour les données personnelles, écrits depuis les RFC et testés sur les fournisseurs que les gens utilisent.",
+  "work": [
+    {
+      "name": "Librairies Pimalaya",
+      "link": "https://pimalaya.org",
+      "meta": "2022 à aujourd'hui · Rust",
+      "text": "IMAP, SMTP, JMAP, CalDAV, CardDAV, OAuth et découverte, en librairies sans I/O que tout runtime peut piloter."
+    },
+    {
+      "name": "Himalaya",
+      "link": "https://github.com/pimalaya/himalaya",
+      "meta": "Rust · CLI",
+      "text": "Le client email en ligne de commande à l'origine de tout, scriptable grâce à sa sortie JSON."
+    },
+    {
+      "name": "Pimalaya pour Android",
+      "meta": "2026 · alpha fermée",
+      "text": "Emails, contacts et agendas dans une seule application hors ligne d'abord, sur les mêmes librairies."
+    },
+    {
+      "name": "Avec Red Arrow",
+      "link": "https://redarrow.fr",
+      "meta": "2026 · en développement",
+      "text": "Un client de bureau pour emails, contacts et agendas, construit sur la pile Pimalaya, en tant que premier partenaire."
+    }
+  ],
+  "archiveLink": "Travaux précédents, de 2010 à 2022 : les archives",
+  "howLabel": "Collaborer",
+  "howTitle": "Deux façons de travailler ensemble",
+  "consultingTitle": "Conseil",
+  "consultingText": "Une intégration à construire, du code à auditer, une équipe à débloquer. À distance, depuis la France, en français ou en anglais.",
+  "consultingPrice": "Tarif journalier sur demande",
+  "partnershipTitle": "Partenariat",
+  "partnershipText": "Votre produit ou vos serveurs sur la pile Pimalaya, testés à chaque version et maintenus année après année.",
+  "partnershipCta": "Voir Pimalaya pour les entreprises",
+  "contactTitle": "Dites-moi ce que vous devez connecter",
+  "contactLead": "Un court appel d'abord, puis une proposition écrite au périmètre fixé.",
+  "revealEmail": "Afficher l'email"
 }

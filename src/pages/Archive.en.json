@@ -1,9 +1,9 @@
 {
   "seoTitle": "Clément DOUIN | Archive",
-  "seoDesc": "Freelance projects and experiences from 2015 to 2022, kept for the record.",
-  "title": "Archive",
-  "intro": "Freelance web development work from 2015 to 2022, kept here for the record. It reflects an earlier chapter, before Himalaya and Pimalaya.",
-  "titleProjects": "Projects",
+  "seoDesc": "Experience and freelance projects from 2010 to 2022, kept for the record.",
+  "label": "Archive",
+  "title": "2010 to 2022, for the record",
+  "intro": "Before Pimalaya: software testing first, then freelance web development in TypeScript, React and Node, for startups, agencies and small businesses. Kept here as it was.",
   "titleExperiences": "Experience",
-  "sourceCode": "Source code"
+  "titleProjects": "Freelance projects"
 }

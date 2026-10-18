@@ -14,3 +14,14 @@ from = "/"
 to = "/en/"
 status = 302
 force = false
+
+# The contact page merged into the home page's contact section.
+[[redirects]]
+from = "/en/contact/"
+to = "/en/#contact"
+status = 301
+
+[[redirects]]
+from = "/fr/contact/"
+to = "/fr/#contact"
+status = 301
